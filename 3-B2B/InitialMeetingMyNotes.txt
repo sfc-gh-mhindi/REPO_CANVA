@@ -1,0 +1,44 @@
+Meeting assets for Snowflake Professional Services Support for Canva B2B Pipeline H1 2026 are ready!
+Meeting summary
+Quick recap
+The meeting focused on Canva's B2B data pipeline architecture and their plans to implement OpenFlow for ingesting and processing lead data. Jeno and the team explained their current system, which processes leads through a backend service (PPS) before landing in Snowflake's B2B Express layer, with a 15-minute SLA for data processing. The team discussed challenges with current transformations and ingestion processes, with Mazen suggesting potential architectural improvements to better scale the system. The group agreed that Professional Services would help design and implement new patterns for webhook integration with third-party sources like Splash, Goldcast, and RainFocus, while ensuring the operations team could maintain the system independently after implementation.
+Next steps
+    - Jeno: Cancel and reschedule call with Snowflake engineers regarding monitoring setup
+    - Jeno and team: Implement monitoring and alerting on top of OpenFlow before releasing all forms to production
+    - Mazen: Review current architecture and provide options with pros/cons for optimizing the data pipeline
+    - Mazen: Look at documentation for third-party sources to understand webhook/API patterns
+    - Mazen: Have follow-up chat with Vanessa and Vishnu to get additional context on next steps
+    - Mazen and team: Put together approach for how to address requirements in H1
+    - Mazen and team: Design webhook pattern with monitoring and alerting for first third-party integration
+    - Mazen and team: Implement first webhook pattern and hand over to Canva team before April
+    - Vanessa: Communicate timeline to Canva team later today for when proposal will be sent over
+    - Snowflake team: Design, get approval, build, test, and provide hypercare support for the first webhook implementation pattern
+
+Summary
+Canva-Snowflake Partnership Agreement Update
+The meeting began with introductions from both Canva and Snowflake teams, including new team member Mazen Hindi, who will assist with professional services and training. Vanessa Barcellona, Global Account Director for Canva at Snowflake, explained that two parallel agreements were signed on September 30th: a four-year agreement for Canva to continue using Snowflake's data platform with increased credit consumption, and a deal for 5,000 Canva Enterprise licenses, making Canva one of Snowflake's top 10 global customers. The four key priorities for the coming years were outlined: B2B go-to-market collaboration, accelerating AI, IPO readiness, and data platform optimization. The conversation ended with a request for Canva to share their current needs, timelines, and progress to date.
+
+Canva's B2B Infrastructure Overhaul
+Jeno discussed Canva's B2B infrastructure challenges, explaining that they previously handled leads directly between frontend services and Salesforce but faced API limitations and data mapping issues. He described building a solution on Snowflake to process and map leads more quickly, but noted performance limitations with their current setup. The team is preparing to launch OpenFlow, which will help with faster processing and enable direct integration with third-party sources, with production deployment expected within a week. The focus for next year will be on making the pipelines more durable, scalable, and autonomous, with the goal of reducing manual intervention by the operations team.
+
+Data Ingestion Automation Strategy
+The team discussed their initiative to automate and streamline data ingestion processes, focusing on transitioning from Fivetran to OpenFlow for managing leads from various external and internal sources. Jeno explained that while webhook functionality was recently available, they have not yet completed any source integrations, as they are prioritizing the setup of monitoring systems before fully migrating forms to OpenFlow. The team emphasized their vision of creating an autonomous system that requires minimal maintenance and is AI-ready, allowing for scalable and efficient data management.
+
+B2B Data Automation Strategy
+The team discussed building patterns and automation for B2B data workflows, with Jeno explaining that while there's no end state for the system, they need to create templates and best practices for ingesting data into Canva's backend servers and then into Salesforce and Braze. Melbourne-24.07-Bogong and Jeno highlighted the importance of proper monitoring and alerting in their NiFi pipelines, with Jeno noting that while he and Dave are skilled in NiFi, they need experts to review their pipelines and implement best practices. The team agreed that Narmina and her team would handle the operational aspects of launching new sources, while they focus on building the automation patterns and templates.
+
+Data Pipeline Architecture Review
+The team discussed the need for a scalable framework for monitoring and ingesting data from multiple external sources, with a focus on creating patterns for five distinct data sources. Jeno presented an architectural diagram outlining the data pipeline, which includes mapping data to contract rules, processing it through a backend service (VPS), and then sending it to Snowflake for further analysis. The team also discussed the use of OpenFlow for pushing data from Snowflake to Salesforce, replacing the previous Census system due to its lack of logical reasoning capabilities.
+
+DynamoDB to B2B Data Flow
+Jeno explained the data flow pattern from DynamoDB to B2B Express using CDC protocol via Snow Pipes, with data landing in Snowflake within a minute. They discussed the need for transformations, particularly mapping fields and enforcing value constraints, which currently happens through OpenFlow but needs to be made more operable by the ops team. Melbourne-24.07-Bogong suggested reconsidering the data flow pattern, proposing either pushing transformations later in the pipeline or using a more scalable tool for transformations, given the focus on scalability and ease of operation for the ops team.
+
+Data Architecture Optimization Strategy
+The team discussed optimizing their data architecture, focusing on scalability and transformation efficiency between different tools like OpenFlow, DynamoDB, and Snowflake. Melbourne-24.07-Bogong emphasized the need to evaluate which tools are best suited for specific tasks, suggesting the possibility of introducing a scalable transformation box between external sources and DynamoDB. Jeno confirmed that while the current architecture requires leads to go through BPS before Snowflake, future plans include reducing data sent to Salesforce by qualifying leads. The team agreed that while the current setup is not set in stone, they need to ensure scalability and efficient transformations, with Clay handling enrichment data insertion into Snowflake in the future.
+
+Streamlined Data Ingestion Framework
+The team discussed streamlining ingestion and democratizing it through a configuration-driven framework, focusing on simple transformations like mapping and filtering. They emphasized the importance of latency, with an SLA of 15 minutes and current SLO of 2-5 minutes for data processing. Jeno explained that AI capabilities are used to create flags for leads, which are delivered to Salesforce for salespeople to review.
+
+B2B Express Integration Planning
+The team discussed implementing a B2B Express data integration system using Snowflake, with Jeno explaining that it currently uses a single database with three schema layers: source, model, and target. They agreed to establish webhook support for third-party integrations with Splash, Goldcast, RainFocus, and potentially G2, with the goal of implementing the first pattern before Jeno's three-month parental leave in April. The team aligned on a design-and-implement approach where Snowflake will help establish best practices and patterns, with the aim of having the first few third parties integrated in the first 1-2 months of H1 (January to June).
+
