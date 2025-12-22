@@ -328,51 +328,18 @@ The following items are explicitly excluded from this engagement:
 
 ### 3.1 High-Level Timeline Overview
 
-```
-20-Week Project Timeline (16 weeks core + 4 weeks hypercare)
+![20-Week Project Timeline](Timeline.jpeg)
 
-Week:  1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19   20
-       │────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────│
-       
-Phase 1: Discovery & Design
-       [════════════════════]
-       │    Design    │    │
-       └─────────────────────> Design Approval (Week 3)
+**20-Week Project Timeline (16 weeks core + 4 weeks hypercare)**
 
-Phase 2: Monitoring Framework
-                           [════════════════════]
-                           │   Monitoring   │
-                           └──────────────────────> Monitoring Live (Week 6)
-
-Phase 3: Ingestion Pattern Implementation
-                                              [══════════════════════════════════════════════════]
-                                              │           Ingestion Pattern           │
-                                              └──────────────────────────────────────────────────> Pattern Complete (Week 12)
-
-Phase 4: First Source Integration
-                                                                                                  [════════════════════]
-                                                                                                  │  First Source  │
-                                                                                                  └────────────────────> Production Live (Week 15)
-
-Phase 5: Knowledge Transfer
-                                                                                                                        [══════]
-                                                                                                                        │  KT  │
-                                                                                                                        └─────> Training Complete (Week 16)
-
-Phase 6: Hypercare & Handover
-                                                                                                                              [════════════════════════════════]
-                                                                                                                              │        Hypercare        │
-                                                                                                                              └────────────────────────────────> BAU Transition (Week 20)
-
-Key Milestones:
-  ◆ Week 1:  Project Kickoff
-  ◆ Week 3:  Design Approval (Go/No-Go)
-  ◆ Week 6:  Monitoring Live (Unblock forms)
-  ◆ Week 12: Pattern Complete
-  ◆ Week 15: First Source Live in Production
-  ◆ Week 16: Training Complete
-  ◆ Week 20: Handover Complete & BAU Transition
-```
+**Key Milestones:**
+- **Week 1:** Project Kickoff
+- **Week 3:** Design Approval (Go/No-Go)
+- **Week 6:** Monitoring Live (Unblock forms)
+- **Week 12:** Pattern Complete
+- **Week 15:** First Source Live in Production
+- **Week 16:** Training Complete
+- **Week 20:** Handover Complete & BAU Transition
 
 ### 3.2 Detailed Schedule
 
