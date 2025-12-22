@@ -210,7 +210,7 @@ The following items are explicitly excluded from this engagement:
 - Prepare for first source integration
 
 #### Deliverables
-- ✅ Ingestion Receiver Infrastructure
+- ✅ Ingestion Pattern
 - ✅ Transformation Templates and Engine
 - ✅ Error Handling Logic
 - ✅ Configuration Framework
@@ -403,12 +403,12 @@ Key Milestones:
 
 ### 4.1 Snowflake Service Delivery Team
 
-| Role | Responsibility | Commitment |
-|------|---------------|------------|
-| **Lead Consultant / Architect** | Overall project leadership, architecture design, stakeholder management, technical reviews | 30-40% |
-| **Solution Architect** | Implementation lead, transformation logic, integration development, testing | 50-60% |
-| **OpenFlow Specialist** | Monitoring framework, pipeline design, OpenFlow best practices, troubleshooting | 10-15% |
-| **Engagement Manager** | Project management, coordination, status reporting, stakeholder communication | 5 hours/week |
+| Role | Responsibility |
+|------|---------------|
+| **Lead Consultant / Architect** | Overall project leadership, architecture design, stakeholder management, technical reviews |
+| **Solution Architect** | Implementation lead, transformation logic, integration development, testing |
+| **OpenFlow Specialist** | Monitoring framework, pipeline design, OpenFlow best practices, troubleshooting |
+| **Engagement Manager** | Project management, coordination, status reporting, stakeholder communication |
 
 ### 4.2 Canva Team Requirements
 
@@ -484,7 +484,7 @@ Key Milestones:
 | Deliverable | Description |
 |------------|-------------|
 | Monitoring Framework | Pipeline monitoring, alerts, simple dashboards |
-| Ingestion Receiver Infrastructure | Endpoint, auth, validation, processing |
+| Ingestion Pattern | Endpoint, auth, validation, processing |
 | Transformation Templates | Reusable transformation logic |
 | Configuration Framework | Config-driven source onboarding |
 | Error Handling Patterns | DLQ, alerting |
