@@ -5,17 +5,17 @@
 
 ## Executive Summary
 
-Snowflake Service Delivery will partner with Canva to design, implement, and operationalize a scalable webhook integration pattern for ingesting B2B lead data from third-party sources (Splash, Goldcast, RainFocus, G2) into their Snowflake-based data pipeline using OpenFlow. This engagement includes establishing monitoring and alerting frameworks, implementing the first integration, and enabling Canva's operations team to independently launch subsequent integrations.
+Snowflake Service Delivery will partner with Canva to design, implement, and operationalize a scalable ingestion pattern for ingesting B2B lead data from third-party sources (Splash, Goldcast, RainFocus, G2) into their Snowflake-based data pipeline using OpenFlow. This engagement includes establishing monitoring and alerting frameworks, implementing the first integration, and enabling Canva's operations team to independently launch subsequent integrations.
 
 **Key Deliverables:**
-- Webhook integration pattern design and documentation
+- Ingestion pattern design and documentation
 - Monitoring and alerting framework on OpenFlow
 - First third-party source integration (reference implementation)
 - Knowledge transfer and operational runbooks
 - Hypercare support for production stabilization
 
-**Timeline:** 18 weeks (14 weeks core implementation + 4 weeks hypercare)
-**Total Estimated Effort:** 715 hours
+**Timeline:** 20 weeks (16 weeks core implementation + 4 weeks hypercare)
+**Total Estimated Effort:** 903 hours
 
 ---
 
@@ -25,7 +25,7 @@ Snowflake Service Delivery will partner with Canva to design, implement, and ope
 
 #### 1.1.1 Architecture & Design
 - Review and document current B2B data pipeline architecture
-- Design scalable webhook integration pattern for third-party sources
+- Design scalable ingestion pattern for third-party sources
 - Evaluate transformation placement options (OpenFlow vs. Snowflake native)
 - Create architectural decision records (ADRs) with pros/cons analysis
 - Design monitoring and alerting framework for data pipelines
@@ -34,7 +34,7 @@ Snowflake Service Delivery will partner with Canva to design, implement, and ope
 
 #### 1.1.2 Implementation
 - Build monitoring and alerting capabilities for data pipelines
-- Verify and enhance webhook receiver infrastructure
+- Verify and enhance ingestion receiver infrastructure
 - Create transformation templates for field mapping and validation
 - Build error handling and dead-letter queue patterns
 - Configure simple monitoring dashboards and alerts for operations team
@@ -42,7 +42,7 @@ Snowflake Service Delivery will partner with Canva to design, implement, and ope
 
 #### 1.1.3 Documentation & Knowledge Transfer
 - Architecture documentation (current and future state)
-- Pattern implementation guide for webhook integrations
+- Pattern implementation guide for ingestion integrations
 - Configuration templates and examples
 - Operations runbooks for common scenarios
 - Troubleshooting guides
@@ -71,13 +71,13 @@ The following items are explicitly excluded from this engagement:
 ### 1.3 Assumptions
 
 1. Canva provides timely access to required environments and documentation
-2. Third-party source (for first implementation) provides webhook or API access
+2. Third-party source (for first implementation) provides ingestion endpoint or API access
 3. OpenFlow production environment is stable and accessible
 4. Canva operations team is available for training sessions
 5. API credentials and access to third-party platforms will be provided by Canva
 6. Current DynamoDB to Snowflake CDC pipeline is stable
 7. Canva technical team is available for technical reviews through implementation
-8. Webhook infrastructure (receiver endpoints, authentication/authorization, rate limiting, request validation, async processing queue) is already set up by Canva or will be provided as a foundation
+8. Ingestion infrastructure (receiver endpoints, authentication/authorization, rate limiting, request validation, async processing queue) is already set up by Canva or will be provided as a foundation
 9. Architectural and pattern changes will be made based on any limitations identified in current state architecture components (including OpenFlow, DynamoDB, etc.) during the design and implementation phases
 
 ---
@@ -103,7 +103,7 @@ The following items are explicitly excluded from this engagement:
 - Review third-party source documentation (Splash, Goldcast, RainFocus, G2)
 
 **Week 2: Pattern Design**
-- Design webhook receiver architecture
+- Design ingestion receiver architecture
 - Define transformation approach and placement
 - Design error handling
 - Design idempotency and duplicate detection strategy
@@ -124,7 +124,7 @@ The following items are explicitly excluded from this engagement:
 - ✅ Current State Architecture Documentation
 - ✅ Future State Architecture Design
 - ✅ Architectural Decision Records (ADRs)
-- ✅ Webhook Integration Pattern Specification
+- ✅ Ingestion Pattern Specification
 - ✅ Monitoring Framework Design Document
 - ✅ Implementation Plan and Timeline
 
@@ -169,10 +169,10 @@ The following items are explicitly excluded from this engagement:
 
 ---
 
-### Phase 3: Webhook Pattern Implementation (Weeks 7-10)
+### Phase 3: Ingestion Pattern Implementation (Weeks 7-12)
 
 #### Objectives
-- Build reusable webhook integration pattern
+- Build reusable ingestion pattern
 - Create configuration templates
 - Implement transformation and validation logic
 - Establish error handling patterns
@@ -180,33 +180,37 @@ The following items are explicitly excluded from this engagement:
 #### Activities
 
 **Week 7: Infrastructure Verification**
-- Verify webhook receiver endpoints setup
+- Verify ingestion receiver endpoints setup
 - Verify authentication/authorization implementation
 - Verify rate limiting and throttling configuration
 - Verify request validation setup
 - Verify async processing queue implementation
 
-**Week 8: Transformation & Processing**
+**Weeks 8-9: Transformation & Processing**
 - Build transformation templates (field mapping, value constraints)
 - Implement configuration-driven transformation engine
 - Build error handling
 - Implement dead-letter queue for failed records
+- Develop comprehensive unit tests for transformation logic
+- Create transformation configuration documentation
 
-**Week 9: Integration & End-to-End Testing**
-- Integrate webhook receiver with OpenFlow
+**Weeks 10-11: Integration & End-to-End Testing**
+- Integrate ingestion receiver with OpenFlow
 - Implement connection to DynamoDB (PPS/BPS) or other pattern changes agreed upon in design phase
 - Test end-to-end data flow
 - Validate transformation logic
 - Test error scenarios
+- Conduct integration testing across all components
+- Document test results and findings
 
-**Week 10: Optimization & Documentation**
+**Week 12: Optimization & Documentation**
 - Performance testing and tuning
-- Implement post-testing changes based on outcomes from Week 9 testing
+- Implement post-testing changes based on outcomes from integration testing
 - Create configuration templates
 - Prepare for first source integration
 
 #### Deliverables
-- ✅ Webhook Receiver Infrastructure
+- ✅ Ingestion Receiver Infrastructure
 - ✅ Transformation Templates and Engine
 - ✅ Error Handling Logic
 - ✅ Configuration Framework
@@ -215,7 +219,7 @@ The following items are explicitly excluded from this engagement:
 
 ---
 
-### Phase 4: First Source Integration (Weeks 11-13)
+### Phase 4: First Source Integration (Weeks 13-15)
 
 #### Objectives
 - Implement first third-party source as reference
@@ -225,22 +229,22 @@ The following items are explicitly excluded from this engagement:
 
 #### Activities
 
-**Week 11: Source Configuration**
-- Review third-party source API/webhook documentation
+**Week 13: Source Configuration**
+- Review third-party source API/ingestion documentation
 - Configure source-specific transformations
 - Set up authentication and credentials
 - Create source configurations
 - Configure monitoring for new source
 
-**Week 12: Implementation & Testing**
-- Implement source-specific webhook handler
+**Week 14: Implementation & Testing**
+- Implement source-specific ingestion handler
 - Configure field mappings and validations
 - Test data ingestion from third-party source
 - Validate data quality in DynamoDB and Snowflake
 - Test error handling and recovery scenarios
 - Conduct UAT with Canva team
 
-**Week 13: Production Deployment**
+**Week 15: Production Deployment**
 - Deploy to production environment
 - Monitor initial data flow
 - Validate SLA compliance (15-minute target)
@@ -256,7 +260,7 @@ The following items are explicitly excluded from this engagement:
 
 ---
 
-### Phase 5: Knowledge Transfer & Handover (Week 14)
+### Phase 5: Knowledge Transfer & Handover (Week 16)
 
 #### Objectives
 - Transfer knowledge to Canva operations team
@@ -265,7 +269,7 @@ The following items are explicitly excluded from this engagement:
 
 #### Activities
 
-**Week 14: Training & Documentation**
+**Week 16: Training & Documentation**
 - Conduct architecture and design training session
 - Conduct hands-on implementation training
 - Conduct operations and troubleshooting training
@@ -279,7 +283,7 @@ The following items are explicitly excluded from this engagement:
 
 ---
 
-### Phase 6: Hypercare Support (Weeks 15-18)
+### Phase 6: Hypercare Support (Weeks 17-20)
 
 #### Objectives
 - Provide elevated support during stabilization period
@@ -290,8 +294,8 @@ The following items are explicitly excluded from this engagement:
 
 #### Activities
 
-**Weeks 15-18: Post-Production Support**
-- Daily monitoring of pipeline health (Week 15)
+**Weeks 17-20: Post-Production Support**
+- Daily monitoring of pipeline health (Week 17)
 - Regular check-ins with operations team (3x per week → 2x → 1x)
 - Issue triage and resolution support
 - Performance optimization as needed
@@ -303,10 +307,10 @@ The following items are explicitly excluded from this engagement:
 - Final knowledge transfer session
 
 **Support Model:**
-- **Week 15:** Daily sync, active monitoring, immediate response
-- **Week 16:** 3x per week sync, proactive monitoring
-- **Week 17:** 2x per week sync, reactive support
-- **Week 18:** 1x per week sync, escalation support only
+- **Week 17:** Daily sync, active monitoring, immediate response
+- **Week 18:** 3x per week sync, proactive monitoring
+- **Week 19:** 2x per week sync, reactive support
+- **Week 20:** 1x per week sync, escalation support only
 
 #### Deliverables
 - ✅ Daily/Weekly Status Reports
@@ -325,10 +329,10 @@ The following items are explicitly excluded from this engagement:
 ### 3.1 High-Level Timeline Overview
 
 ```
-18-Week Project Timeline (14 weeks core + 4 weeks hypercare)
+20-Week Project Timeline (16 weeks core + 4 weeks hypercare)
 
-Week:  1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18
-       │────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────│
+Week:  1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19   20
+       │────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────│
        
 Phase 1: Discovery & Design
        [════════════════════]
@@ -340,34 +344,34 @@ Phase 2: Monitoring Framework
                            │   Monitoring   │
                            └──────────────────────> Monitoring Live (Week 6)
 
-Phase 3: Webhook Pattern Implementation
-                                              [══════════════════════════════]
-                                              │    Webhook Pattern    │
-                                              └─────────────────────────────> Pattern Complete (Week 10)
+Phase 3: Ingestion Pattern Implementation
+                                              [══════════════════════════════════════════════════]
+                                              │           Ingestion Pattern           │
+                                              └──────────────────────────────────────────────────> Pattern Complete (Week 12)
 
 Phase 4: First Source Integration
-                                                                        [════════════════════]
-                                                                        │  First Source  │
-                                                                        └────────────────────> Production Live (Week 13)
+                                                                                                  [════════════════════]
+                                                                                                  │  First Source  │
+                                                                                                  └────────────────────> Production Live (Week 15)
 
 Phase 5: Knowledge Transfer
-                                                                                          [══════]
-                                                                                          │  KT  │
-                                                                                          └─────> Training Complete (Week 14)
+                                                                                                                        [══════]
+                                                                                                                        │  KT  │
+                                                                                                                        └─────> Training Complete (Week 16)
 
 Phase 6: Hypercare & Handover
-                                                                                                [════════════════════════════════]
-                                                                                                │        Hypercare        │
-                                                                                                └────────────────────────────────> BAU Transition (Week 18)
+                                                                                                                              [════════════════════════════════]
+                                                                                                                              │        Hypercare        │
+                                                                                                                              └────────────────────────────────> BAU Transition (Week 20)
 
 Key Milestones:
   ◆ Week 1:  Project Kickoff
   ◆ Week 3:  Design Approval (Go/No-Go)
   ◆ Week 6:  Monitoring Live (Unblock forms)
-  ◆ Week 10: Pattern Complete
-  ◆ Week 13: First Source Live in Production
-  ◆ Week 14: Training Complete
-  ◆ Week 18: Handover Complete & BAU Transition
+  ◆ Week 12: Pattern Complete
+  ◆ Week 15: First Source Live in Production
+  ◆ Week 16: Training Complete
+  ◆ Week 20: Handover Complete & BAU Transition
 ```
 
 ### 3.2 Detailed Schedule
@@ -376,10 +380,10 @@ Key Milestones:
 |-------|----------|------------|----------|---------------|
 | Phase 1: Discovery & Design | 3 weeks | Week 1 | Week 3 | Design Approval |
 | Phase 2: Monitoring Framework | 3 weeks | Week 4 | Week 6 | Monitoring Live |
-| Phase 3: Webhook Pattern | 4 weeks | Week 7 | Week 10 | Pattern Complete |
-| Phase 4: First Source | 3 weeks | Week 11 | Week 13 | Production Live |
-| Phase 5: Knowledge Transfer | 1 week | Week 14 | Week 14 | Training Complete |
-| Phase 6: Hypercare & Handover | 4 weeks | Week 15 | Week 18 | BAU Transition |
+| Phase 3: Ingestion Pattern | 6 weeks | Week 7 | Week 12 | Pattern Complete |
+| Phase 4: First Source | 3 weeks | Week 13 | Week 15 | Production Live |
+| Phase 5: Knowledge Transfer | 1 week | Week 16 | Week 16 | Training Complete |
+| Phase 6: Hypercare & Handover | 4 weeks | Week 17 | Week 20 | BAU Transition |
 
 ### 3.3 Critical Milestones
 
@@ -388,10 +392,10 @@ Key Milestones:
 | Project Kickoff | Week 1 | Project start |
 | Design Approval | Week 3 | Go/No-Go decision point |
 | Monitoring Live | Week 6 | Unblock forms release |
-| Pattern Complete | Week 10 | Core deliverable |
-| First Source Live | Week 13 | Production deployment |
-| Training Complete | Week 14 | Team enablement |
-| Handover Complete | Week 18 | BAU transition |
+| Pattern Complete | Week 12 | Core deliverable |
+| First Source Live | Week 15 | Production deployment |
+| Training Complete | Week 16 | Team enablement |
+| Handover Complete | Week 20 | BAU transition |
 
 ---
 
@@ -404,12 +408,13 @@ Key Milestones:
 | **Lead Consultant / Architect** | Overall project leadership, architecture design, stakeholder management, technical reviews | 30-40% |
 | **Solution Architect** | Implementation lead, transformation logic, integration development, testing | 50-60% |
 | **OpenFlow Specialist** | Monitoring framework, pipeline design, OpenFlow best practices, troubleshooting | 10-15% |
+| **Engagement Manager** | Project management, coordination, status reporting, stakeholder communication | 5 hours/week |
 
 ### 4.2 Canva Team Requirements
 
 | Role | Time Commitment | Phases |
 |------|----------------|--------|
-| **Jeno** (Technical Lead) | 4-6 hours/week | Weeks 1-13 (before leave) |
+| **Jeno** (Technical Lead) | 4-6 hours/week | Weeks 1-15 (before leave) |
 | **Data Engineer/Architect** | 4-6 hours/week | All phases |
 | **Dave** | 2-4 hours/week | Phases 2-6 |
 | **Narmina & Ops Team** | 8-10 hours/week | Phases 5-6 (training & handover) |
@@ -423,41 +428,25 @@ Key Milestones:
 
 | Phase | Hours |
 |-------|-------|
-| Phase 1: Discovery & Design | 132 |
-| Phase 2: Monitoring Framework | 162 |
-| Phase 3: Webhook Pattern | 176 |
-| Phase 4: First Source Integration | 120 |
-| Phase 5: Knowledge Transfer | 50 |
-| Phase 6: Hypercare & Handover | 75 |
-| **Total Project Hours** | **715** |
+| Phase 1: Discovery & Design | 147 |
+| Phase 2: Monitoring Framework | 177 |
+| Phase 3: Ingestion Pattern | 294 |
+| Phase 4: First Source Integration | 135 |
+| Phase 5: Knowledge Transfer | 55 |
+| Phase 6: Hypercare & Handover | 95 |
+| **Total Project Hours** | **903** |
 
 ### 5.2 Effort Summary by Role
 
 | Role | Hours |
 |------|-------|
-| Lead Consultant / Architect | 320 |
-| Solution Architect | 355 |
-| OpenFlow Specialist | 40 |
-| **Total** | **715** |
+| Lead Consultant / Architect | 340 |
+| Solution Architect | 415 |
+| OpenFlow Specialist | 48 |
+| Engagement Manager | 100 |
+| **Total** | **903** |
 
-### 5.3 Cost Breakdown (Indicative)
-
-*Note: Actual rates to be confirmed based on Snowflake Service Delivery rate card and Canva's existing agreement.*
-
-**Assumptions for estimation purposes:**
-- Lead Consultant/Architect: $250-300/hour
-- Solution Architect: $200-250/hour
-- OpenFlow Specialist: $200-250/hour
-
-| Total Hours | Estimated Cost Range* |
-|-------------|----------------------|
-| **715 hours** | $143,000 - $178,750 |
-
-**Recommended Budget:** $145,000 - $180,000
-
-*\*Cost ranges are indicative. Final pricing will be based on Snowflake Service Delivery standard rates and Canva's existing commercial agreement.*
-
-### 5.4 Cost Assumptions & Exclusions
+### 5.3 Cost Assumptions & Exclusions
 
 **Included in Estimate:**
 - All activities outlined in Phases 1-6
@@ -470,7 +459,7 @@ Key Milestones:
 - Implementation of 2nd-5th third-party sources (Canva team will implement using pattern)
 - Costs for third-party API usage or licenses
 - Snowflake compute/storage costs
-- Infrastructure costs for webhook hosting
+- Infrastructure costs for ingestion hosting
 
 ---
 
@@ -483,7 +472,7 @@ Key Milestones:
 | Current State Architecture Documentation | Technical team |
 | Future State Architecture Design | Technical team |
 | Architectural Decision Records (ADRs) | Technical team |
-| Webhook Integration Pattern Specification | Developers |
+| Ingestion Pattern Specification | Developers |
 | Monitoring Framework Design Document | Ops & Engineering |
 | Configuration Template Library | Ops team |
 | Operational Runbooks | Operations team |
@@ -495,7 +484,7 @@ Key Milestones:
 | Deliverable | Description |
 |------------|-------------|
 | Monitoring Framework | Pipeline monitoring, alerts, simple dashboards |
-| Webhook Receiver Infrastructure | Endpoint, auth, validation, processing |
+| Ingestion Receiver Infrastructure | Endpoint, auth, validation, processing |
 | Transformation Templates | Reusable transformation logic |
 | Configuration Framework | Config-driven source onboarding |
 | Error Handling Patterns | DLQ, alerting |
@@ -520,7 +509,7 @@ Key Milestones:
 
 | Risk | Probability | Impact | Mitigation |
 |------|-------------|--------|------------|
-| **Jeno unavailable before April** | Medium | High | Prioritize critical reviews in Weeks 1-12; document decisions thoroughly |
+| **Jeno unavailable before April** | Medium | High | Prioritize critical reviews in Weeks 1-15; document decisions thoroughly |
 | **Third-party API delays** | Medium | Medium | Engage third-party vendors early; have backup source option |
 | **Scope creep** | Medium | Medium | Strict change control; separate "nice-to-have" for Phase 2 |
 | **Holiday/vacation scheduling** | Low | Low | Identify key dates early; plan around holidays |
@@ -556,7 +545,7 @@ Key Milestones:
 4. **Credentials:** API keys and authentication credentials for third-party sources will be provided by Canva
 5. **Team Availability:** Canva technical team available for weekly design reviews and bi-weekly status meetings
 6. **OpenFlow Stability:** OpenFlow platform is production-ready and stable for new implementations
-7. **Infrastructure:** Webhook hosting infrastructure is available or can be provisioned quickly
+7. **Infrastructure:** Ingestion hosting infrastructure is available or can be provisioned quickly
 8. **Approval Process:** Technical decisions can be approved within 3-5 business days
 
 ### 8.2 Critical Dependencies
@@ -566,10 +555,10 @@ Key Milestones:
 | OpenFlow environment access | Canva | Week 1 | High |
 | Third-party API documentation | Canva | Week 2 | High |
 | Schema and data model documentation | Canva | Week 1 | Medium |
-| API credentials for first source | Canva | Week 11 | High |
+| API credentials for first source | Canva | Week 13 | High |
 | Operations team availability for training | Canva | Phase 5 | Medium |
 | Design approval from stakeholders | Canva | Week 3 | High |
-| Webhook infrastructure foundation | Canva/IT | Week 7 | Medium |
+| Ingestion infrastructure foundation | Canva/IT | Week 7 | Medium |
 
 ---
 
