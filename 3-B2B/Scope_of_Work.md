@@ -1,23 +1,11 @@
 # Scope of Work: Canva B2B Data Pipeline Enhancement
-## Professional Services Engagement
-
----
-
-## Document Control
-- **Version:** 1.2
-- **Date:** December 2025
-- **Project Name:** Canva B2B Pipeline H1 2026
-- **Client:** Canva
-- **Service Provider:** Snowflake Professional Services
-- **Engagement Type:** Fixed Scope - Time & Materials
-- **Primary Contact (Snowflake):** Snowflake Professional Services
-- **Primary Contact (Canva):** Jeno
+## Service Delivery Engagement
 
 ---
 
 ## Executive Summary
 
-Snowflake Professional Services will partner with Canva to design, implement, and operationalize a scalable webhook integration pattern for ingesting B2B lead data from third-party sources (Splash, Goldcast, RainFocus, G2) into their Snowflake-based data pipeline using OpenFlow. This engagement includes establishing monitoring and alerting frameworks, implementing the first integration, and enabling Canva's operations team to independently launch subsequent integrations.
+Snowflake Service Delivery will partner with Canva to design, implement, and operationalize a scalable webhook integration pattern for ingesting B2B lead data from third-party sources (Splash, Goldcast, RainFocus, G2) into their Snowflake-based data pipeline using OpenFlow. This engagement includes establishing monitoring and alerting frameworks, implementing the first integration, and enabling Canva's operations team to independently launch subsequent integrations.
 
 **Key Deliverables:**
 - Webhook integration pattern design and documentation
@@ -361,7 +349,7 @@ The following items are explicitly excluded from this engagement:
 
 ## 4. Resource Plan
 
-### 4.1 Snowflake Professional Services Team
+### 4.1 Snowflake Service Delivery Team
 
 | Role | Responsibility | Commitment |
 |------|---------------|------------|
@@ -406,7 +394,7 @@ The following items are explicitly excluded from this engagement:
 
 ### 5.3 Cost Breakdown (Indicative)
 
-*Note: Actual rates to be confirmed based on Snowflake Professional Services rate card and Canva's existing agreement.*
+*Note: Actual rates to be confirmed based on Snowflake Service Delivery rate card and Canva's existing agreement.*
 
 **Assumptions for estimation purposes:**
 - Lead Consultant/Architect: $250-300/hour
@@ -419,7 +407,7 @@ The following items are explicitly excluded from this engagement:
 
 **Recommended Budget:** $145,000 - $180,000
 
-*\*Cost ranges are indicative. Final pricing will be based on Snowflake Professional Services standard rates and Canva's existing commercial agreement.*
+*\*Cost ranges are indicative. Final pricing will be based on Snowflake Service Delivery standard rates and Canva's existing commercial agreement.*
 
 ### 5.4 Cost Assumptions & Exclusions
 
