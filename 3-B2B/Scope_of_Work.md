@@ -363,7 +363,7 @@ The following items are explicitly excluded from this engagement:
 |------|----------------|--------|
 | **Jeno** (Technical Lead) | 4-6 hours/week | Weeks 1-13 (before leave) |
 | **Data Engineer/Architect** | 4-6 hours/week | All phases |
-| **Dave** (OpenFlow Specialist) | 2-4 hours/week | Phases 2-6 |
+| **Dave** | 2-4 hours/week | Phases 2-6 |
 | **Narmina & Ops Team** | 8-10 hours/week | Phases 5-6 (training & handover) |
 | **Adrian** | 2-3 hours/week | As needed |
 
@@ -466,43 +466,9 @@ The following items are explicitly excluded from this engagement:
 
 ---
 
-## 7. Success Criteria & KPIs
+## 7. Risks & Mitigation Strategies
 
-### 7.1 Technical Success Criteria
-
-| Criterion | Target | Measurement |
-|-----------|--------|-------------|
-| **Data Latency** | < 15 minutes (SLA), < 5 minutes (SLO) | End-to-end from webhook to Snowflake |
-| **Pipeline Availability** | > 99.5% | Uptime monitoring |
-| **Data Quality** | > 99% records passing validation | Quality checks |
-| **Error Rate** | < 1% failed records | Error monitoring |
-| **Monitoring Coverage** | 100% of pipelines monitored | Dashboard verification |
-| **Alert Response Time** | < 15 minutes for critical alerts | Operations team SLA |
-
-### 7.2 Operational Success Criteria
-
-| Criterion | Target | Measurement |
-|-----------|--------|-------------|
-| **Self-Service Onboarding** | Ops team can add new source in < 5 days | Time tracking |
-| **Documentation Completeness** | 100% of components documented | Review checklist |
-| **Training Effectiveness** | 80%+ on post-training assessment | Quiz scores |
-| **Manual Intervention Reduction** | < 10% of ingestions require manual action | Ops metrics |
-| **Knowledge Transfer** | Ops team successfully launches 2nd source | Handover validation |
-
-### 7.3 Business Success Criteria
-
-| Criterion | Target | Measurement |
-|-----------|--------|-------------|
-| **Timeline Adherence** | First source live by end of March | Milestone tracking |
-| **Scalability** | Pattern supports 5+ sources with no changes | Architectural review |
-| **Cost Efficiency** | Reduced external consulting needs | Budget tracking |
-| **Team Enablement** | Canva team operates independently post-hypercare | Support tickets |
-
----
-
-## 8. Risks & Mitigation Strategies
-
-### 8.1 Schedule Risks
+### 7.1 Schedule Risks
 
 | Risk | Probability | Impact | Mitigation |
 |------|-------------|--------|------------|
@@ -511,7 +477,7 @@ The following items are explicitly excluded from this engagement:
 | **Scope creep** | Medium | Medium | Strict change control; separate "nice-to-have" for Phase 2 |
 | **Holiday/vacation scheduling** | Low | Low | Identify key dates early; plan around holidays |
 
-### 8.2 Technical Risks
+### 7.2 Technical Risks
 
 | Risk | Probability | Impact | Mitigation |
 |------|-------------|--------|------------|
@@ -521,7 +487,7 @@ The following items are explicitly excluded from this engagement:
 | **Security/compliance requirements** | Low | Medium | Early security review in Phase 1; involve security team |
 | **Data quality issues** | Medium | High | Comprehensive validation; staging environment testing |
 
-### 8.3 Organizational Risks
+### 7.3 Organizational Risks
 
 | Risk | Probability | Impact | Mitigation |
 |------|-------------|--------|------------|
@@ -532,9 +498,9 @@ The following items are explicitly excluded from this engagement:
 
 ---
 
-## 9. Assumptions & Dependencies
+## 8. Assumptions & Dependencies
 
-### 9.1 Key Assumptions
+### 8.1 Key Assumptions
 
 1. **Environment Access:** Snowflake team will receive full access to OpenFlow production and development environments by project kickoff
 2. **Data Access:** Access to B2B Express schemas, DynamoDB structure, and sample data will be provided
@@ -545,7 +511,7 @@ The following items are explicitly excluded from this engagement:
 7. **Infrastructure:** Webhook hosting infrastructure is available or can be provisioned quickly
 8. **Approval Process:** Technical decisions can be approved within 3-5 business days
 
-### 9.2 Critical Dependencies
+### 8.2 Critical Dependencies
 
 | Dependency | Owner | Required By | Risk Level |
 |------------|-------|-------------|------------|
