@@ -4,13 +4,13 @@
 ---
 
 ## Document Control
-- **Version:** 1.1
+- **Version:** 1.2
 - **Date:** December 2025
 - **Project Name:** Canva B2B Pipeline H1 2026
 - **Client:** Canva
 - **Service Provider:** Snowflake Professional Services
 - **Engagement Type:** Fixed Scope - Time & Materials
-- **Primary Contact (Snowflake):** Mazen Hindi
+- **Primary Contact (Snowflake):** Snowflake Professional Services
 - **Primary Contact (Canva):** Jeno
 
 ---
@@ -27,7 +27,7 @@ Snowflake Professional Services will partner with Canva to design, implement, an
 - Hypercare support for production stabilization
 
 **Timeline:** 18 weeks (14 weeks core implementation + 4 weeks hypercare)
-**Total Estimated Effort:** 585-710 hours
+**Total Estimated Effort:** 715 hours
 
 ---
 
@@ -49,7 +49,6 @@ Snowflake Professional Services will partner with Canva to design, implement, an
 - Verify and enhance webhook receiver infrastructure
 - Create transformation templates for field mapping and validation
 - Build error handling and dead-letter queue patterns
-- Implement data quality checks
 - Configure simple monitoring dashboards and alerts for operations team
 - Integrate first third-party source (Splash, Goldcast, or RainFocus - TBD)
 
@@ -80,7 +79,6 @@ The following items are explicitly excluded from this engagement:
 - Implementation of sources beyond the first reference implementation (Canva team will implement 2-4 additional sources)
 - Fivetran replacement for non-lead data pipelines
 - IPO readiness workstreams unrelated to B2B data pipeline
-- Code review of existing OpenFlow pipelines (unless blocking issues identified)
 
 ### 1.3 Assumptions
 
@@ -111,7 +109,7 @@ The following items are explicitly excluded from this engagement:
 **Week 1: Current State Assessment**
 - Conduct architecture deep-dive sessions with Canva team
 - Review existing OpenFlow pipelines and configurations
-- Document current data flow (external sources → OpenFlow → DynamoDB → Snowflake → Salesforce)
+- Document current data flow (external sources → OpenFlow → DynamoDB → Snowflake → OpenFlow → Salesforce)
 - Review B2B Express schema and data models
 - Assess current monitoring capabilities and gaps
 - Review third-party source documentation (Splash, Goldcast, RainFocus, G2)
@@ -141,14 +139,6 @@ The following items are explicitly excluded from this engagement:
 - ✅ Webhook Integration Pattern Specification
 - ✅ Monitoring Framework Design Document
 - ✅ Implementation Plan and Timeline
-
-#### Effort Estimate
-| Role | Hours |
-|------|-------|
-| Lead Architect / Consultant | 60-70 |
-| OpenFlow Specialist | 30-40 |
-| Data Engineer | 20-25 |
-| **Phase Total** | **110-135 hours** |
 
 ---
 
@@ -188,14 +178,6 @@ The following items are explicitly excluded from this engagement:
 - ✅ Alert Configuration (if no system blockers)
 - ✅ Monitoring Operations Guide
 - ✅ Training Session for Operations Team
-
-#### Effort Estimate
-| Role | Hours |
-|------|-------|
-| OpenFlow Specialist | 60-70 |
-| Data Engineer | 40-50 |
-| Lead Consultant (oversight) | 15-20 |
-| **Phase Total** | **115-140 hours** |
 
 ---
 
@@ -243,15 +225,6 @@ The following items are explicitly excluded from this engagement:
 - ✅ Configuration Template Library
 - ✅ Unit and Integration Tests
 
-#### Effort Estimate
-| Role | Hours |
-|------|-------|
-| Data Engineer | 80-90 |
-| OpenFlow Specialist | 50-60 |
-| Lead Consultant | 30-35 |
-| Security/DevOps Specialist | 15-20 |
-| **Phase Total** | **175-205 hours** |
-
 ---
 
 ### Phase 4: First Source Integration (Weeks 11-13)
@@ -293,14 +266,6 @@ The following items are explicitly excluded from this engagement:
 - ✅ Production Deployment Documentation
 - ✅ Deployment Runbook (approved by Canva)
 
-#### Effort Estimate
-| Role | Hours |
-|------|-------|
-| Data Engineer | 40-50 |
-| OpenFlow Specialist | 30-35 |
-| Lead Consultant | 20-25 |
-| **Phase Total** | **90-110 hours** |
-
 ---
 
 ### Phase 5: Knowledge Transfer & Handover (Week 14)
@@ -323,14 +288,6 @@ The following items are explicitly excluded from this engagement:
 - ✅ Training Sessions (Architecture, Implementation, Operations)
 - ✅ Operational Runbooks
 - ✅ Troubleshooting Guides
-
-#### Effort Estimate
-| Role | Hours |
-|------|-------|
-| Lead Consultant | 15-20 |
-| Data Engineer | 10-12 |
-| OpenFlow Specialist | 8-10 |
-| **Phase Total** | **33-42 hours** |
 
 ---
 
@@ -373,27 +330,11 @@ The following items are explicitly excluded from this engagement:
 - ✅ Hypercare Closeout Report
 - ✅ Transition to BAU Support
 
-#### Effort Estimate
-| Role | Hours |
-|------|-------|
-| Lead Consultant | 30-35 |
-| Data Engineer | 20-25 |
-| OpenFlow Specialist | 12-18 |
-| **Phase Total** | **62-78 hours** |
-
 ---
 
 ## 3. Project Timeline
 
-### 3.1 High-Level Timeline (18 Weeks Total: 14 Weeks Core + 4 Weeks Hypercare)
-
-```
-Week: 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18
-     [Phase 1 ] [Phase 2   ] [Phase 3      ] [Ph4   ] [5][Phase 6      ]
-     [Design  ] [Monitor   ] [Webhook      ] [Source] [KT][Hypercare    ]
-```
-
-### 3.2 Detailed Schedule
+### 3.1 Detailed Schedule
 
 | Phase | Duration | Start Week | End Week | Key Milestone |
 |-------|----------|------------|----------|---------------|
@@ -404,7 +345,7 @@ Week: 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18
 | Phase 5: Knowledge Transfer | 1 week | Week 14 | Week 14 | Training Complete |
 | Phase 6: Hypercare & Handover | 4 weeks | Week 15 | Week 18 | BAU Transition |
 
-### 3.3 Critical Milestones
+### 3.2 Critical Milestones
 
 | Milestone | Target Week | Importance |
 |-----------|-------------|------------|
@@ -416,10 +357,6 @@ Week: 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18
 | Training Complete | Week 14 | Team enablement |
 | Handover Complete | Week 18 | BAU transition |
 
-### 3.4 Timeline Constraints
-- **Priority 1:** First source integration must be completed by end of Week 13 before Jeno's parental leave
-- **Priority 2:** Monitoring framework is blocking release of 50-60 existing forms, prioritized in Phase 2
-
 ---
 
 ## 4. Resource Plan
@@ -428,10 +365,9 @@ Week: 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18
 
 | Role | Responsibility | Commitment |
 |------|---------------|------------|
-| **Lead Consultant / Architect** (Mazen Hindi) | Overall project leadership, architecture design, stakeholder management, technical reviews | 30-40% |
-| **Senior Data Engineer** | Implementation lead, transformation logic, integration development, testing | 50-60% |
-| **OpenFlow Specialist** | Monitoring framework, pipeline design, OpenFlow best practices, troubleshooting | 40-50% |
-| **Security/DevOps Specialist** | Security review, authentication setup, deployment automation | 10-15% (Phase 3 only) |
+| **Lead Consultant / Architect** | Overall project leadership, architecture design, stakeholder management, technical reviews | 30-40% |
+| **Solution Architect** | Implementation lead, transformation logic, integration development, testing | 50-60% |
+| **OpenFlow Specialist** | Monitoring framework, pipeline design, OpenFlow best practices, troubleshooting | 10-15% |
 
 ### 4.2 Canva Team Requirements
 
@@ -449,26 +385,24 @@ Week: 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18
 
 ### 5.1 Effort Summary by Phase
 
-| Phase | Hours (Low) | Hours (High) | Average |
-|-------|-------------|--------------|---------|
-| Phase 1: Discovery & Design | 110 | 135 | 123 |
-| Phase 2: Monitoring Framework | 115 | 140 | 128 |
-| Phase 3: Webhook Pattern | 175 | 205 | 190 |
-| Phase 4: First Source Integration | 90 | 110 | 100 |
-| Phase 5: Knowledge Transfer | 33 | 42 | 38 |
-| Phase 6: Hypercare & Handover | 62 | 78 | 70 |
-| **Total Project Hours** | **585** | **710** | **649** |
+| Phase | Hours |
+|-------|-------|
+| Phase 1: Discovery & Design | 132 |
+| Phase 2: Monitoring Framework | 162 |
+| Phase 3: Webhook Pattern | 176 |
+| Phase 4: First Source Integration | 120 |
+| Phase 5: Knowledge Transfer | 50 |
+| Phase 6: Hypercare & Handover | 75 |
+| **Total Project Hours** | **715** |
 
 ### 5.2 Effort Summary by Role
 
-| Role | Hours (Low) | Hours (High) | Average |
-|------|-------------|--------------|---------|
-| Lead Consultant / Architect | 175 | 210 | 193 |
-| Senior Data Engineer | 185 | 225 | 205 |
-| OpenFlow Specialist | 190 | 220 | 205 |
-| Security/DevOps Specialist | 15 | 20 | 18 |
-| Project Management | 20 | 35 | 28 |
-| **Total** | **585** | **710** | **649** |
+| Role | Hours |
+|------|-------|
+| Lead Consultant / Architect | 320 |
+| Solution Architect | 355 |
+| OpenFlow Specialist | 40 |
+| **Total** | **715** |
 
 ### 5.3 Cost Breakdown (Indicative)
 
@@ -476,18 +410,14 @@ Week: 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18
 
 **Assumptions for estimation purposes:**
 - Lead Consultant/Architect: $250-300/hour
-- Senior Data Engineer: $200-250/hour
+- Solution Architect: $200-250/hour
 - OpenFlow Specialist: $200-250/hour
-- Security/DevOps Specialist: $200-250/hour
-- Project Management: $150-200/hour
 
-| Scenario | Total Hours | Estimated Cost Range* |
-|----------|-------------|----------------------|
-| **Low Estimate** | 585 hours | $117,000 - $146,250 |
-| **Average Estimate** | 649 hours | $129,800 - $162,250 |
-| **High Estimate** | 710 hours | $142,000 - $177,500 |
+| Total Hours | Estimated Cost Range* |
+|-------------|----------------------|
+| **715 hours** | $143,000 - $178,750 |
 
-**Recommended Budget:** $130,000 - $165,000 (based on average estimate)
+**Recommended Budget:** $145,000 - $180,000
 
 *\*Cost ranges are indicative. Final pricing will be based on Snowflake Professional Services standard rates and Canva's existing commercial agreement.*
 
@@ -502,11 +432,9 @@ Week: 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18
 
 **Not Included in Estimate:**
 - Implementation of 2nd-5th third-party sources (Canva team will implement using pattern)
-- Travel expenses (if on-site workshops required)
 - Costs for third-party API usage or licenses
 - Snowflake compute/storage costs
 - Infrastructure costs for webhook hosting
-- Post-hypercare ongoing support (covered under standard support agreement)
 
 ---
 
@@ -514,39 +442,39 @@ Week: 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18
 
 ### 6.1 Documentation Deliverables
 
-| Deliverable | Format | Audience |
-|------------|--------|----------|
-| Current State Architecture Documentation | Confluence/Markdown | Technical team |
-| Future State Architecture Design | Confluence/Markdown with diagrams | Technical team |
-| Architectural Decision Records (ADRs) | Markdown | Technical team |
-| Webhook Integration Pattern Specification | Technical document | Developers |
-| Monitoring Framework Design Document | Technical document | Ops & Engineering |
-| Configuration Template Library | YAML/JSON with examples | Ops team |
-| Operational Runbooks | Confluence/Wiki | Operations team |
-| Troubleshooting Guides | Confluence/Wiki | Operations team |
-| Training Materials | Slides + recordings | Operations team |
+| Deliverable | Audience |
+|------------|----------|
+| Current State Architecture Documentation | Technical team |
+| Future State Architecture Design | Technical team |
+| Architectural Decision Records (ADRs) | Technical team |
+| Webhook Integration Pattern Specification | Developers |
+| Monitoring Framework Design Document | Ops & Engineering |
+| Configuration Template Library | Ops team |
+| Operational Runbooks | Operations team |
+| Troubleshooting Guides | Operations team |
+| Training Materials | Operations team |
 
 ### 6.2 Technical Deliverables
 
-| Deliverable | Description | Ownership Post-Project |
-|------------|-------------|------------------------|
-| Monitoring Framework | Pipeline monitoring, alerts, simple dashboards | Canva operations team |
-| Webhook Receiver Infrastructure | Endpoint, auth, validation, processing | Canva operations team |
-| Transformation Templates | Reusable transformation logic | Canva engineering team |
-| Configuration Framework | Config-driven source onboarding | Canva operations team |
-| Error Handling Patterns | DLQ, alerting | Canva operations team |
-| First Source Integration | Production-ready integration (Splash/Goldcast/RainFocus) | Canva operations team |
-| Test Suite | Unit, integration, end-to-end tests | Canva engineering team |
+| Deliverable | Description |
+|------------|-------------|
+| Monitoring Framework | Pipeline monitoring, alerts, simple dashboards |
+| Webhook Receiver Infrastructure | Endpoint, auth, validation, processing |
+| Transformation Templates | Reusable transformation logic |
+| Configuration Framework | Config-driven source onboarding |
+| Error Handling Patterns | DLQ, alerting |
+| First Source Integration | Production-ready integration (Splash/Goldcast/RainFocus) |
+| Test Suite | Unit, integration, end-to-end tests |
 
 ### 6.3 Knowledge Transfer Deliverables
 
-| Deliverable | Format | Duration |
-|------------|--------|----------|
-| Architecture & Design Training | Workshop | Half day |
-| Hands-on Implementation Training | Workshop | Half day |
-| Operations & Troubleshooting Training | Workshop | Half day |
-| Guided Second Source Implementation | Pair programming session | During hypercare |
-| Office Hours (during hypercare) | Q&A sessions | As needed |
+| Deliverable | Duration |
+|------------|----------|
+| Architecture & Design Training | Half day |
+| Hands-on Implementation Training | Half day |
+| Operations & Troubleshooting Training | Half day |
+| Guided Second Source Implementation | During hypercare |
+| Office Hours (during hypercare) | As needed |
 
 ---
 
@@ -592,7 +520,6 @@ Week: 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18
 |------|-------------|--------|------------|
 | **Jeno unavailable before April** | Medium | High | Prioritize critical reviews in Weeks 1-12; document decisions thoroughly |
 | **Third-party API delays** | Medium | Medium | Engage third-party vendors early; have backup source option |
-| **OpenFlow stability issues** | Low | High | Include buffer time; engage Snowflake product team if needed |
 | **Scope creep** | Medium | Medium | Strict change control; separate "nice-to-have" for Phase 2 |
 | **Holiday/vacation scheduling** | Low | Low | Identify key dates early; plan around holidays |
 
@@ -642,211 +569,6 @@ Week: 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18
 | Design approval from stakeholders | Canva | Week 3 | High |
 | Webhook infrastructure foundation | Canva/IT | Week 7 | Medium |
 
-### 9.3 External Dependencies
-
-- **Third-Party Vendors:** Webhook availability and API stability from Splash, Goldcast, RainFocus
-- **Snowflake Product Team:** Support for any OpenFlow product issues or limitations
-- **Canva IT/Security:** Infrastructure provisioning, security approvals, network configurations
-
----
-
-## 10. Governance & Communication
-
-### 10.1 Project Governance Structure
-
-```
-Executive Sponsor (Vanessa Barcellona)
-          |
-    Project Steering Committee
-    (Quarterly reviews)
-          |
-    Project Manager
-    /              \
-Snowflake Team   Canva Team
-(Mazen + team)   (Jeno, Dave, Narmina)
-```
-
-### 10.2 Meeting Cadence
-
-| Meeting Type | Frequency | Duration | Attendees | Purpose |
-|--------------|-----------|----------|-----------|---------|
-| **Project Kickoff** | Once | 2 hours | All stakeholders | Align on scope, timeline, expectations |
-| **Weekly Sync** | Weekly | 1 hour | Core team (both sides) | Progress updates, blockers, decisions |
-| **Design Reviews** | As needed (3-4 total) | 2 hours | Technical team | Review and approve designs |
-| **Demo Sessions** | Every 2 weeks | 30 min | Core + extended team | Show progress, gather feedback |
-| **Steering Committee** | Monthly | 30 min | Executives + PM | Strategic alignment, escalations |
-| **Training Sessions** | During Phase 5 | Half day (x3) | Ops team + trainers | Knowledge transfer |
-| **Hypercare Check-ins** | Per schedule | 30 min | Core team | Support and issue triage |
-
-### 10.3 Communication Plan
-
-| Stakeholder Group | Updates | Method | Frequency |
-|-------------------|---------|--------|-----------|
-| **Executive Sponsors** | Strategic progress, risks, decisions | Email summary + steering meetings | Monthly |
-| **Project Core Team** | Detailed progress, technical issues | Weekly sync + Slack | Weekly |
-| **Extended Team** | Demos, major milestones | Email + demo sessions | Bi-weekly |
-| **Operations Team** | Operational changes, training | Dedicated Slack channel | As needed |
-
-### 10.4 Status Reporting
-
-**Weekly Status Report includes:**
-- Accomplishments this week
-- Planned activities next week
-- Blockers and risks (RAG status)
-- Milestone progress
-- Budget/hours tracking
-
-**Monthly Executive Summary includes:**
-- Progress against timeline
-- Key milestones achieved
-- Risks and mitigation actions
-- Budget status
-- Upcoming critical decisions
-
----
-
-## 11. Change Management
-
-### 11.1 Change Control Process
-
-**Change Request Procedure:**
-1. Submit change request in writing (email or project tool)
-2. Project Manager reviews and assesses impact
-3. Impact analysis (timeline, cost, scope, risk)
-4. Present to steering committee if material impact
-5. Decision within 5 business days
-6. Document decision and update project plan
-
-### 11.2 Change Classification
-
-| Type | Definition | Approval Authority |
-|------|------------|-------------------|
-| **Minor** | < 5 hours, no timeline impact | Project Manager |
-| **Moderate** | 5-20 hours, < 1 week delay | Core team consensus |
-| **Major** | > 20 hours or > 1 week delay | Steering committee |
-
-### 11.3 Out of Scope Request Handling
-
-Requests falling outside defined scope will be:
-1. Documented in "Future Enhancements" backlog
-2. Discussed for potential Phase 2 inclusion
-3. Quoted separately if urgent
-
----
-
-## 12. Quality Assurance
-
-### 12.1 Code Quality Standards
-- Follow Snowflake and OpenFlow best practices
-- Peer review for all code changes
-- Automated testing (unit + integration tests)
-- Security review for authentication and data handling
-
-### 12.2 Documentation Quality Standards
-- Technical accuracy verified by subject matter experts
-- Clarity reviewed by operations team (target audience)
-- Examples and screenshots included
-- Version controlled and maintained in Canva's system
-
-### 12.3 Testing Strategy
-
-| Test Type | Scope | Responsibility | Phase |
-|-----------|-------|----------------|-------|
-| **Unit Testing** | Individual components | Development team | Phase 3 |
-| **Integration Testing** | End-to-end data flow | Development team | Phase 3-4 |
-| **UAT** | Business validation | Canva team | Phase 4 |
-| **Performance Testing** | Latency, throughput | Development team | Phase 3-4 |
-| **Security Testing** | Authentication, data protection | Security specialist | Phase 3 |
-| **Operational Testing** | Monitoring, alerting | Operations team | Phase 5 |
-
----
-
-## 13. Project Closeout
-
-### 13.1 Closeout Criteria
-
-The project will be considered complete when:
-- [x] All deliverables accepted by Canva
-- [x] First third-party source live in production
-- [x] Operations team successfully launches second source (with guidance)
-- [x] Training completed and assessed
-- [x] All documentation delivered and reviewed
-- [x] Hypercare period successfully completed
-- [x] No high or critical severity issues open
-- [x] Final project report submitted
-
-### 13.2 Closeout Activities
-
-1. **Final Demo:** Demonstrate all deliverables to stakeholders
-2. **Documentation Handover:** Transfer all documentation to Canva systems
-3. **Knowledge Transfer Verification:** Assess operations team readiness
-4. **Lessons Learned Session:** Capture feedback for future engagements
-5. **Final Report:** Summarize achievements, metrics, recommendations
-6. **Transition to BAU:** Hand over to standard Snowflake support
-7. **Customer Satisfaction Survey:** Gather feedback
-
-### 13.3 Post-Project Support
-
-After hypercare ends (Week 18):
-- **Standard Support:** Issues handled through Canva's existing support agreement with Snowflake
-- **Follow-up Review:** Optional 30-day post-project review meeting
-- **Enhancement Requests:** Captured for potential Phase 2 engagement
-
----
-
-## 14. Terms & Conditions
-
-### 14.1 Engagement Model
-- **Type:** Fixed scope, time and materials
-- **Estimated Effort:** 585-710 hours
-- **Duration:** 18 weeks (14 weeks core implementation + 4 weeks hypercare)
-- **Billing:** Bi-weekly based on actual hours worked
-- **Rate Card:** Per Snowflake Professional Services standard rates (or per existing Canva agreement)
-
-### 14.2 Resource Commitment
-- Snowflake team commitment as outlined in Section 4.1
-- Canva team availability as outlined in Section 4.2
-- 30-day advance notice required for resource changes
-
-### 14.3 Expenses
-- Remote engagement (no travel expected)
-- Any required travel must be pre-approved and billed separately
-- Third-party tool/API costs are Canva's responsibility
-
-### 14.4 Intellectual Property
-- Implementation code and configurations: Canva owns
-- Reusable patterns and frameworks: Snowflake may reuse (anonymized)
-- Documentation specific to Canva: Canva owns
-- General best practices documentation: Snowflake may reuse
-
-### 14.5 Confidentiality
-- All parties bound by existing Snowflake-Canva agreement
-- Canva data treated as confidential
-- Architecture details not shared externally without approval
-
----
-
-## 15. Approvals
-
-### 15.1 Scope Approval
-
-By signing below, both parties agree to the scope, timeline, deliverables, and terms outlined in this Statement of Work.
-
-| Role | Name | Signature | Date |
-|------|------|-----------|------|
-| **Canva Technical Lead** | Jeno | | |
-| **Canva Executive Sponsor** | [Name/Title] | | |
-| **Snowflake PS Lead** | Mazen Hindi | | |
-| **Snowflake Account Director** | Vanessa Barcellona | | |
-
-### 15.2 Change Log
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | December 2025 | Mazen Hindi | Initial version |
-| 1.1 | December 2025 | Mazen Hindi | Updated based on scope refinement discussions |
-| | | | |
-
 ---
 
 ## Appendix A: Acronyms & Glossary
@@ -869,35 +591,5 @@ By signing below, both parties agree to the scope, timeline, deliverables, and t
 
 ---
 
-## Appendix B: Contact Information
-
-### Snowflake Team
-- **Mazen Hindi:** Lead Professional Services Consultant - [email]
-- **Vanessa Barcellona:** Global Account Director - [email]
-- **[Data Engineer Name]:** Senior Data Engineer - [email]
-- **[OpenFlow Specialist Name]:** OpenFlow Specialist - [email]
-
-### Canva Team
-- **Jeno:** Technical Lead - [email]
-- **Data Engineer/Architect:** [Name] - [email]
-- **Dave:** OpenFlow Specialist - [email]
-- **Narmina:** Operations Team Lead - [email]
-- **Adrian:** [Role] - [email]
-
----
-
-## Appendix C: Reference Documents
-
-1. Initial Meeting Summary (provided)
-2. Canva B2B Requirements Document (companion to this SOW)
-3. Third-Party API Documentation (Splash, Goldcast, RainFocus, G2)
-4. Snowflake-Canva Partnership Agreement (Sept 30, 2024)
-5. OpenFlow Best Practices Guide
-6. Canva B2B Express Schema Documentation
-
----
-
 **End of Scope of Work Document**
-
-*This document serves as the basis for the professional services engagement between Snowflake and Canva. Any modifications must be agreed upon in writing by both parties through the change control process outlined in Section 11.*
 
