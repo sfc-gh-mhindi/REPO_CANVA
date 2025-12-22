@@ -322,7 +322,55 @@ The following items are explicitly excluded from this engagement:
 
 ## 3. Project Timeline
 
-### 3.1 Detailed Schedule
+### 3.1 High-Level Timeline Overview
+
+```
+18-Week Project Timeline (14 weeks core + 4 weeks hypercare)
+
+Week:  1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18
+       │────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────│
+       
+Phase 1: Discovery & Design
+       [════════════════════]
+       │    Design    │    │
+       └─────────────────────> Design Approval (Week 3)
+
+Phase 2: Monitoring Framework
+                           [════════════════════]
+                           │   Monitoring   │
+                           └──────────────────────> Monitoring Live (Week 6)
+
+Phase 3: Webhook Pattern Implementation
+                                              [══════════════════════════════]
+                                              │    Webhook Pattern    │
+                                              └─────────────────────────────> Pattern Complete (Week 10)
+
+Phase 4: First Source Integration
+                                                                        [════════════════════]
+                                                                        │  First Source  │
+                                                                        └────────────────────> Production Live (Week 13)
+
+Phase 5: Knowledge Transfer
+                                                                                          [══════]
+                                                                                          │  KT  │
+                                                                                          └─────> Training Complete (Week 14)
+
+Phase 6: Hypercare & Handover
+                                                                                                [════════════════════════════════]
+                                                                                                │        Hypercare        │
+                                                                                                └────────────────────────────────> BAU Transition (Week 18)
+
+Key Milestones:
+  ◆ Week 1:  Project Kickoff
+  ◆ Week 3:  Design Approval (Go/No-Go)
+  ◆ Week 6:  Monitoring Live (Unblock forms)
+  ◆ Week 10: Pattern Complete
+  ◆ Week 13: First Source Live in Production
+  ◆ Week 14: Training Complete
+  ◆ Week 18: Handover Complete & BAU Transition
+```
+
+### 3.2 Detailed Schedule
 
 | Phase | Duration | Start Week | End Week | Key Milestone |
 |-------|----------|------------|----------|---------------|
@@ -333,7 +381,7 @@ The following items are explicitly excluded from this engagement:
 | Phase 5: Knowledge Transfer | 1 week | Week 14 | Week 14 | Training Complete |
 | Phase 6: Hypercare & Handover | 4 weeks | Week 15 | Week 18 | BAU Transition |
 
-### 3.2 Critical Milestones
+### 3.3 Critical Milestones
 
 | Milestone | Target Week | Importance |
 |-----------|-------------|------------|
