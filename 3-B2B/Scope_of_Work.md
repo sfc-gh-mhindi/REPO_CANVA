@@ -14,6 +14,7 @@ Snowflake Service Delivery will partner with Canva to design, implement, and ope
 - Knowledge transfer and operational runbooks
 - Hypercare support for production stabilization
 
+**Contract Type**: Outcome based
 **Timeline:** 20 weeks (16 weeks core implementation + 4 weeks hypercare)
 **Total Estimated Effort:** 903 hours
 
