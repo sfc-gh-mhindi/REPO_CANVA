@@ -11,7 +11,7 @@
 
 ## Engagement Outcome
 
-This outcome-based engagement will deliver a fully modernised data pipeline for the Monetisation Domain as part of Canva's enterprise data migration initiative. Upon completion, Snowflake Professional Services will have analysed and redesigned 14 source tables and 31 DBT models into a new three-layer architecture (Conformed, Metrics, Semantic), built approximately 23 optimised DBT models in a dedicated namespace, established 4 semantic views enabling natural language queries via Snowflake Intelligence, configured event-based and scheduled orchestration through Airflow, migrated all historical data with full validation, implemented comprehensive data governance (classifications, masking, RBAC), and delivered complete documentation including solution design, data architecture specifications, and a migration guide for downstream consumers—all validated through a 3-month parallel run period.
+This outcome-based engagement will deliver a fully modernised data pipeline for the Monetisation Domain as part of Canva's enterprise data migration initiative. Snowflake will analyse, redesign, and rebuild the existing DBT project into a new three-layer architecture (Conformed, Metrics, Semantic), establish semantic views for Snowflake Intelligence, configure orchestration through Airflow, migrate historical data with validation, implement data governance, and deliver complete documentation—all validated through a 3-month parallel run period.
 
 ---
 
