@@ -1,0 +1,52 @@
+The ask
+
+---------- Forwarded message ---------
+From: Adrian Jacobs <adrianj@canva.com>
+Date: Fri, 30 Jan 2026 at 1:33 pm
+Subject: Re: Snowflake Professional Services support for Canva Data Platform migration
+To: Vanessa Barcellona <vanessa.barcellona@snowflake.com>
+Cc: Andrew Brown <andrew.brown@snowflake.com>, <frankw@canva.com>, <helencrossley@canva.com>, Luke McDermott <luke.mcdermott@snowflake.com>, <moe.k@canva.com>, Nathan Kulinitsch <nathan.kulinitsch@snowflake.com>, <npreema@canva.com>, <playfair@canva.com>, Rubesh Dhallapah <rubesh.dhallapah@snowflake.com>, Tyson Nutt <tyson.nutt@snowflake.com>, Vishnu Rajmohan <vishnu.rajmohan@snowflake.com>
+
+
+Hi Snowflake team,
+
+Thanks for your patience in allowing us to come up with a set of desired deliverables for this engagement.
+
+Here's the path forward as I see it:
+The Snowflake team review the attached Canva Sheet which includes data assets the Canva team would like assistance with (the team has included reference docs, and I have used a few attributes to help us stack rank them).
+If the provided information is enough, the Snowflake team develops cost proposals per line item. 
+If not, the Snowflake team will set up calls with the appropriate people to dive deeper and understand the deliverables.
+Once all the requirements are gathered the Snowflake team will prepare an overall cost estimate for the engagement.
+Depending on the scale, we can use the stack ranking to reduce the scope if required.
+Could we aim to have a high level proposal back from Snowflake 13 February? (Note I will be OOO next week)
+
+Thanks,
+
+Adrian.
+
+
+On Fri, Jan 16, 2026 at 9:58 AM Adrian Jacobs <adrianj@canva.com> wrote:
+Hi Vanessa,
+
+We will be going out to embedded Data Science and Analytics Engineering leads shortly to ask for deliverables they would like assistance with from Snowflake. We need to give them a little time to get things together, so aiming to have something for you in early February.
+
+Thanks,
+
+Adrian.
+
+On Thu, Jan 15, 2026 at 4:11 PM Vanessa Barcellona <vanessa.barcellona@snowflake.com> wrote:
+ 
+Hi Helen, Frank, Adrian, Nicholas, Skye and Moe,
+
+Thanks again for the discussion yesterday. I'm pleased that we're aligned on focusing this engagement around clear, outcomes-based deliverables.
+
+As a next step, Adrian / Nicholas it would be great to please receive:
+- Your proposed Phase 1 deliverables and scope
+- The current-state architecture artefacts to support a quick walkthrough
+
+Once we have these, the Snowflake PS team will schedule the scoping workshop and come back with a concrete Phase 1 proposal (deliverables, effort, and timeline), including any recommended partner support if needed.
+
+Looking forward to moving this forward quickly.
+
+Best regards,
+Vanessa Barcellona

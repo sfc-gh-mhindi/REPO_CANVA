@@ -1,0 +1,37 @@
+Data Pipeline Prioritisation for Snowflake,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Purpose,,,,,,# of Dependencies,# of Supergroups,Value,,Is Critical,Value,,Snowflake Cost,Cost Bins,Value
+"This sheet will be used to stack rank data pipelines to allocate Snowflake resources in 2026
+",,,,,,Very low,No dependencies,1,,❌ No,1,,Very low,0 - 500,1
+,,,,,,Low,Up to 1,2,,✅️ Yes,2,,Low,"500 - 1,000",2
+Instructions,,,,,,Medium,2 to 3,3,,,,,Medium,"1,000 - 10,000",3
+"Add the data pipeline name and use drop downs to select the # of dependencies, criticality and Snowflake cost
+",,,,,,High,3 to 5,4,,,,,High,"10,000 - 100,000",4
+"# of Dependencies - How many other Supergroups are known to depend on this data pipeline? See ALRs
+",,,,,,Very High,5 or more,5,,,,,Very High,"> 100,000",5
+"Is Critical - See here to determine whether your pipeline is considered “critical” (this definition will evolve, but for now helpful for prioritisation)
+",,,,,,,,,,,,,,,
+"Annualised Snowflake Cost - Use this Mode dashboard to calculate approximate annualised cost (incl. compute and storage)
+",,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Pipeline name,Owning Domain,Owner / Contact Person,# of Dependencies,Is Critical?,Annualised Snowflake Cost,Rank,Supporting Docs,,,,,,,Snowflake Questions / Comments,
+Subscription data transformation,Monetisation,Aiden Guerin,Very High,✅️ Yes,Medium,10,As part of Monetinsation domain migration changes are required due to backend updates,,,,,,,,
+Atlassian Jira Delta Share,Information Technology,Akshun Kumar,Very low,❌ No,Very low,3,Atlassian JIRA Delta Share,,,,,,,,
+Transactional Emails,Marketing & Acquisition,Charlie Tomlinson,Low,✅️ Yes,Medium,7,"Marketing and Acquisition HLDD | fact_transactional_email_send DataHub | martech_messaging_stats DataHub | email summary stats dash | transactional email distribution dash
+",,,,,,,,
+Merchant Fee reporting,Monetisation,Kaihao Wang,Low,✅️ Yes,Low,6,Monetisation - Domain Data Migration,,,,,,,,
+"Payout, Offer & Coupon, Dispute & Refund reporting",Monetisation,Kaihao Wang,Low,✅️ Yes,Low,6,Monetisation - Domain Data Migration,,,,,,,,
+fact_print_ordered,Print,Kevin Mariono,Medium,✅️ Yes,Medium,8,fact_print_ordered Data Model Vision,,,,,,,,
+fact_print_funnel,Print,Kevin Mariono,Low,✅️ Yes,Medium,7,fact_print_funnel Data Model Vision,,,,,,,,
+Product Experience conformed layer interactions pipeline,Product Experience,Mike Robins,Very High,✅️ Yes,Medium,10,Product Experience Domain Data Services HLDD,,,,,,,,
+Marketplace Flow Pipeline,Marketing & Acquisition,Nessie Li,High,✅️ Yes,Low,8,"HLDD, initial planning, source tables are already in discovery domain
+",,,,,,,,
+dim_editor_session,Product Experience,Owen Yan,Very High,❌ No,Medium,9,Product Experience - Dim Editor Session Pipeline,,,,,,,,
+Product Experience Macros,Product Experience,Owen Yan,Medium,✅️ Yes,Medium,8,"Questions to answer in the product org (Jan25) (Page 2)
+",,,,,,,,
+Product Experience retention pipeline,Product Experience,Owen Yan,Medium,✅️ Yes,Medium,8,Product Experience Domain Data Services HLDD,,,,,,,,
+feature_catalog metrics pipeline,Pilot,Rowena Kok,Very low,❌ No,High,6,"WIP PILOT - Domain Data Services HLDD
+",,,,,,,,
+Product Experience key metrics pipeline,Product Experience,Soumya Prabha,High,✅️ Yes,Medium,9,Product Experience Domain Data Services HLDD,,,,,,,,
+dim_brand_user_membership,Product Experience,Wilson Kong,Very High,❌ No,Very low,7,"How is it different from foundation's fact_brand_user_movement. Can we simplify the modelling of it by referring to the foundation model to cut down the # of dependencies?
+",,,,,,,,
