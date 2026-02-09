@@ -46,7 +46,7 @@
 | **Upstream Dependency Migration** | Foundation domain tables consumed as-is from current location |
 | **Downstream Consumer Re-pointing** | Migration guide provided, but actual re-pointing is consumer responsibility |
 | **Decommissioning Old Tables** | Not included; old tables remain during and after parallel run |
-| **Envalidio Metrics Alerts** | Pending confirmation from Nicholas Prima |
+| **Metrics Alerts** | Pending confirmation from Nicholas Prima |
 | **Source Data Ingestion** | All source data already available in Snowflake |
 | **Infrastructure Provisioning** | Platform team responsibility (databases, Airflow infrastructure) |
 
@@ -499,7 +499,7 @@ Week:  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 2
 | 2 | Can sample DBT models be shared via compliant mechanism? Timeline? | Platform Team | Blocks detailed design phase | High |
 | 3 | Are there additional tables beyond the 14 listed that produce the target reports? | Kaihao Wang | Potential scope increase | High |
 | 4 | What are the specific semantic layer requirements for each reporting area? | Aiden Guerin / Alex Hruska | Impacts semantic layer effort | Medium |
-| 5 | Should Envalidio metrics alerts be included in migration scope? | Nicholas Prima | Potential scope addition | Medium |
+| 5 | Should metrics alerts be included in migration scope? | Nicholas Prima | Potential scope addition | Medium |
 | 6 | What is the exact refresh frequency for each pipeline (event vs scheduled)? | Kaihao Wang | Orchestration design | Medium |
 | 7 | Who are the critical downstream consumers requiring migration notification? | Kaihao Wang | Documentation scope | Medium |
 | 8 | What are the specific data masking requirements for financial data? | Kaihao Wang | Governance complexity | Medium |

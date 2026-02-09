@@ -36,7 +36,7 @@
 ### 1.3 Out of Scope
 - Subscription Data Transformation pipeline (separate engagement)
 - Downstream consumer application changes
-- Envalidio metrics alerts (pending confirmation from Nicholas Prima)
+- metrics alerts (pending confirmation from Nicholas Prima)
 - Platform team infrastructure changes
 - Source system modifications
 
@@ -279,7 +279,7 @@ Week:  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 2
 |---|----------|-------|--------|
 | 1 | What is the exact distribution of DBT model complexity (simple/medium/complex)? | Kaihao Wang | Refines effort estimate |
 | 2 | Can sample DBT models be shared via compliant mechanism? When? | Vishnu/Vanessa + Platform Team | Blocks detailed design |
-| 3 | Should Envalidio metrics alerts be included in migration scope? | Kaihao + Nicholas Prima | Potential scope addition |
+| 3 | Should metrics alerts be included in migration scope? | Kaihao + Nicholas Prima | Potential scope addition |
 | 4 | What is the exact refresh frequency for each table (event vs scheduled)? | Kaihao Wang | Impacts orchestration design |
 | 5 | Are there any metric definitions missing that require SME workshops? | Kaihao Wang | Impacts Metrics Layer timeline |
 | 6 | What is the expected data volume growth during migration period? | Canva Data Platform | Impacts migration strategy |
