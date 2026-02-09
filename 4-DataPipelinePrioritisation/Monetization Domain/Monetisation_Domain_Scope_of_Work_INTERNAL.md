@@ -96,7 +96,8 @@
 
 | Assumption | Value | Impact |
 |------------|-------|--------|
-| Total DBT models in scope | 31 | Confirmed by Kaihao (post-workshop) |
+| Total DBT models in scope (current state) | 31 | Confirmed by Kaihao (post-workshop) |
+| Estimated new DBT models (target state) | 23 (~75% of current) | Assumes redesign consolidates functionality |
 | Overall complexity rating | 6-7 out of 10 | Confirmed by Kaihao |
 | Data volume | Gigabytes range | Manageable for full historical migration |
 | Parallel run duration | 3 months | Confirmed requirement |
@@ -144,23 +145,27 @@
 
 #### 3.2.4 New DBT Model Design
 
+*Assumption: The redesigned target state is estimated at 75% of the current model count (23 models), as the redesign exercise is expected to consolidate functionality and eliminate redundancy.*
+
 | Activity | Description | Calculation | Effort (Days) | MH Effort (Days) |
 |----------|-------------|-------------|---------------|------------------|
-| New model design | Design 31 models for new 3-layer architecture | 31 models x 0.3 days | 9.3 | 9.3 |
+| New model design | Design 23 models for new 3-layer architecture | 23 models x 0.3 days | 6.9 | 6.9 |
 | Reusable component design | Design macros and shared logic | | 3.0 | 3.0 |
 | Design documentation | Technical specifications | | 2.0 | 2.0 |
-| **Subtotal** | | | **14.3** | **14.3** |
+| **Subtotal** | | | **11.9** | **11.9** |
 
 #### 3.2.5 New DBT Model Build
 
+*Assumption: Complexity distribution for new models follows similar proportions - Simple 4 (17%), Medium 11 (48%), Complex 8 (35%).*
+
 | Activity | Description | Calculation | Effort (Days) | MH Effort (Days) |
 |----------|-------------|-------------|---------------|------------------|
-| Simple model build | Build simple DBT models | 5 models x 0.25 days | 1.25 | 1.25 |
-| Medium model build | Build medium DBT models | 15 models x 0.5 days | 7.5 | 7.5 |
-| Complex model build | Build complex DBT models | 11 models x 1.0 days | 11.0 | 11.0 |
+| Simple model build | Build simple DBT models | 4 models x 0.25 days | 1.0 | 1.0 |
+| Medium model build | Build medium DBT models | 11 models x 0.5 days | 5.5 | 5.5 |
+| Complex model build | Build complex DBT models | 8 models x 1.0 days | 8.0 | 8.0 |
 | Macro/reusable component build | Build shared components | | 3.0 | 3.0 |
-| Model configuration | YAML configs, tests, documentation | 31 models x 0.1 days | 3.1 | 3.1 |
-| **Subtotal** | | | **25.85** | **25.85** |
+| Model configuration | YAML configs, tests, documentation | 23 models x 0.1 days | 2.3 | 2.3 |
+| **Subtotal** | | | **19.8** | **19.8** |
 
 #### 3.2.6 Semantic Layer Development
 
@@ -255,8 +260,8 @@
 | Physical Layer Setup | 2.5 | 2.5 |
 | Current State Analysis & Data Model Redesign | 18.5 | 18.5 |
 | Transformation Layer Analysis (DBT) | 13.5 | 13.5 |
-| New DBT Model Design | 14.3 | 14.3 |
-| New DBT Model Build | 25.85 | 25.85 |
+| New DBT Model Design | 11.9 | 11.9 |
+| New DBT Model Build | 19.8 | 19.8 |
 | Semantic Layer Development | 11.0 | 11.0 |
 | Orchestration Setup | 10.0 | 10.0 |
 | Historical Data Migration | 15.5 | 15.5 |
@@ -265,9 +270,9 @@
 | Parallel Run Support | 14.0 | 14.0 |
 | Documentation | 10.0 | 10.0 |
 | Deployment | 7.0 | 7.0 |
-| **Total Base Effort** | **168.15 days** | **168.15 days** |
-| **Contingency (15%)** | **25.2 days** | **25.2 days** |
-| **Grand Total** | **193.35 days** | **193.35 days** |
+| **Total Base Effort** | **159.7 days** | **159.7 days** |
+| **Contingency (15%)** | **24.0 days** | **24.0 days** |
+| **Grand Total** | **183.7 days** | **183.7 days** |
 
 ---
 
@@ -275,19 +280,19 @@
 
 | Phase | Activities Included | Effort (Days) | MH Effort (Days) |
 |-------|---------------------|---------------|------------------|
-| **Phase 1: Discovery & Design** | Physical layer setup, current state analysis, transformation analysis, new model design | 48.8 | 48.8 |
-| **Phase 2: Build** | DBT model build, semantic layer, orchestration, governance | 55.85 | 55.85 |
+| **Phase 1: Discovery & Design** | Physical layer setup, current state analysis, transformation analysis, new model design | 46.4 | 46.4 |
+| **Phase 2: Build** | DBT model build, semantic layer, orchestration, governance | 49.8 | 49.8 |
 | **Phase 3: Migration & Testing** | Historical migration, testing, deployment to dev/test | 39.5 | 39.5 |
 | **Phase 4: Parallel Run & Handover** | Parallel run support, documentation, production deployment, knowledge transfer | 24.0 | 24.0 |
-| **Subtotal** | | **168.15** | **168.15** |
-| **Contingency (15%)** | | **25.2** | **25.2** |
-| **Grand Total** | | **193.35** | **193.35** |
+| **Subtotal** | | **159.7** | **159.7** |
+| **Contingency (15%)** | | **24.0** | **24.0** |
+| **Grand Total** | | **183.7** | **183.7** |
 
 ---
 
 ### 3.5 Phase-by-Phase Calculation
 
-#### Phase 1: Discovery & Design (48.8 days)
+#### Phase 1: Discovery & Design (46.4 days)
 
 | Activity | Days | Calculation |
 |----------|------|-------------|
@@ -302,20 +307,20 @@
 | Complex model analysis | 5.5 | 11 models x 0.5 days |
 | Macro identification | 2.0 | Common pattern analysis |
 | Lineage documentation | 1.5 | Model dependency mapping |
-| New model design | 9.3 | 31 models x 0.3 days |
+| New model design | 6.9 | 23 models x 0.3 days |
 | Reusable component design | 3.0 | Macros and shared logic |
 | Design documentation | 2.0 | Technical specifications |
-| **Subtotal** | **48.8** | |
+| **Subtotal** | **46.4** | |
 
-#### Phase 2: Build (55.85 days)
+#### Phase 2: Build (49.8 days)
 
 | Activity | Days | Calculation |
 |----------|------|-------------|
-| Simple model build | 1.25 | 5 models x 0.25 days |
-| Medium model build | 7.5 | 15 models x 0.5 days |
-| Complex model build | 11.0 | 11 models x 1.0 days |
+| Simple model build | 1.0 | 4 models x 0.25 days |
+| Medium model build | 5.5 | 11 models x 0.5 days |
+| Complex model build | 8.0 | 8 models x 1.0 days |
 | Macro build | 3.0 | Shared components |
-| Model configuration | 3.1 | 31 models x 0.1 days (YAML, tests) |
+| Model configuration | 2.3 | 23 models x 0.1 days (YAML, tests) |
 | Semantic requirements discovery | 2.0 | 4 areas x 0.5 days |
 | Semantic model design | 4.0 | 4 models x 1.0 days |
 | Semantic view build | 3.0 | 4 views x 0.75 days |
@@ -330,7 +335,7 @@
 | Row access policies | 1.5 | RAP configuration |
 | RBAC implementation | 2.5 | Role hierarchy and grants |
 | Governance validation | 1.0 | Audit and testing |
-| **Subtotal** | **55.85** | |
+| **Subtotal** | **49.8** | |
 
 #### Phase 3: Migration & Testing (39.5 days)
 
