@@ -590,6 +590,14 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 ```
 Week:  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32
        |----Discovery & Design----|--------Build----------|--Migration & Test--|----------Parallel Run & Handover----------|
+
+Lead Solution Architect:
+       |========================================================================================================|
+       Week 1-32 (Full engagement)
+
+Senior Solution Architect:
+                            |===========================================|
+                            Week 7-20 (14 weeks)
 ```
 
 **Total Duration:** ~32 weeks (8 months) including 3-month parallel run
