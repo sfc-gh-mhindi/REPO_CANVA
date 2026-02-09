@@ -114,24 +114,28 @@
 
 #### 3.2.1 Physical Layer Setup
 
+*Note: MH effort assumes DEV environment setup only.*
+
 | Activity | Description | Effort (Days) | MH Effort (Days) |
 |----------|-------------|---------------|------------------|
 | Database creation | Create 3 databases: monetisation_conformed, monetisation_metrics, monetisation_semantic | 0.5 | 0.5 |
 | Schema creation | Create schemas per database: source, internal, expose | 0.5 | 0.5 |
 | Access configuration | Initial role grants and access setup | 0.5 | 0.5 |
-| Environment setup | Dev/Test/Prod environment configuration | 1.0 | 1.0 |
-| **Subtotal** | | **2.5** | **2.5** |
+| Environment setup | Dev/Test/Prod environment configuration | 1.0 | 0 |
+| **Subtotal** | | **2.5** | **1.5** |
 
 #### 3.2.2 Current State Analysis & Data Model Redesign
 
+*Assumption: Design reviews are approved in a timely fashion.*
+
 | Activity | Description | Calculation | Effort (Days) | MH Effort (Days) |
 |----------|-------------|-------------|---------------|------------------|
-| Table analysis | Analyse 14 current tables structure and relationships | 14 tables x 0.5 days | 7.0 | 7.0 |
-| Data profiling | Volume, distribution, quality assessment | 14 tables x 0.25 days | 3.5 | 3.5 |
+| Table analysis | Analyse 14 current tables structure and relationships | 14 tables x 0.5 days | 7.0 | 3.0 |
+| Data profiling | Volume, distribution, quality assessment | 14 tables x 0.25 days | 3.5 | 2.0 |
 | Dependency mapping | Document upstream/downstream dependencies | | 2.0 | 2.0 |
 | Target model design | Design new 3-layer data model architecture | | 4.0 | 4.0 |
-| Design review & iteration | Stakeholder review and refinement | | 2.0 | 2.0 |
-| **Subtotal** | | | **18.5** | **18.5** |
+| Design review & iteration | Stakeholder review and refinement | | 2.0 | 1.0 |
+| **Subtotal** | | | **18.5** | **12.0** |
 
 #### 3.2.3 Transformation Layer Analysis (DBT Models)
 
@@ -165,8 +169,8 @@
 | Medium model build | Build medium DBT models | 11 models x 0.5 days | 5.5 | 5.5 |
 | Complex model build | Build complex DBT models | 8 models x 1.0 days | 8.0 | 8.0 |
 | Macro/reusable component build | Build shared components | | 3.0 | 3.0 |
-| Model configuration | YAML configs, tests, documentation | 23 models x 0.1 days | 2.3 | 2.3 |
-| **Subtotal** | | | **19.8** | **19.8** |
+| Model configuration | YAML configs, tests, documentation | 23 models x 0.1 days | 2.3 | 1.0 |
+| **Subtotal** | | | **19.8** | **18.5** |
 
 #### 3.2.6 Semantic Layer Development
 
@@ -212,16 +216,20 @@
 
 #### 3.2.10 Testing
 
+*Assumption: Deployment to UAT and production environments is not included in MH effort scope.*
+
 | Activity | Description | Effort (Days) | MH Effort (Days) |
 |----------|-------------|---------------|------------------|
 | Unit test migration | Migrate existing DBT tests | 3.0 | 3.0 |
 | Unit test development | New tests for new models | 4.0 | 4.0 |
 | Integration testing | End-to-end pipeline validation | 4.0 | 4.0 |
 | Data quality testing | Accuracy, completeness, consistency | 3.0 | 3.0 |
-| UAT support | Business user acceptance testing | 3.0 | 3.0 |
-| **Subtotal** | | **17.0** | **17.0** |
+| UAT support | Business user acceptance testing | 3.0 | 0 |
+| **Subtotal** | | **17.0** | **14.0** |
 
 #### 3.2.11 Parallel Run Support
+
+*MH Effort: 1.5 days per week for 12 weeks (3-month parallel run period).*
 
 | Activity | Description | Effort (Days) | MH Effort (Days) |
 |----------|-------------|---------------|------------------|
@@ -229,7 +237,9 @@
 | Monitoring & validation | Weekly validation checks (12 weeks) | 6.0 | 6.0 |
 | Discrepancy investigation | Root cause analysis and fixes | 4.0 | 4.0 |
 | Stakeholder reporting | Status updates and issue tracking | 2.0 | 2.0 |
-| **Subtotal** | | **14.0** | **14.0** |
+| Weekly support | Ongoing support during parallel run | - | 6.0 |
+| **Subtotal** | | **14.0** | **18.0** |
+| | | | *(1.5 days x 12 weeks = 18 days)* |
 
 #### 3.2.12 Documentation
 
@@ -239,18 +249,20 @@
 | Data architecture document | Data model specifications | 2.0 | 2.0 |
 | Migration guide | Downstream consumer re-pointing guide | 2.0 | 2.0 |
 | Runbooks | Operational procedures | 1.5 | 1.5 |
-| Knowledge transfer | Training sessions (2-3 sessions) | 1.5 | 1.5 |
-| **Subtotal** | | **10.0** | **10.0** |
+| Knowledge transfer | 4 sessions (1 per reporting area) x 1 hour | 1.5 | 0.5 |
+| **Subtotal** | | **10.0** | **9.0** |
 
 #### 3.2.13 Deployment
+
+*Note: MH effort is restricted to DEV environment only. Deployment to TEST/UAT and Production environments is not included.*
 
 | Activity | Description | Effort (Days) | MH Effort (Days) |
 |----------|-------------|---------------|------------------|
 | Development environment deployment | Initial deployment and validation | 2.0 | 2.0 |
-| Test environment deployment | Staging deployment | 1.5 | 1.5 |
-| Production deployment | Go-live deployment | 2.0 | 2.0 |
-| Post-deployment validation | Smoke testing and monitoring | 1.5 | 1.5 |
-| **Subtotal** | | **7.0** | **7.0** |
+| Test environment deployment | Staging deployment | 1.5 | 0 |
+| Production deployment | Go-live deployment | 2.0 | 0 |
+| Post-deployment validation | Smoke testing and monitoring | 1.5 | 0 |
+| **Subtotal** | | **7.0** | **2.0** |
 
 ---
 
@@ -258,22 +270,22 @@
 
 | Category | Effort (Days) | MH Effort (Days) |
 |----------|---------------|------------------|
-| Physical Layer Setup | 2.5 | 2.5 |
-| Current State Analysis & Data Model Redesign | 18.5 | 18.5 |
+| Physical Layer Setup | 2.5 | 1.5 |
+| Current State Analysis & Data Model Redesign | 18.5 | 12.0 |
 | Transformation Layer Analysis (DBT) | 13.5 | 13.5 |
 | New DBT Model Design | 11.9 | 11.9 |
-| New DBT Model Build | 19.8 | 19.8 |
+| New DBT Model Build | 19.8 | 18.5 |
 | Semantic Layer Development | 11.0 | 11.0 |
 | Orchestration Setup | 10.0 | 10.0 |
 | Historical Data Migration | 15.5 | 15.5 |
 | Governance Implementation | 9.0 | 9.0 |
-| Testing | 17.0 | 17.0 |
-| Parallel Run Support | 14.0 | 14.0 |
-| Documentation | 10.0 | 10.0 |
-| Deployment | 7.0 | 7.0 |
-| **Total Base Effort** | **159.7 days** | **159.7 days** |
-| **Contingency (15%)** | **24.0 days** | **24.0 days** |
-| **Grand Total** | **183.7 days** | **183.7 days** |
+| Testing | 17.0 | 14.0 |
+| Parallel Run Support | 14.0 | 18.0 |
+| Documentation | 10.0 | 9.0 |
+| Deployment | 7.0 | 2.0 |
+| **Total Base Effort** | **159.7 days** | **145.9 days** |
+| **Contingency (15%)** | **24.0 days** | **21.9 days** |
+| **Grand Total** | **183.7 days** | **167.8 days** |
 
 ---
 
@@ -281,13 +293,13 @@
 
 | Phase | Activities Included | Effort (Days) | MH Effort (Days) |
 |-------|---------------------|---------------|------------------|
-| **Phase 1: Discovery & Design** | Physical layer setup, current state analysis, transformation analysis, new model design | 46.4 | 46.4 |
-| **Phase 2: Build** | DBT model build, semantic layer, orchestration, governance | 49.8 | 49.8 |
-| **Phase 3: Migration & Testing** | Historical migration, testing, deployment to dev/test | 39.5 | 39.5 |
-| **Phase 4: Parallel Run & Handover** | Parallel run support, documentation, production deployment, knowledge transfer | 24.0 | 24.0 |
-| **Subtotal** | | **159.7** | **159.7** |
-| **Contingency (15%)** | | **24.0** | **24.0** |
-| **Grand Total** | | **183.7** | **183.7** |
+| **Phase 1: Discovery & Design** | Physical layer setup, current state analysis, transformation analysis, new model design | 46.4 | 38.9 |
+| **Phase 2: Build** | DBT model build, semantic layer, orchestration, governance | 49.8 | 48.5 |
+| **Phase 3: Migration & Testing** | Historical migration, testing, deployment to dev/test | 39.5 | 31.5 |
+| **Phase 4: Parallel Run & Handover** | Parallel run support, documentation, production deployment, knowledge transfer | 24.0 | 27.0 |
+| **Subtotal** | | **159.7** | **145.9** |
+| **Contingency (15%)** | | **24.0** | **21.9** |
+| **Grand Total** | | **183.7** | **167.8** |
 
 ---
 
@@ -542,6 +554,9 @@ Week:  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 2
 | A13 | SME availability of 4-6 hours/week throughout engagement | Workshop commitment |
 | A14 | No major changes to source models during migration period | Workshop understanding |
 | A15 | Upstream dependencies (remaining internal models) complete prior to initiative start | Domain owner confirmation |
+| A16 | Design reviews are approved in a timely fashion | MH effort assumption |
+| A17 | Deployment to UAT and production environments is not included in MH effort scope | MH effort assumption |
+| A18 | MH effort is restricted to DEV environment only | MH effort assumption |
 
 ### 7.2 Risks
 
