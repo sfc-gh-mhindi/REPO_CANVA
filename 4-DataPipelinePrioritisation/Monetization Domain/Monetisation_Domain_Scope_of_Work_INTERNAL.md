@@ -112,176 +112,176 @@
 
 #### 3.2.1 Physical Layer Setup
 
-| Activity | Description | Effort (Days) |
-|----------|-------------|---------------|
-| Database creation | Create 3 databases: monetisation_conformed, monetisation_metrics, monetisation_semantic | 0.5 |
-| Schema creation | Create schemas per database: source, internal, expose | 0.5 |
-| Access configuration | Initial role grants and access setup | 0.5 |
-| Environment setup | Dev/Test/Prod environment configuration | 1.0 |
-| **Subtotal** | | **2.5** |
+| Activity | Description | Effort (Days) | MH Effort (Days) |
+|----------|-------------|---------------|------------------|
+| Database creation | Create 3 databases: monetisation_conformed, monetisation_metrics, monetisation_semantic | 0.5 | 0.5 |
+| Schema creation | Create schemas per database: source, internal, expose | 0.5 | 0.5 |
+| Access configuration | Initial role grants and access setup | 0.5 | 0.5 |
+| Environment setup | Dev/Test/Prod environment configuration | 1.0 | 1.0 |
+| **Subtotal** | | **2.5** | **2.5** |
 
 #### 3.2.2 Current State Analysis & Data Model Redesign
 
-| Activity | Description | Calculation | Effort (Days) |
-|----------|-------------|-------------|---------------|
-| Table analysis | Analyse 14 current tables structure and relationships | 14 tables x 0.5 days | 7.0 |
-| Data profiling | Volume, distribution, quality assessment | 14 tables x 0.25 days | 3.5 |
-| Dependency mapping | Document upstream/downstream dependencies | | 2.0 |
-| Target model design | Design new 3-layer data model architecture | | 4.0 |
-| Design review & iteration | Stakeholder review and refinement | | 2.0 |
-| **Subtotal** | | | **18.5** |
+| Activity | Description | Calculation | Effort (Days) | MH Effort (Days) |
+|----------|-------------|-------------|---------------|------------------|
+| Table analysis | Analyse 14 current tables structure and relationships | 14 tables x 0.5 days | 7.0 | 7.0 |
+| Data profiling | Volume, distribution, quality assessment | 14 tables x 0.25 days | 3.5 | 3.5 |
+| Dependency mapping | Document upstream/downstream dependencies | | 2.0 | 2.0 |
+| Target model design | Design new 3-layer data model architecture | | 4.0 | 4.0 |
+| Design review & iteration | Stakeholder review and refinement | | 2.0 | 2.0 |
+| **Subtotal** | | | **18.5** | **18.5** |
 
 #### 3.2.3 Transformation Layer Analysis (DBT Models)
 
-| Activity | Description | Calculation | Effort (Days) |
-|----------|-------------|-------------|---------------|
-| Simple model analysis | Analyse simple DBT models | 5 models x 0.15 days | 0.75 |
-| Medium model analysis | Analyse medium DBT models | 15 models x 0.25 days | 3.75 |
-| Complex model analysis | Analyse complex DBT models | 11 models x 0.5 days | 5.5 |
-| Macro/reusable component identification | Identify common patterns | | 2.0 |
-| Lineage documentation | Document model dependencies | | 1.5 |
-| **Subtotal** | | | **13.5** |
+| Activity | Description | Calculation | Effort (Days) | MH Effort (Days) |
+|----------|-------------|-------------|---------------|------------------|
+| Simple model analysis | Analyse simple DBT models | 5 models x 0.15 days | 0.75 | 0.75 |
+| Medium model analysis | Analyse medium DBT models | 15 models x 0.25 days | 3.75 | 3.75 |
+| Complex model analysis | Analyse complex DBT models | 11 models x 0.5 days | 5.5 | 5.5 |
+| Macro/reusable component identification | Identify common patterns | | 2.0 | 2.0 |
+| Lineage documentation | Document model dependencies | | 1.5 | 1.5 |
+| **Subtotal** | | | **13.5** | **13.5** |
 
 #### 3.2.4 New DBT Model Design
 
-| Activity | Description | Calculation | Effort (Days) |
-|----------|-------------|-------------|---------------|
-| New model design | Design 31 models for new 3-layer architecture | 31 models x 0.3 days | 9.3 |
-| Reusable component design | Design macros and shared logic | | 3.0 |
-| Design documentation | Technical specifications | | 2.0 |
-| **Subtotal** | | | **14.3** |
+| Activity | Description | Calculation | Effort (Days) | MH Effort (Days) |
+|----------|-------------|-------------|---------------|------------------|
+| New model design | Design 31 models for new 3-layer architecture | 31 models x 0.3 days | 9.3 | 9.3 |
+| Reusable component design | Design macros and shared logic | | 3.0 | 3.0 |
+| Design documentation | Technical specifications | | 2.0 | 2.0 |
+| **Subtotal** | | | **14.3** | **14.3** |
 
 #### 3.2.5 New DBT Model Build
 
-| Activity | Description | Calculation | Effort (Days) |
-|----------|-------------|-------------|---------------|
-| Simple model build | Build simple DBT models | 5 models x 0.25 days | 1.25 |
-| Medium model build | Build medium DBT models | 15 models x 0.5 days | 7.5 |
-| Complex model build | Build complex DBT models | 11 models x 1.0 days | 11.0 |
-| Macro/reusable component build | Build shared components | | 3.0 |
-| Model configuration | YAML configs, tests, documentation | 31 models x 0.1 days | 3.1 |
-| **Subtotal** | | | **25.85** |
+| Activity | Description | Calculation | Effort (Days) | MH Effort (Days) |
+|----------|-------------|-------------|---------------|------------------|
+| Simple model build | Build simple DBT models | 5 models x 0.25 days | 1.25 | 1.25 |
+| Medium model build | Build medium DBT models | 15 models x 0.5 days | 7.5 | 7.5 |
+| Complex model build | Build complex DBT models | 11 models x 1.0 days | 11.0 | 11.0 |
+| Macro/reusable component build | Build shared components | | 3.0 | 3.0 |
+| Model configuration | YAML configs, tests, documentation | 31 models x 0.1 days | 3.1 | 3.1 |
+| **Subtotal** | | | **25.85** | **25.85** |
 
 #### 3.2.6 Semantic Layer Development
 
-| Activity | Description | Calculation | Effort (Days) |
-|----------|-------------|-------------|---------------|
-| Requirements discovery | Define AI/LLM use cases per area | 4 areas x 0.5 days | 2.0 |
-| Semantic model design | Dimensions, measures, relationships, synonyms | 4 models x 1.0 days | 4.0 |
-| Semantic view build | Create and validate semantic views | 4 views x 0.75 days | 3.0 |
-| Snowflake Intelligence validation | Test with Cortex Analyst | | 2.0 |
-| **Subtotal** | | | **11.0** |
+| Activity | Description | Calculation | Effort (Days) | MH Effort (Days) |
+|----------|-------------|-------------|---------------|------------------|
+| Requirements discovery | Define AI/LLM use cases per area | 4 areas x 0.5 days | 2.0 | 2.0 |
+| Semantic model design | Dimensions, measures, relationships, synonyms | 4 models x 1.0 days | 4.0 | 4.0 |
+| Semantic view build | Create and validate semantic views | 4 views x 0.75 days | 3.0 | 3.0 |
+| Snowflake Intelligence validation | Test with Cortex Analyst | | 2.0 | 2.0 |
+| **Subtotal** | | | **11.0** | **11.0** |
 
 #### 3.2.7 Orchestration Setup
 
-| Activity | Description | Effort (Days) |
-|----------|-------------|---------------|
-| Orchestration design | Event-based + scheduled trigger patterns | 2.0 |
-| Airflow DAG development | Build DAGs for 4 pipelines | 4.0 |
-| Event trigger configuration | Configure foundation layer triggers | 1.5 |
-| Schedule configuration | Daily refresh schedules | 1.0 |
-| Testing & validation | End-to-end orchestration testing | 1.5 |
-| **Subtotal** | | **10.0** |
+| Activity | Description | Effort (Days) | MH Effort (Days) |
+|----------|-------------|---------------|------------------|
+| Orchestration design | Event-based + scheduled trigger patterns | 2.0 | 2.0 |
+| Airflow DAG development | Build DAGs for 4 pipelines | 4.0 | 4.0 |
+| Event trigger configuration | Configure foundation layer triggers | 1.5 | 1.5 |
+| Schedule configuration | Daily refresh schedules | 1.0 | 1.0 |
+| Testing & validation | End-to-end orchestration testing | 1.5 | 1.5 |
+| **Subtotal** | | **10.0** | **10.0** |
 
 #### 3.2.8 Historical Data Migration
 
-| Activity | Description | Calculation | Effort (Days) |
-|----------|-------------|-------------|---------------|
-| Migration script development | Scripts for 14 tables | 14 tables x 0.5 days | 7.0 |
-| Data extraction & load | Execute full historical migration | | 3.0 |
-| Data reconciliation | Row counts, checksums, sampling | 14 tables x 0.25 days | 3.5 |
-| Issue resolution | Address migration discrepancies | | 2.0 |
-| **Subtotal** | | | **15.5** |
+| Activity | Description | Calculation | Effort (Days) | MH Effort (Days) |
+|----------|-------------|-------------|---------------|------------------|
+| Migration script development | Scripts for 14 tables | 14 tables x 0.5 days | 7.0 | 7.0 |
+| Data extraction & load | Execute full historical migration | | 3.0 | 3.0 |
+| Data reconciliation | Row counts, checksums, sampling | 14 tables x 0.25 days | 3.5 | 3.5 |
+| Issue resolution | Address migration discrepancies | | 2.0 | 2.0 |
+| **Subtotal** | | | **15.5** | **15.5** |
 
 #### 3.2.9 Governance Implementation
 
-| Activity | Description | Effort (Days) |
-|----------|-------------|---------------|
-| Data classification | Apply classifications to new objects | 2.0 |
-| Masking policies | Implement data masking rules | 2.0 |
-| Row access policies | Configure RAP on sensitive tables | 1.5 |
-| RBAC design & implementation | Role hierarchy and grants | 2.5 |
-| Governance validation | Audit and testing | 1.0 |
-| **Subtotal** | | **9.0** |
+| Activity | Description | Effort (Days) | MH Effort (Days) |
+|----------|-------------|---------------|------------------|
+| Data classification | Apply classifications to new objects | 2.0 | 2.0 |
+| Masking policies | Implement data masking rules | 2.0 | 2.0 |
+| Row access policies | Configure RAP on sensitive tables | 1.5 | 1.5 |
+| RBAC design & implementation | Role hierarchy and grants | 2.5 | 2.5 |
+| Governance validation | Audit and testing | 1.0 | 1.0 |
+| **Subtotal** | | **9.0** | **9.0** |
 
 #### 3.2.10 Testing
 
-| Activity | Description | Effort (Days) |
-|----------|-------------|---------------|
-| Unit test migration | Migrate existing DBT tests | 3.0 |
-| Unit test development | New tests for new models | 4.0 |
-| Integration testing | End-to-end pipeline validation | 4.0 |
-| Data quality testing | Accuracy, completeness, consistency | 3.0 |
-| UAT support | Business user acceptance testing | 3.0 |
-| **Subtotal** | | **17.0** |
+| Activity | Description | Effort (Days) | MH Effort (Days) |
+|----------|-------------|---------------|------------------|
+| Unit test migration | Migrate existing DBT tests | 3.0 | 3.0 |
+| Unit test development | New tests for new models | 4.0 | 4.0 |
+| Integration testing | End-to-end pipeline validation | 4.0 | 4.0 |
+| Data quality testing | Accuracy, completeness, consistency | 3.0 | 3.0 |
+| UAT support | Business user acceptance testing | 3.0 | 3.0 |
+| **Subtotal** | | **17.0** | **17.0** |
 
 #### 3.2.11 Parallel Run Support
 
-| Activity | Description | Effort (Days) |
-|----------|-------------|---------------|
-| Parallel run setup | Configure dual-pipeline execution | 2.0 |
-| Monitoring & validation | Weekly validation checks (12 weeks) | 6.0 |
-| Discrepancy investigation | Root cause analysis and fixes | 4.0 |
-| Stakeholder reporting | Status updates and issue tracking | 2.0 |
-| **Subtotal** | | **14.0** |
+| Activity | Description | Effort (Days) | MH Effort (Days) |
+|----------|-------------|---------------|------------------|
+| Parallel run setup | Configure dual-pipeline execution | 2.0 | 2.0 |
+| Monitoring & validation | Weekly validation checks (12 weeks) | 6.0 | 6.0 |
+| Discrepancy investigation | Root cause analysis and fixes | 4.0 | 4.0 |
+| Stakeholder reporting | Status updates and issue tracking | 2.0 | 2.0 |
+| **Subtotal** | | **14.0** | **14.0** |
 
 #### 3.2.12 Documentation
 
-| Activity | Description | Effort (Days) |
-|----------|-------------|---------------|
-| Solution design document | Architecture and design documentation | 3.0 |
-| Data architecture document | Data model specifications | 2.0 |
-| Migration guide | Downstream consumer re-pointing guide | 2.0 |
-| Runbooks | Operational procedures | 1.5 |
-| Knowledge transfer | Training sessions (2-3 sessions) | 1.5 |
-| **Subtotal** | | **10.0** |
+| Activity | Description | Effort (Days) | MH Effort (Days) |
+|----------|-------------|---------------|------------------|
+| Solution design document | Architecture and design documentation | 3.0 | 3.0 |
+| Data architecture document | Data model specifications | 2.0 | 2.0 |
+| Migration guide | Downstream consumer re-pointing guide | 2.0 | 2.0 |
+| Runbooks | Operational procedures | 1.5 | 1.5 |
+| Knowledge transfer | Training sessions (2-3 sessions) | 1.5 | 1.5 |
+| **Subtotal** | | **10.0** | **10.0** |
 
 #### 3.2.13 Deployment
 
-| Activity | Description | Effort (Days) |
-|----------|-------------|---------------|
-| Development environment deployment | Initial deployment and validation | 2.0 |
-| Test environment deployment | Staging deployment | 1.5 |
-| Production deployment | Go-live deployment | 2.0 |
-| Post-deployment validation | Smoke testing and monitoring | 1.5 |
-| **Subtotal** | | **7.0** |
+| Activity | Description | Effort (Days) | MH Effort (Days) |
+|----------|-------------|---------------|------------------|
+| Development environment deployment | Initial deployment and validation | 2.0 | 2.0 |
+| Test environment deployment | Staging deployment | 1.5 | 1.5 |
+| Production deployment | Go-live deployment | 2.0 | 2.0 |
+| Post-deployment validation | Smoke testing and monitoring | 1.5 | 1.5 |
+| **Subtotal** | | **7.0** | **7.0** |
 
 ---
 
 ### 3.3 Effort Summary
 
-| Category | Effort (Days) |
-|----------|---------------|
-| Physical Layer Setup | 2.5 |
-| Current State Analysis & Data Model Redesign | 18.5 |
-| Transformation Layer Analysis (DBT) | 13.5 |
-| New DBT Model Design | 14.3 |
-| New DBT Model Build | 25.85 |
-| Semantic Layer Development | 11.0 |
-| Orchestration Setup | 10.0 |
-| Historical Data Migration | 15.5 |
-| Governance Implementation | 9.0 |
-| Testing | 17.0 |
-| Parallel Run Support | 14.0 |
-| Documentation | 10.0 |
-| Deployment | 7.0 |
-| **Total Base Effort** | **168.15 days** |
-| **Contingency (15%)** | **25.2 days** |
-| **Grand Total** | **193.35 days** |
+| Category | Effort (Days) | MH Effort (Days) |
+|----------|---------------|------------------|
+| Physical Layer Setup | 2.5 | 2.5 |
+| Current State Analysis & Data Model Redesign | 18.5 | 18.5 |
+| Transformation Layer Analysis (DBT) | 13.5 | 13.5 |
+| New DBT Model Design | 14.3 | 14.3 |
+| New DBT Model Build | 25.85 | 25.85 |
+| Semantic Layer Development | 11.0 | 11.0 |
+| Orchestration Setup | 10.0 | 10.0 |
+| Historical Data Migration | 15.5 | 15.5 |
+| Governance Implementation | 9.0 | 9.0 |
+| Testing | 17.0 | 17.0 |
+| Parallel Run Support | 14.0 | 14.0 |
+| Documentation | 10.0 | 10.0 |
+| Deployment | 7.0 | 7.0 |
+| **Total Base Effort** | **168.15 days** | **168.15 days** |
+| **Contingency (15%)** | **25.2 days** | **25.2 days** |
+| **Grand Total** | **193.35 days** | **193.35 days** |
 
 ---
 
 ### 3.4 Breakdown by Phase
 
-| Phase | Activities Included | Effort (Days) |
-|-------|---------------------|---------------|
-| **Phase 1: Discovery & Design** | Physical layer setup, current state analysis, transformation analysis, new model design | 48.8 |
-| **Phase 2: Build** | DBT model build, semantic layer, orchestration, governance | 55.85 |
-| **Phase 3: Migration & Testing** | Historical migration, testing, deployment to dev/test | 39.5 |
-| **Phase 4: Parallel Run & Handover** | Parallel run support, documentation, production deployment, knowledge transfer | 24.0 |
-| **Subtotal** | | **168.15** |
-| **Contingency (15%)** | | **25.2** |
-| **Grand Total** | | **193.35** |
+| Phase | Activities Included | Effort (Days) | MH Effort (Days) |
+|-------|---------------------|---------------|------------------|
+| **Phase 1: Discovery & Design** | Physical layer setup, current state analysis, transformation analysis, new model design | 48.8 | 48.8 |
+| **Phase 2: Build** | DBT model build, semantic layer, orchestration, governance | 55.85 | 55.85 |
+| **Phase 3: Migration & Testing** | Historical migration, testing, deployment to dev/test | 39.5 | 39.5 |
+| **Phase 4: Parallel Run & Handover** | Parallel run support, documentation, production deployment, knowledge transfer | 24.0 | 24.0 |
+| **Subtotal** | | **168.15** | **168.15** |
+| **Contingency (15%)** | | **25.2** | **25.2** |
+| **Grand Total** | | **193.35** | **193.35** |
 
 ---
 
