@@ -28,7 +28,7 @@
 |---|-------------|-------------|
 | 1 | **Physical Layer Setup** | Create 3 Snowflake databases (Conformed, Metrics, Semantic) with schemas (source, internal, expose) |
 | 2 | **Data Model Analysis & Redesign** | Analyse current 14 tables and redesign into 3-layer architecture |
-| 3 | **DBT Project Development** | Analyse, redesign, and build ~50 DBT models in new namespace |
+| 3 | **DBT Project Development** | Analyse, redesign, and build 31 DBT models in new namespace |
 | 4 | **Semantic Layer** | Create 4 semantic views and models (one per reporting area) for Snowflake Intelligence |
 | 5 | **Orchestration** | Event-based and scheduled orchestration via Airflow |
 | 6 | **Historical Data Migration** | Full historical data migration with validation |
@@ -66,29 +66,37 @@
 | Current state documentation availability | Partial | YAML files exist; no architecture diagram |
 | Reverse engineering required | Minimal | DBT YAML files available for each model |
 
-#### 3.1.2 DBT Model Complexity Assumptions
+#### 3.1.2 DBT Model Complexity Distribution (Confirmed)
 
-| Complexity Level | Definition | Distribution | Effort per Model (Analysis) | Effort per Model (Build) |
-|------------------|------------|--------------|-----------------------------|--------------------------| 
-| **Simple** | Direct SELECT, minimal joins, no macros | 20% (~10 models) | 0.15 days | 0.25 days |
-| **Medium** | Multiple joins, CTEs, standard transformations | 60% (~30 models) | 0.25 days | 0.5 days |
-| **Complex** | Macros, complex CTEs, window functions, business logic | 20% (~10 models) | 0.5 days | 1.0 days |
+| Pipeline | Simple | Medium | Complex | Total |
+|----------|--------|--------|---------|-------|
+| **Merchant Fees Reporting** | 1 | 7 | 5 | 13 |
+| **Payout, Offer & Coupon, Dispute & Refund Reporting** | 4 | 8 | 6 | 18 |
+| **Total** | **5 (16%)** | **15 (48%)** | **11 (35%)** | **31** |
 
-*Note: Distribution assumed as 20/60/20 pending confirmation from Kaihao's complexity breakdown*
+#### 3.1.3 Effort per Model by Complexity
 
-#### 3.1.3 Model Distribution Across Layers
+| Complexity Level | Definition | Effort per Model (Analysis) | Effort per Model (Build) |
+|------------------|------------|-----------------------------|--------------------------| 
+| **Simple** | Direct SELECT, minimal joins, no macros | 0.15 days | 0.25 days |
+| **Medium** | Multiple joins, CTEs, standard transformations | 0.25 days | 0.5 days |
+| **Complex** | Macros, complex CTEs, window functions, business logic | 0.5 days | 1.0 days |
+
+#### 3.1.4 Model Distribution Across Layers
 
 | Layer | Estimated Model Count | Rationale |
 |-------|----------------------|-----------|
-| Conformed Layer | ~20 models (40%) | Entity-aligned staging models |
-| Metrics Layer | ~30 models (60%) | Aggregation and business logic |
+| Conformed Layer | TBD | To be determined during discovery - current state does not have 3-layer architecture |
+| Metrics Layer | TBD | To be determined during discovery - current state does not have 3-layer architecture |
 | Semantic Layer | 4 semantic views | One per reporting area (not DBT models) |
 
-#### 3.1.4 Other Key Assumptions
+*Note: The current state architecture does not have the three-layer structure (Conformed, Metrics, Semantic). The distribution of DBT models across the new layers will be determined during the Discovery & Design phase.*
+
+#### 3.1.5 Other Key Assumptions
 
 | Assumption | Value | Impact |
 |------------|-------|--------|
-| Total DBT models in scope | ~50 | Confirmed in workshop |
+| Total DBT models in scope | 31 | Confirmed by Kaihao (post-workshop) |
 | Overall complexity rating | 6-7 out of 10 | Confirmed by Kaihao |
 | Data volume | Gigabytes range | Manageable for full historical migration |
 | Parallel run duration | 3 months | Confirmed requirement |
@@ -127,33 +135,32 @@
 
 | Activity | Description | Calculation | Effort (Days) |
 |----------|-------------|-------------|---------------|
-| Simple model analysis | Analyse simple DBT models | 10 models x 0.15 days | 1.5 |
-| Medium model analysis | Analyse medium DBT models | 30 models x 0.25 days | 7.5 |
-| Complex model analysis | Analyse complex DBT models | 10 models x 0.5 days | 5.0 |
+| Simple model analysis | Analyse simple DBT models | 5 models x 0.15 days | 0.75 |
+| Medium model analysis | Analyse medium DBT models | 15 models x 0.25 days | 3.75 |
+| Complex model analysis | Analyse complex DBT models | 11 models x 0.5 days | 5.5 |
 | Macro/reusable component identification | Identify common patterns | | 2.0 |
 | Lineage documentation | Document model dependencies | | 1.5 |
-| **Subtotal** | | | **17.5** |
+| **Subtotal** | | | **13.5** |
 
 #### 3.2.4 New DBT Model Design
 
 | Activity | Description | Calculation | Effort (Days) |
 |----------|-------------|-------------|---------------|
-| Conformed layer design | Design ~20 entity-aligned models | 20 models x 0.3 days | 6.0 |
-| Metrics layer design | Design ~30 reporting models | 30 models x 0.3 days | 9.0 |
+| New model design | Design 31 models for new 3-layer architecture | 31 models x 0.3 days | 9.3 |
 | Reusable component design | Design macros and shared logic | | 3.0 |
 | Design documentation | Technical specifications | | 2.0 |
-| **Subtotal** | | | **20.0** |
+| **Subtotal** | | | **14.3** |
 
 #### 3.2.5 New DBT Model Build
 
 | Activity | Description | Calculation | Effort (Days) |
 |----------|-------------|-------------|---------------|
-| Simple model build | Build simple DBT models | 10 models x 0.25 days | 2.5 |
-| Medium model build | Build medium DBT models | 30 models x 0.5 days | 15.0 |
-| Complex model build | Build complex DBT models | 10 models x 1.0 days | 10.0 |
+| Simple model build | Build simple DBT models | 5 models x 0.25 days | 1.25 |
+| Medium model build | Build medium DBT models | 15 models x 0.5 days | 7.5 |
+| Complex model build | Build complex DBT models | 11 models x 1.0 days | 11.0 |
 | Macro/reusable component build | Build shared components | | 3.0 |
-| Model configuration | YAML configs, tests, documentation | 50 models x 0.1 days | 5.0 |
-| **Subtotal** | | | **35.5** |
+| Model configuration | YAML configs, tests, documentation | 31 models x 0.1 days | 3.1 |
+| **Subtotal** | | | **25.85** |
 
 #### 3.2.6 Semantic Layer Development
 
@@ -247,9 +254,9 @@
 |----------|---------------|
 | Physical Layer Setup | 2.5 |
 | Current State Analysis & Data Model Redesign | 18.5 |
-| Transformation Layer Analysis (DBT) | 17.5 |
-| New DBT Model Design | 20.0 |
-| New DBT Model Build | 35.5 |
+| Transformation Layer Analysis (DBT) | 13.5 |
+| New DBT Model Design | 14.3 |
+| New DBT Model Build | 25.85 |
 | Semantic Layer Development | 11.0 |
 | Orchestration Setup | 10.0 |
 | Historical Data Migration | 15.5 |
@@ -258,9 +265,9 @@
 | Parallel Run Support | 14.0 |
 | Documentation | 10.0 |
 | Deployment | 7.0 |
-| **Total Base Effort** | **187.5 days** |
-| **Contingency (15%)** | **28.0 days** |
-| **Grand Total** | **215.5 days** |
+| **Total Base Effort** | **168.15 days** |
+| **Contingency (15%)** | **25.2 days** |
+| **Grand Total** | **193.35 days** |
 
 ---
 
@@ -268,19 +275,19 @@
 
 | Phase | Activities Included | Effort (Days) |
 |-------|---------------------|---------------|
-| **Phase 1: Discovery & Design** | Physical layer setup, current state analysis, transformation analysis, new model design | 58.5 |
-| **Phase 2: Build** | DBT model build, semantic layer, orchestration, governance | 65.5 |
+| **Phase 1: Discovery & Design** | Physical layer setup, current state analysis, transformation analysis, new model design | 48.8 |
+| **Phase 2: Build** | DBT model build, semantic layer, orchestration, governance | 55.85 |
 | **Phase 3: Migration & Testing** | Historical migration, testing, deployment to dev/test | 39.5 |
 | **Phase 4: Parallel Run & Handover** | Parallel run support, documentation, production deployment, knowledge transfer | 24.0 |
-| **Subtotal** | | **187.5** |
-| **Contingency (15%)** | | **28.0** |
-| **Grand Total** | | **215.5** |
+| **Subtotal** | | **168.15** |
+| **Contingency (15%)** | | **25.2** |
+| **Grand Total** | | **193.35** |
 
 ---
 
 ### 3.5 Phase-by-Phase Calculation
 
-#### Phase 1: Discovery & Design (58.5 days)
+#### Phase 1: Discovery & Design (48.8 days)
 
 | Activity | Days | Calculation |
 |----------|------|-------------|
@@ -290,26 +297,25 @@
 | Dependency mapping | 2.0 | Cross-domain and internal dependencies |
 | Target model design | 4.0 | 3-layer architecture design |
 | Design review | 2.0 | Stakeholder iterations |
-| Simple model analysis | 1.5 | 10 models x 0.15 days |
-| Medium model analysis | 7.5 | 30 models x 0.25 days |
-| Complex model analysis | 5.0 | 10 models x 0.5 days |
+| Simple model analysis | 0.75 | 5 models x 0.15 days |
+| Medium model analysis | 3.75 | 15 models x 0.25 days |
+| Complex model analysis | 5.5 | 11 models x 0.5 days |
 | Macro identification | 2.0 | Common pattern analysis |
 | Lineage documentation | 1.5 | Model dependency mapping |
-| Conformed layer design | 6.0 | 20 models x 0.3 days |
-| Metrics layer design | 9.0 | 30 models x 0.3 days |
+| New model design | 9.3 | 31 models x 0.3 days |
 | Reusable component design | 3.0 | Macros and shared logic |
 | Design documentation | 2.0 | Technical specifications |
-| **Subtotal** | **58.5** | |
+| **Subtotal** | **48.8** | |
 
-#### Phase 2: Build (65.5 days)
+#### Phase 2: Build (55.85 days)
 
 | Activity | Days | Calculation |
 |----------|------|-------------|
-| Simple model build | 2.5 | 10 models x 0.25 days |
-| Medium model build | 15.0 | 30 models x 0.5 days |
-| Complex model build | 10.0 | 10 models x 1.0 days |
+| Simple model build | 1.25 | 5 models x 0.25 days |
+| Medium model build | 7.5 | 15 models x 0.5 days |
+| Complex model build | 11.0 | 11 models x 1.0 days |
 | Macro build | 3.0 | Shared components |
-| Model configuration | 5.0 | 50 models x 0.1 days (YAML, tests) |
+| Model configuration | 3.1 | 31 models x 0.1 days (YAML, tests) |
 | Semantic requirements discovery | 2.0 | 4 areas x 0.5 days |
 | Semantic model design | 4.0 | 4 models x 1.0 days |
 | Semantic view build | 3.0 | 4 views x 0.75 days |
@@ -324,7 +330,7 @@
 | Row access policies | 1.5 | RAP configuration |
 | RBAC implementation | 2.5 | Role hierarchy and grants |
 | Governance validation | 1.0 | Audit and testing |
-| **Subtotal** | **65.5** | |
+| **Subtotal** | **55.85** | |
 
 #### Phase 3: Migration & Testing (39.5 days)
 
@@ -366,8 +372,8 @@
 
 | If This Changes... | Impact on Estimate |
 |--------------------|--------------------|
-| DBT model count increases from 50 to 70 | +15-20 days |
-| Complexity distribution shifts to 30% complex | +10-15 days |
+| DBT model count increases from 31 to 50 | +15-20 days |
+| Complexity distribution shifts further toward complex | +5-10 days |
 | Additional tables identified beyond 14 | +2-3 days per table |
 | SME availability drops to 2 hrs/week | +8-12 days (waiting time) |
 | Code sharing mechanism delayed by 4+ weeks | +8-12 days (rework/discovery) |
@@ -495,18 +501,17 @@ Week:  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 2
 
 | # | Question | Owner | Impact | Priority |
 |---|----------|-------|--------|----------|
-| 1 | What is the exact distribution of DBT model complexity (simple/medium/complex)? | Kaihao Wang | Refines build effort by +/- 15 days | High |
-| 2 | Can sample DBT models be shared via compliant mechanism? Timeline? | Platform Team | Blocks detailed design phase | High |
-| 3 | Are there additional tables beyond the 14 listed that produce the target reports? | Kaihao Wang | Potential scope increase | High |
-| 4 | What are the specific semantic layer requirements for each reporting area? | Aiden Guerin / Alex Hruska | Impacts semantic layer effort | Medium |
-| 5 | Should metrics alerts be included in migration scope? | Nicholas Prima | Potential scope addition | Medium |
-| 6 | What is the exact refresh frequency for each pipeline (event vs scheduled)? | Kaihao Wang | Orchestration design | Medium |
-| 7 | Who are the critical downstream consumers requiring migration notification? | Kaihao Wang | Documentation scope | Medium |
-| 8 | What are the specific data masking requirements for financial data? | Kaihao Wang | Governance complexity | Medium |
-| 9 | Will views mimicking old table signatures be required for backward compatibility? | Aiden Guerin | Additional development | Medium |
-| 10 | What is the rollback strategy if parallel run validation fails? | Joint decision | Risk mitigation | Low |
-| 11 | Is Airflow hourly execution possible, or must we start with daily? | Platform Team | Orchestration design | Low |
-| 12 | What is the acceptable variance threshold for parallel run validation? | Business stakeholders | Testing criteria | Low |
+| 1 | Can sample DBT models be shared via compliant mechanism? Timeline? | Platform Team | Blocks detailed design phase | High |
+| 2 | Are there additional tables beyond the 14 listed that produce the target reports? | Kaihao Wang | Potential scope increase | High |
+| 3 | What are the specific semantic layer requirements for each reporting area? | Aiden Guerin / Alex Hruska | Impacts semantic layer effort | Medium |
+| 4 | Should metrics alerts be included in migration scope? | Nicholas Prima | Potential scope addition | Medium |
+| 5 | What is the exact refresh frequency for each pipeline (event vs scheduled)? | Kaihao Wang | Orchestration design | Medium |
+| 6 | Who are the critical downstream consumers requiring migration notification? | Kaihao Wang | Documentation scope | Medium |
+| 7 | What are the specific data masking requirements for financial data? | Kaihao Wang | Governance complexity | Medium |
+| 8 | Will views mimicking old table signatures be required for backward compatibility? | Aiden Guerin | Additional development | Medium |
+| 9 | What is the rollback strategy if parallel run validation fails? | Joint decision | Risk mitigation | Low |
+| 10 | Is Airflow hourly execution possible, or must we start with daily? | Platform Team | Orchestration design | Low |
+| 11 | What is the acceptable variance threshold for parallel run validation? | Business stakeholders | Testing criteria | Low |
 
 ---
 
@@ -517,7 +522,7 @@ Week:  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 2
 | # | Assumption | Source |
 |---|------------|--------|
 | A1 | All source data is currently available in Snowflake; no new ingestion required | Workshop confirmed |
-| A2 | Total DBT models in scope is approximately 50 | Workshop estimate |
+| A2 | Total DBT models in scope is 31 (5 simple, 15 medium, 11 complex) | Confirmed by Kaihao (post-workshop) |
 | A3 | DBT complexity rating is 6-7 out of 10 | Kaihao (workshop) |
 | A4 | Data volume is in gigabytes range | Workshop confirmed |
 | A5 | DBT Core (open source) is the transformation platform | Workshop confirmed |
