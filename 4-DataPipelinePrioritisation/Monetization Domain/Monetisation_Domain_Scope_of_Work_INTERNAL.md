@@ -1,4 +1,4 @@
-# Monetisation Domain Data Migration - Scope of Work
+# Monetisation Domain Data Migration - Scope of Work (INTERNAL)
 
 **Client:** Canva  
 **Domain:** Monetisation  
@@ -6,6 +6,31 @@
 **Date:** February 2026  
 **Version:** 1.0 (DRAFT)  
 **Document Status:** For Review
+
+---
+
+## Engagement Outcome
+
+This outcome-based engagement will deliver a fully modernised data pipeline for the Monetisation Domain as part of Canva's enterprise data migration initiative. Upon completion, Snowflake Professional Services will have analysed and redesigned 14 source tables and 31 DBT models into a new three-layer architecture (Conformed, Metrics, Semantic), built approximately 23 optimised DBT models in a dedicated namespace, established 4 semantic views enabling natural language queries via Snowflake Intelligence, configured event-based and scheduled orchestration through Airflow, migrated all historical data with full validation, implemented comprehensive data governance (classifications, masking, RBAC), and delivered complete documentation including solution design, data architecture specifications, and a migration guide for downstream consumers—all validated through a 3-month parallel run period.
+
+---
+
+## Table of Contents
+
+1. [In-Scope Pipelines](#1-in-scope-pipelines)
+2. [Out of Scope](#2-out-of-scope)
+3. [Effort Estimate](#3-effort-estimate)
+   - 3.1 Assumptions Made on Estimate Calculation
+   - 3.2 Effort Estimates - Detailed Breakdown
+   - 3.3 Effort Summary
+   - 3.4 Breakdown by Phase
+   - 3.5 Phase-by-Phase Calculation
+   - 3.6 Consolidated Effort Table
+   - 3.7 Estimate Sensitivity
+4. [High-Level Execution Plan](#4-high-level-execution-plan)
+5. [Resourcing Needs](#5-resourcing-needs)
+6. [Open Questions](#6-open-questions)
+7. [Risks and Assumptions](#7-risks-and-assumptions)
 
 ---
 
@@ -577,10 +602,8 @@ Week:  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 2
 
 | Role | FTE | Duration | Responsibilities | Required Skills & Expertise |
 |------|-----|----------|------------------|----------------------------|
-| **Lead Data Engineer** | 1.0 | Full engagement (32 weeks) | Solution architecture, complex DBT development, technical leadership, stakeholder management | DBT Core (advanced), Snowflake (advanced), Data modeling (advanced), SQL (advanced), Airflow, Semantic Views/Cortex Analyst, Solution design |
-| **Senior Data Engineer** | 1.0 | Weeks 7-20 (14 weeks) | DBT model development, migration scripts, testing | DBT Core (advanced), Snowflake, SQL (advanced), Python, Data migration, Testing frameworks |
-| **Data Engineer** | 1.0 | Weeks 7-16 (10 weeks) | DBT model development, data validation | DBT Core (intermediate), Snowflake, SQL, Data quality |
-| **Data Governance Specialist** | 0.5 | Weeks 13-16 (4 weeks) | Data classification, masking policies, RBAC design | Snowflake RBAC, Data classification, Masking policies, Access control design |
+| **Lead Solution Architect** | 1.0 | Full engagement (32 weeks) | Solution architecture, complex DBT development, technical leadership, stakeholder management | DBT Core (advanced), Snowflake (advanced), Data modeling (advanced), SQL (advanced), Airflow, Semantic Views/Cortex Analyst, Solution design |
+| **Senior Solution Architect** | 1.0 | Weeks 7-20 (14 weeks) | DBT model development, migration scripts, testing | DBT Core (advanced), Snowflake, SQL (advanced), Python, Data migration, Testing frameworks |
 
 ### 5.2 Canva Team Requirements
 
@@ -664,17 +687,6 @@ Week:  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 2
 | R11 | **Platform team capacity** - Infrastructure provisioning delays | Low | High | Early engagement; clear timeline commitments; escalation path |
 | R12 | **Subscription pipeline dependency** - Hidden dependencies with out-of-scope pipeline | Low | Medium | Explicit interface definition; separate engagement tracking |
 | R13 | **Upstream dependencies not ready** - Internal team models incomplete at kickoff | Medium | High | Confirm delivery status before engagement start; delay kickoff if dependencies not met |
-
----
-
-## 8. Approval and Sign-off
-
-| Role | Name | Signature | Date |
-|------|------|-----------|------|
-| Snowflake Project Lead | | | |
-| Canva Domain Sponsor | Alex Hruska | | |
-| Canva Technical Lead | Aiden Guerin | | |
-| Canva Domain SME | Kaihao Wang | | |
 
 ---
 
