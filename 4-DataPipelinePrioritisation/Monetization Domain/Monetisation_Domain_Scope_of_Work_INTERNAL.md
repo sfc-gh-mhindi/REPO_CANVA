@@ -106,6 +106,7 @@
 | DBT version | DBT Core (open source) | Provided by platform team |
 | SME availability | 4-6 hours/week | Based on workshop commitment |
 | Code sharing | Via compliant mechanism | Pending platform team setup |
+| Upstream dependencies complete | Prior to initiative start | Internal team to deliver remaining models before migration begins |
 
 ---
 
@@ -540,6 +541,7 @@ Week:  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 2
 | A12 | Compliant code sharing mechanism will be established within 2 weeks | Pending platform team |
 | A13 | SME availability of 4-6 hours/week throughout engagement | Workshop commitment |
 | A14 | No major changes to source models during migration period | Workshop understanding |
+| A15 | Upstream dependencies (remaining internal models) complete prior to initiative start | Domain owner confirmation |
 
 ### 7.2 Risks
 
@@ -557,6 +559,7 @@ Week:  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 2
 | R10 | **Governance complexity** - RBAC/masking requirements more complex than expected | Low | Medium | Early governance assessment; involve security team |
 | R11 | **Platform team capacity** - Infrastructure provisioning delays | Low | High | Early engagement; clear timeline commitments; escalation path |
 | R12 | **Subscription pipeline dependency** - Hidden dependencies with out-of-scope pipeline | Low | Medium | Explicit interface definition; separate engagement tracking |
+| R13 | **Upstream dependencies not ready** - Internal team models incomplete at kickoff | Medium | High | Confirm delivery status before engagement start; delay kickoff if dependencies not met |
 
 ---
 
