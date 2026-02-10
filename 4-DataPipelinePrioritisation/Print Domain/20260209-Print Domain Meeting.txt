@@ -1,0 +1,28 @@
+Meeting assets for Confirmed - Snowflake PS - Data Pipeline Migration Scoping Discussion - Print Domain!
+
+Meeting summary
+Quick recap
+The meeting focused on discussing the data migration and transformation requirements for the Print Domain, specifically around the Print Order and Print Funnel tables. Mazen and Kevin explored the current state of the data models, including the number of intermediate tables and the complexity of the current DBT models. They discussed the target state architecture, which includes three new layers: Confirmed Database, Metrics Database, and Semantics Database. Kevin expressed concerns about query performance in the new data model and the need to revisit the target data model. They also discussed the requirements for migration, including the need to maintain data volume and governance policies. Mazen suggested that the data model should be revisited to address the issue of revenue allocation across different order items. The conversation ended with Kevin expressing a desire to complete the fact print order data model by the end of March.
+
+Next steps
+Kevin: Send Mazen the HLDD (high-level design document) and examples of current metrics for review.
+Mazen: Review Kevin's target state data model and provide feedback/assumptions on semantic views, starting with Print Ordered.
+Kevin: Send Mazen a few examples of existing metrics for reference.
+Kevin: Communicate with other domain owners to confirm if any models are dependent on the current intermediate tables before decommissioning old cron jobs.
+Mazen: Write up individual scoping for each domain (including Print) and share with Helen, Adrian, and Frank for approval next week.
+Kevin: Target completion of the new Print Ordered data model and migration by end of March.
+
+
+Summary
+Print Domain Data Model Restructuring
+Mazen and Kevin discussed the data model for the Print Domain, focusing on migrating current tables to a new architecture with three layers: Confirmed Database, Metrics Database, and Semantics Database. They clarified that the source data is not ingested directly into the two facts tables but goes through several intermediate layers. Kevin expressed concerns about query performance in the new data model, particularly in the semantic layer. They discussed the challenges of handling revenue data at different levels and the need for a third normal form model in the Confirmed layer. Mazen suggested revisiting the data model when the project kicks off, as it should be designed to minimize expectations for consumers and ensure seamless access for business users.
+
+Print Data Model Consolidation Plan
+Mazen and Kevin discussed the transformation of print data models, focusing on reducing the number of models for better maintainability. Kevin explained that around 30 models, including intermediary and target models, need to be analyzed and potentially consolidated. Mazen suggested targeting a 30% reduction in the number of models, aiming for a more compact and easily maintainable system. They agreed that the biggest modeling challenge would come from the fact Print Funnel, which currently uses a convoluted data structure with over 50 events in one table.
+
+Dependency Migration and Orchestration Plans
+Kevin and Mazen discussed the migration of dependencies and the creation of new semantic models. They agreed that the current orchestration process is a daily cron job, but they plan to move it to Airflow. Kevin explained that there is a requirement for a near real-time 2-hour refresh of certain data, which is currently handled by a separate database. They discussed the possibility of combining this with the Fact Print Audit process, which also needs a 2-hourly refresh. Kevin proposed an event-based system for the Fact Print Ordered data, while the Print Funnel does not require this.
+
+Print Funnel Data Migration Planning
+Mazen and Kevin discussed the migration of print funnel data, including data volume, governance policies, and the need for documentation. They explored the complexity of current DBT models and the potential for evolving metrics. Kevin expressed a need for assistance with data modeling and building new DBT models. They agreed that productionization would be handled by Canva. Mazen noted that the next step would be to write up individual scoping documents for each domain, with Kevin's target to complete the fact print order by the end of March.
+

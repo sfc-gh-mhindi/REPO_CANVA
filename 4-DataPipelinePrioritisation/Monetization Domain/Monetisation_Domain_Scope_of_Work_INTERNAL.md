@@ -585,6 +585,57 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 - Documentation delivered
 - Knowledge transfer complete
 
+### Timeline Diagram
+
+```mermaid
+gantt
+    title Monetisation Domain - Project Timeline (32 Weeks)
+    dateFormat  YYYY-MM-DD
+    axisFormat  Wk %W
+    tickInterval 1week
+    
+    section Phase 1: Discovery & Design
+    Physical Layer Setup (2.5d)           :active, p1a, 2026-03-02, 5d
+    Current State Analysis (18.5d)        :p1b, 2026-03-02, 20d
+    Transformation Analysis (13.5d)       :p1c, 2026-03-09, 15d
+    New DBT Model Design (11.9d)          :p1d, 2026-03-23, 15d
+    Design Approved                       :milestone, m1, 2026-04-10, 0d
+    
+    section Phase 2: Build
+    DBT Model Build (19.8d)               :p2a, 2026-04-13, 20d
+    Semantic Layer (11.0d)                :p2b, 2026-04-27, 12d
+    Orchestration Setup (10.0d)           :p2c, 2026-05-04, 12d
+    Governance Implementation (9.0d)      :p2d, 2026-05-11, 10d
+    Build Complete                        :milestone, m2, 2026-05-22, 0d
+    
+    section Phase 3: Migration & Testing
+    Historical Data Migration (15.5d)     :crit, p3a, 2026-05-25, 15d
+    Testing (17.0d)                       :p3b, 2026-06-01, 18d
+    Deployment (7.0d)                     :p3c, 2026-06-15, 8d
+    Production Deployed                   :milestone, m3, 2026-06-26, 0d
+    
+    section Phase 4: Parallel Run
+    Parallel Run Support (14.0d)          :p4a, 2026-06-29, 60d
+    Documentation (10.0d)                 :p4b, 2026-08-10, 15d
+    Knowledge Transfer                    :p4c, 2026-08-24, 5d
+    Final Handover                        :milestone, m4, 2026-08-28, 0d
+    
+    section Resources
+    Lead Solution Architect (Wk 1-32)     :done, res1, 2026-03-02, 160d
+    Senior Solution Architect (Wk 7-20)   :done, res2, 2026-04-13, 70d
+```
+
+### Effort by Phase
+
+```mermaid
+pie showData
+    title Effort Distribution by Phase (159.7 days)
+    "Phase 1: Discovery & Design" : 46.4
+    "Phase 2: Build" : 49.8
+    "Phase 3: Migration & Testing" : 39.5
+    "Phase 4: Parallel Run & Handover" : 24.0
+```
+
 ### Timeline Summary
 
 ```

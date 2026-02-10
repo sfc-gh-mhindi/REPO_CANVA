@@ -1,0 +1,17 @@
+Task,Phase,Start Week,End Week,Duration (Days),Owner,Milestone
+Physical Layer Setup,Phase 1: Discovery & Design,1,1,1.0,Lead SA,
+Current State Analysis,Phase 1: Discovery & Design,1,4,13.0,Lead SA,
+Transformation Analysis,Phase 1: Discovery & Design,2,4,10.0,Lead SA,
+New DBT Model Design,Phase 1: Discovery & Design,4,6,13.3,Lead SA,
+Design Approved,Phase 1: Discovery & Design,6,6,0,Lead SA,Yes
+DBT Model Build,Phase 2: Build,7,9,13.5,Lead SA + Senior SA,
+Semantic Layer Development,Phase 2: Build,9,10,8.5,Lead SA,
+Orchestration Setup,Phase 2: Build,10,11,8.5,Lead SA,
+Orchestration Live,Phase 2: Build,11,11,0,Lead SA,Yes
+Historical Data Migration,Phase 3: Migration & Testing,12,14,10.0,Senior SA,
+Testing,Phase 3: Migration & Testing,14,16,12.0,Senior SA,
+Deployment,Phase 3: Migration & Testing,16,16,2.0,Lead SA,
+7.5B Rows Migrated,Phase 3: Migration & Testing,14,14,0,Senior SA,Yes
+Parallel Run Support,Phase 4: Parallel Run & Handover,17,24,15.0,Lead SA,
+Documentation,Phase 4: Parallel Run & Handover,22,24,5.5,Lead SA,
+Final Handover,Phase 4: Parallel Run & Handover,24,24,0,Lead SA,Yes
