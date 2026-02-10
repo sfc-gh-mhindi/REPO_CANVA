@@ -828,6 +828,8 @@ Senior SA                              █████████████�
 | A21 | MH effort is restricted to DEV environment only | MH effort assumption |
 | A22 | Target 30% reduction in model count through consolidation | Meeting confirmed |
 | A23 | Parallel run period estimated at 2 months (TBD by domain owner) | Not yet defined |
+| A24 | Access to entire monolithic DBT project granted to understand cross-domain dependencies | Required for discovery |
+| A25 | Cortex Code CLI (or later version) can be connected to target Snowflake environment | Development tooling |
 
 ### 7.2 Risks
 

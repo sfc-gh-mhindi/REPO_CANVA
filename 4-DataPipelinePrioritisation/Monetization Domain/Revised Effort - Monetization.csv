@@ -1,0 +1,57 @@
+Domain,Phase,Category,Activity,MH Effort (Days),Can be expedited / scaled with CoCo,Effort with AI Scale,Calculation
+Monetization,1,Physical Layer Setup,Database creation,0.5,Yes,0.35,3 databases
+Monetization,1,Physical Layer Setup,Schema creation,0.5,Yes,0.35,Schemas per database
+Monetization,1,Physical Layer Setup,Access configuration,0.5,No,0.5,Initial role grants
+Monetization,1,Physical Layer Setup,Environment setup,0,No,0,DEV only
+Monetization,1,Current State Analysis,Table analysis,3,Yes,2.1,14 tables
+Monetization,1,Current State Analysis,Data profiling,2,Yes,1.4,14 tables
+Monetization,1,Current State Analysis,Dependency mapping,2,No,2,Cross-domain dependencies
+Monetization,1,Current State Analysis,Target model design,4,Yes,2.8,3-layer architecture
+Monetization,1,Current State Analysis,Design review & iteration,1,No,1,Stakeholder review
+Monetization,1,Transformation Analysis,Simple model analysis,0.75,Yes,0.525,5 models x 0.15 days
+Monetization,1,Transformation Analysis,Medium model analysis,3.75,Yes,2.625,15 models x 0.25 days
+Monetization,1,Transformation Analysis,Complex model analysis,5.5,Yes,3.85,11 models x 0.5 days
+Monetization,1,Transformation Analysis,Macro identification,2,Yes,1.4,Common patterns
+Monetization,1,Transformation Analysis,Lineage documentation,1.5,Yes,1.05,Model dependencies
+Monetization,1,New DBT Model Design,New model design,6.9,Yes,4.83,23 models x 0.3 days
+Monetization,1,New DBT Model Design,Reusable component design,3,Yes,2.1,Macros and shared logic
+Monetization,1,New DBT Model Design,Design documentation,2,Yes,1.4,Technical specifications
+Monetization,2,New DBT Model Build,Simple model build,1,Yes,0.7,4 models x 0.25 days
+Monetization,2,New DBT Model Build,Medium model build,5.5,Yes,3.85,11 models x 0.5 days
+Monetization,2,New DBT Model Build,Complex model build,8,Yes,5.6,8 models x 1.0 days
+Monetization,2,New DBT Model Build,Macro/component build,3,Yes,2.1,Shared components
+Monetization,2,New DBT Model Build,Model configuration,1,Yes,0.7,"YAML, tests, docs"
+Monetization,2,Semantic Layer,Requirements discovery,2,No,2,4 areas x 0.5 days
+Monetization,2,Semantic Layer,Semantic model design,4,Yes,2.8,4 models x 1.0 days
+Monetization,2,Semantic Layer,Semantic view build,3,Yes,2.1,4 views x 0.75 days
+Monetization,2,Semantic Layer,Snowflake Intelligence validation,2,No,2,Cortex Analyst testing
+Monetization,2,Orchestration Setup,Orchestration design,2,No,2,Event + scheduled patterns
+Monetization,2,Orchestration Setup,Airflow DAG development,4,Yes,2.8,4 pipeline DAGs
+Monetization,2,Orchestration Setup,Event trigger configuration,0,No,0,Foundation layer triggers
+Monetization,2,Orchestration Setup,Schedule configuration,0,No,0,Daily schedules
+Monetization,2,Orchestration Setup,Testing & validation,1.5,No,1.5,End-to-end testing
+Monetization,2,Governance,Data classification,2,No,2,Apply to new objects
+Monetization,2,Governance,Masking policies,2,Yes,1.4,Implement masking rules
+Monetization,2,Governance,Row access policies,1.5,Yes,1.05,RAP configuration
+Monetization,2,Governance,RBAC implementation,2.5,No,2.5,Role hierarchy and grants
+Monetization,2,Governance,Governance validation,1,No,1,Audit and testing
+Monetization,3,Historical Data Migration,Migration script development,7,Yes,4.9,14 tables x 0.5 days
+Monetization,3,Historical Data Migration,Data extraction & load,0,No,0,Full historical migration
+Monetization,3,Historical Data Migration,Data reconciliation,2,No,2,14 tables x 0.25 days
+Monetization,3,Historical Data Migration,Issue resolution,2,No,2,Migration discrepancies
+Monetization,3,Testing,Unit test migration,3,Yes,2.1,Existing DBT tests
+Monetization,3,Testing,Unit test development,0,No,0,New model tests
+Monetization,3,Testing,Integration testing,0,No,0,End-to-end validation
+Monetization,3,Testing,Data quality testing,3,Yes,2.1,"Accuracy, completeness"
+Monetization,3,Testing,UAT support,0,No,0,Not in scope
+Monetization,3,Deployment,Dev environment deployment,2,No,2,Initial deployment
+Monetization,3,Deployment,Test environment deployment,0,No,0,Not in scope
+Monetization,3,Deployment,Production deployment,0,No,0,Not in scope
+Monetization,3,Deployment,Post-deployment validation,0,No,0,Not in scope
+Monetization,4,Parallel Run Support,Parallel Run Support,12,No,12,1 days x 12 weeks
+Monetization,4,Documentation,Solution design document,3,No,3,Architecture documentation
+Monetization,4,Documentation,Data architecture document,2,No,2,Data model specs
+Monetization,4,Documentation,Migration guide,2,No,2,Downstream consumer guide
+Monetization,4,Documentation,Runbooks,1.5,No,1.5,Operational procedures
+Monetization,4,Documentation,Knowledge transfer,0.5,No,0.5,4 sessions x 1 hour
+Monetization,5,Contingency (15%),Contingency (15%),18.735,No,18.735,15% of total time
