@@ -1,0 +1,295 @@
+<mxfile host="app.diagrams.net" modified="2026-02-10T00:00:00.000Z" agent="Snowflake PS" version="21.0.0">
+  <diagram name="Print Domain Timeline" id="print-domain-timeline">
+    <mxGraphModel dx="1434" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title" value="PRINT DOMAIN - PROJECT TIMELINE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1a365d;" vertex="1" parent="1">
+          <mxGeometry x="500" y="20" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Total Duration: 24 Weeks | Total Effort: 129.1 Days (with contingency)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="500" y="55" width="600" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Week Headers -->
+        <mxCell id="week-header" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f7fafc;strokeColor=#e2e8f0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="1200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk1" value="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk2" value="2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="250" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk3" value="3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk4" value="4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="350" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk5" value="5" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="400" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk6" value="6" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="450" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk7" value="7" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="500" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk8" value="8" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="550" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk9" value="9" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="600" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk10" value="10" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="650" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk11" value="11" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="700" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk12" value="12" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="750" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk13" value="13" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="800" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk14" value="14" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="850" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk15" value="15" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="900" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk16" value="16" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="950" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk17" value="17" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk18" value="18" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk19" value="19" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk20" value="20" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk21" value="21" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk22" value="22" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk23" value="23" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wk24" value="24" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 1: Discovery & Design -->
+        <mxCell id="phase1-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#3b82f6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="200" y="140" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="phase1-title" value="PHASE 1: DISCOVERY &amp; DESIGN" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#1e40af;" vertex="1" parent="1">
+          <mxGeometry x="200" y="145" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="phase1-effort" value="37.3 days | Weeks 1-6" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#3b82f6;" vertex="1" parent="1">
+          <mxGeometry x="200" y="165" width="300" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Phase 1 Activities -->
+        <mxCell id="p1-a1" value="Physical Layer Setup (1.0d)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b82f6;strokeColor=#1e40af;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="210" y="185" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-a2" value="Current State Analysis (13.0d)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b82f6;strokeColor=#1e40af;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="210" y="215" width="180" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-a3" value="Transformation Analysis (10.0d)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b82f6;strokeColor=#1e40af;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="210" y="245" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-a4" value="New DBT Model Design (13.3d)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b82f6;strokeColor=#1e40af;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="210" y="275" width="170" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 1 Milestone -->
+        <mxCell id="m1" value="" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate;fillColor=#f59e0b;strokeColor=#d97706;" vertex="1" parent="1">
+          <mxGeometry x="485" y="295" width="25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="m1-label" value="Design Approved" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontColor=#92400e;" vertex="1" parent="1">
+          <mxGeometry x="475" y="320" width="90" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 2: Build -->
+        <mxCell id="phase2-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#22c55e;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="500" y="140" width="250" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="phase2-title" value="PHASE 2: BUILD" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#166534;" vertex="1" parent="1">
+          <mxGeometry x="500" y="145" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="phase2-effort" value="30.5 days | Weeks 7-11" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#22c55e;" vertex="1" parent="1">
+          <mxGeometry x="500" y="165" width="250" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Phase 2 Activities -->
+        <mxCell id="p2-a1" value="DBT Model Build (13.5d)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#22c55e;strokeColor=#166534;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="510" y="185" width="140" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-a2" value="Semantic Layer (8.5d)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#22c55e;strokeColor=#166534;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="510" y="215" width="110" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-a3" value="Orchestration Setup (8.5d)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#22c55e;strokeColor=#166534;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="510" y="245" width="130" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 2 Milestone -->
+        <mxCell id="m2" value="" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate;fillColor=#f59e0b;strokeColor=#d97706;" vertex="1" parent="1">
+          <mxGeometry x="735" y="295" width="25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="m2-label" value="Orchestration Live" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontColor=#92400e;" vertex="1" parent="1">
+          <mxGeometry x="720" y="320" width="100" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 3: Migration & Testing -->
+        <mxCell id="phase3-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#f59e0b;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="750" y="140" width="250" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="phase3-title" value="PHASE 3: MIGRATION &amp; TESTING" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#92400e;" vertex="1" parent="1">
+          <mxGeometry x="750" y="145" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="phase3-effort" value="24.0 days | Weeks 12-16" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#f59e0b;" vertex="1" parent="1">
+          <mxGeometry x="750" y="165" width="250" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Phase 3 Activities -->
+        <mxCell id="p3-a1" value="Data Migration (10.0d)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f59e0b;strokeColor=#92400e;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="760" y="185" width="120" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-a2" value="Testing (12.0d)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f59e0b;strokeColor=#92400e;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="760" y="215" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-a3" value="Deployment (2.0d)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f59e0b;strokeColor=#92400e;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="760" y="245" width="80" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 3 Milestone -->
+        <mxCell id="m3" value="" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate;fillColor=#f59e0b;strokeColor=#d97706;" vertex="1" parent="1">
+          <mxGeometry x="985" y="295" width="25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="m3-label" value="7.5B Rows Migrated" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontColor=#92400e;" vertex="1" parent="1">
+          <mxGeometry x="965" y="320" width="110" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 4: Parallel Run & Handover -->
+        <mxCell id="phase4-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce7f3;strokeColor=#ec4899;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="140" width="400" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="phase4-title" value="PHASE 4: PARALLEL RUN &amp; HANDOVER" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#9d174d;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="145" width="400" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="phase4-effort" value="20.5 days | Weeks 17-24" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#ec4899;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="165" width="400" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Phase 4 Activities -->
+        <mxCell id="p4-a1" value="Parallel Run Support (15.0d)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ec4899;strokeColor=#9d174d;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="185" width="350" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-a2" value="Documentation (5.5d)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ec4899;strokeColor=#9d174d;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="215" width="120" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 4 Milestone -->
+        <mxCell id="m4" value="" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate;fillColor=#10b981;strokeColor=#059669;" vertex="1" parent="1">
+          <mxGeometry x="1375" y="295" width="25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="m4-label" value="Final Handover" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=9;fontColor=#059669;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1355" y="320" width="80" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- Resource Allocation Section -->
+        <mxCell id="resources-title" value="RESOURCE ALLOCATION" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1a365d;" vertex="1" parent="1">
+          <mxGeometry x="40" y="360" width="200" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Lead SA -->
+        <mxCell id="lead-sa-label" value="Lead Solution Architect" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="40" y="390" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="lead-sa-bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6366f1;strokeColor=#4f46e5;" vertex="1" parent="1">
+          <mxGeometry x="200" y="390" width="1200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="lead-sa-text" value="Weeks 1-24 (Full Engagement)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="200" y="390" width="1200" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Senior SA -->
+        <mxCell id="senior-sa-label" value="Senior Solution Architect" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#4a5568;" vertex="1" parent="1">
+          <mxGeometry x="40" y="425" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="senior-sa-bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8b5cf6;strokeColor=#7c3aed;" vertex="1" parent="1">
+          <mxGeometry x="500" y="425" width="500" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="senior-sa-text" value="Weeks 7-16 (Build + Migration)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="500" y="425" width="500" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Key Milestones Section -->
+        <mxCell id="milestones-title" value="KEY MILESTONES" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1a365d;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="200" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="milestones-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="510" width="1360" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Milestone Items -->
+        <mxCell id="ms1" value="◆ Wk 1: Project Kickoff" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#1e40af;" vertex="1" parent="1">
+          <mxGeometry x="60" y="520" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ms2" value="◆ Wk 6: Design Approved" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#1e40af;" vertex="1" parent="1">
+          <mxGeometry x="220" y="520" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ms3" value="◆ Wk 9: DBT Models Complete" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#166534;" vertex="1" parent="1">
+          <mxGeometry x="380" y="520" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ms4" value="◆ Wk 11: Orchestration Live" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#166534;" vertex="1" parent="1">
+          <mxGeometry x="560" y="520" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ms5" value="◆ Wk 14: 7.5B Rows Migrated" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#92400e;" vertex="1" parent="1">
+          <mxGeometry x="60" y="550" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ms6" value="◆ Wk 16: Testing Complete" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#92400e;" vertex="1" parent="1">
+          <mxGeometry x="240" y="550" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ms7" value="◆ Wk 23: Parallel Run Validated" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#9d174d;" vertex="1" parent="1">
+          <mxGeometry x="400" y="550" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ms8" value="◆ Wk 24: Final Handover" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#059669;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="590" y="550" width="150" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Effort Summary Box -->
+        <mxCell id="summary-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e40af;strokeColor=#1e3a8a;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="510" width="340" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-title" value="EFFORT SUMMARY" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="515" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-base" value="Base Effort: 112.3 days" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#bfdbfe;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="535" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-contingency" value="Contingency: 16.8 days" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#bfdbfe;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="535" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-total" value="TOTAL: 129.1 DAYS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="560" width="340" height="25" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
