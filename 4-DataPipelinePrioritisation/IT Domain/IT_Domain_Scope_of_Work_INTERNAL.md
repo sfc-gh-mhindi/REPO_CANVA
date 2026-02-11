@@ -662,6 +662,7 @@ Senior Solution Architect:
 | A15 | Cortex Code CLI (or later version) can be connected to target Snowflake environment | Development tooling |
 | A16 | Design reviews are approved in a timely fashion | Standard |
 | A17 | Productionization support (beyond runbooks) is not included | Workshop confirmed |
+| A18 | Access to personnel with source data knowledge for target state model design is available | Required for analysis |
 
 ### 7.2 Risks
 
