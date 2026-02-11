@@ -11,7 +11,7 @@
 
 ## Engagement Outcome
 
-This outcome-based engagement will deliver a fully modernised data pipeline for the Monetisation Domain as part of Canva's enterprise data migration initiative. Snowflake will analyse, redesign, and rebuild the existing DBT project into a new three-layer architecture (Conformed, Metrics, Semantic), establish semantic views for Snowflake Intelligence, configure orchestration through Airflow, migrate historical data with validation, implement data governance, and deliver complete documentation—all validated through a 3-month parallel run period.
+This outcome-based engagement will deliver a fully modernised data pipeline for the Monetisation Domain as part of Canva's enterprise data migration initiative. Snowflake will analyse, redesign, and rebuild the existing DBT project into a new three-layer architecture (Conformed, Metrics, Semantic), establish semantic views for Snowflake Intelligence, configure orchestration through Airflow, migrate historical data with validation, implement data governance, and deliver complete documentation.
 
 ---
 
@@ -58,7 +58,7 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | 5 | **Orchestration** | Event-based and scheduled orchestration via Airflow |
 | 6 | **Historical Data Migration** | Full historical data migration with validation |
 | 7 | **Governance Implementation** | Data classifications, masking policies, RAP, RBAC |
-| 8 | **Testing** | Data quality tests, unit tests, integration tests, parallel run validation |
+| 8 | **Testing** | Data quality tests, unit tests, integration tests |
 | 9 | **Documentation** | Solution design, data architecture, migration guide for downstream consumers |
 
 ---
@@ -70,7 +70,7 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | **Subscription Data Transformation Pipeline** | Requires separate workshop with Aiden Guerin; documentation not yet available |
 | **Upstream Dependency Migration** | Foundation domain tables consumed as-is from current location |
 | **Downstream Consumer Re-pointing** | Migration guide provided, but actual re-pointing is consumer responsibility |
-| **Decommissioning Old Tables** | Not included; old tables remain during and after parallel run |
+| **Decommissioning Old Tables** | Not included; separate operational activity |
 | **Metrics Alerts** | Pending confirmation from Nicholas Prima |
 | **Source Data Ingestion** | All source data already available in Snowflake |
 | **Infrastructure Provisioning** | Platform team responsibility (databases, Airflow infrastructure) |
@@ -125,7 +125,7 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | Estimated new DBT models (target state) | 23 (~75% of current) | Assumes redesign consolidates functionality |
 | Overall complexity rating | 6-7 out of 10 | Confirmed by Kaihao |
 | Data volume | Gigabytes range | Manageable for full historical migration |
-| Parallel run duration | 3 months | Confirmed requirement |
+
 | Refresh frequency | Event-based + Daily scheduled | Mixed orchestration |
 | Target tables type | Native Snowflake tables | No external/transient tables |
 | DBT version | DBT Core (open source) | Provided by platform team |
@@ -252,16 +252,7 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | UAT support | Business user acceptance testing | 0 |
 | **Subtotal** | | **4.2** |
 
-#### 3.2.11 Parallel Run Support
-
-*Effort: 1 day per week for 12 weeks (3-month parallel run period).*
-
-| Activity | Description | Effort (Days) |
-|----------|-------------|---------------|
-| Parallel Run Support | Weekly monitoring, validation, and issue resolution | 12.0 |
-| **Subtotal** | | **12.0** |
-
-#### 3.2.12 Documentation
+#### 3.2.11 Documentation
 
 | Activity | Description | Effort (Days) |
 |----------|-------------|---------------|
@@ -272,7 +263,7 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | Knowledge transfer | 4 sessions (1 per reporting area) x 1 hour | 0.5 |
 | **Subtotal** | | **9.0** |
 
-#### 3.2.13 Deployment
+#### 3.2.12 Deployment
 
 *Note: MH effort is restricted to DEV environment only. Deployment to TEST/UAT and Production environments is not included.*
 
@@ -300,12 +291,11 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | Historical Data Migration | 8.9 |
 | Governance Implementation | 7.95 |
 | Testing | 4.2 |
-| Parallel Run Support | 12.0 |
 | Documentation | 9.0 |
 | Deployment | 2.0 |
-| **Total Base Effort** | **100.5 days** |
-| **Contingency (15%)** | **15.1 days** |
-| **Grand Total** | **115.6 days** |
+| **Total Base Effort** | **88.5 days** |
+| **Contingency (15%)** | **13.3 days** |
+| **Grand Total** | **101.8 days** |
 
 ---
 
@@ -316,10 +306,10 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | **Phase 1: Discovery & Design** | Physical layer setup, current state analysis, transformation analysis, new model design | 28.3 |
 | **Phase 2: Build** | DBT model build, semantic layer, orchestration, governance | 36.1 |
 | **Phase 3: Migration & Testing** | Historical migration, testing, deployment to dev | 15.1 |
-| **Phase 4: Parallel Run & Handover** | Parallel run support, documentation | 21.0 |
-| **Subtotal** | | **100.5** |
-| **Contingency (15%)** | | **15.1** |
-| **Grand Total** | | **115.6** |
+| **Phase 4: Documentation & Handover** | Documentation, knowledge transfer | 9.0 |
+| **Subtotal** | | **88.5** |
+| **Contingency (15%)** | | **13.3** |
+| **Grand Total** | | **101.8** |
 
 ---
 
@@ -380,17 +370,16 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | Dev environment deployment | 2.0 | Initial deployment |
 | **Subtotal** | **15.1** | |
 
-#### Phase 4: Parallel Run & Handover (21.0 days)
+#### Phase 4: Documentation & Handover (9.0 days)
 
 | Activity | Days | Calculation |
 |----------|------|-------------|
-| Parallel run support | 12.0 | 1 day x 12 weeks |
 | Solution design document | 3.0 | Architecture documentation |
 | Data architecture document | 2.0 | Data model specs |
 | Migration guide | 2.0 | Downstream consumer guide |
 | Runbooks | 1.5 | Operational procedures |
 | Knowledge transfer | 0.5 | 4 sessions x 1 hour |
-| **Subtotal** | **21.0** | |
+| **Subtotal** | **9.0** | |
 
 ---
 
@@ -448,8 +437,6 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | | | **Subtotal** | **4.2** | |
 | **Deployment** | 3 | Dev environment deployment | 2.0 | Initial deployment |
 | | | **Subtotal** | **2.0** | |
-| **Parallel Run Support** | 4 | Parallel run support | 12.0 | 1 day x 12 weeks |
-| | | **Subtotal** | **12.0** | |
 | **Documentation** | 4 | Solution design document | 3.0 | Architecture documentation |
 | | 4 | Data architecture document | 2.0 | Data model specs |
 | | 4 | Migration guide | 2.0 | Downstream consumer guide |
@@ -461,11 +448,11 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | | **Phase 1** | Discovery & Design | **28.3** | |
 | | **Phase 2** | Build | **36.1** | |
 | | **Phase 3** | Migration & Testing | **15.1** | |
-| | **Phase 4** | Parallel Run & Handover | **21.0** | |
+| | **Phase 4** | Documentation & Handover | **9.0** | |
 | | | | | |
-| | | **Total Base Effort** | **100.5** | |
-| | | **Contingency (15%)** | **15.1** | |
-| | | **Grand Total** | **115.6** | |
+| | | **Total Base Effort** | **88.5** | |
+| | | **Contingency (15%)** | **13.3** | |
+| | | **Grand Total** | **101.8** | |
 
 ---
 
@@ -478,7 +465,7 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | Additional tables identified beyond 14 | +2-3 days per table |
 | SME availability drops to 2 hrs/week | +8-12 days (waiting time) |
 | Code sharing mechanism delayed by 4+ weeks | +8-12 days (rework/discovery) |
-| Parallel run extended beyond 3 months | +2 days per additional month |
+
 | Semantic views increase from 4 to 8 | +8-10 days |
 | Additional governance policies required | +3-5 days |
 | Historical data volume larger than expected (TBs) | +5-8 days migration |
@@ -490,31 +477,30 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 
 ## 4. High-Level Execution Plan
 
-### Phase 1: Discovery & Design (Weeks 1-6)
+### Phase 1: Discovery & Design (Weeks 1-5)
 
 **Objectives:** Understand current state, design target architecture, obtain approval
 
 | Week | Activities |
 |------|------------|
-| 1-2 | Physical layer setup, receive sample DBT models, begin table analysis |
-| 3-4 | Complete data profiling, dependency mapping, DBT model analysis |
-| 5-6 | Target model design, design review with stakeholders, obtain sign-off |
+| 1-2 | Physical layer setup, receive sample DBT models, begin table analysis (AI-assisted) |
+| 3-4 | Complete data profiling, dependency mapping, DBT model analysis (AI-assisted) |
+| 5 | Target model design, design review with stakeholders, obtain sign-off |
 
 **Key Milestones:**
 - Solution Design Document approved
 - DBT model complexity breakdown confirmed
 - Target data model design signed off
 
-### Phase 2: Build (Weeks 7-14)
+### Phase 2: Build (Weeks 6-11)
 
 **Objectives:** Develop all DBT models, semantic layer, orchestration, governance
 
 | Week | Activities |
 |------|------------|
-| 7-8 | Build Conformed layer DBT models, reusable macros |
-| 9-10 | Build Metrics layer DBT models |
-| 11-12 | Semantic layer development, orchestration setup |
-| 13-14 | Governance implementation, model configuration |
+| 6-7 | Build Conformed layer DBT models, reusable macros (AI-assisted) |
+| 8-9 | Build Metrics layer DBT models, semantic layer development (AI-assisted) |
+| 10-11 | Orchestration setup, governance implementation |
 
 **Key Milestones:**
 - Conformed layer models complete
@@ -522,35 +508,31 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 - Semantic views deployed
 - Orchestration operational
 
-### Phase 3: Migration & Testing (Weeks 15-20)
+### Phase 3: Migration & Testing (Weeks 12-14)
 
 **Objectives:** Migrate data, test thoroughly, deploy to production
 
 | Week | Activities |
 |------|------------|
-| 15-16 | Migration script development, test migration |
-| 17-18 | Full historical migration, data reconciliation |
-| 19 | Integration testing, data quality testing |
-| 20 | UAT, production deployment |
+| 12 | Migration script development (AI-assisted), test migration |
+| 13 | Full historical migration, data reconciliation |
+| 14 | Data quality testing, production deployment |
 
 **Key Milestones:**
 - Historical data migrated and validated
 - All tests passing
 - Production deployment complete
 
-### Phase 4: Parallel Run & Handover (Weeks 21-32)
+### Phase 4: Documentation & Handover (Weeks 15-16)
 
-**Objectives:** Validate in production, document, transfer knowledge
+**Objectives:** Document solution, transfer knowledge
 
 | Week | Activities |
 |------|------------|
-| 21-24 | Active parallel run monitoring, weekly validation |
-| 25-28 | Continued monitoring, discrepancy resolution |
-| 29-30 | Documentation completion, migration guide |
-| 31-32 | Knowledge transfer, final handover |
+| 15 | Documentation completion, migration guide |
+| 16 | Knowledge transfer, final handover |
 
 **Key Milestones:**
-- Parallel run validation complete
 - Documentation delivered
 - Knowledge transfer complete
 
@@ -558,70 +540,68 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 
 ```mermaid
 gantt
-    title Monetisation Domain - Project Timeline (32 Weeks) - AI-Assisted
+    title Monetisation Domain - Project Timeline (16 Weeks) - AI-Assisted
     dateFormat  YYYY-MM-DD
     axisFormat  Wk %W
     tickInterval 1week
     
     section Phase 1: Discovery & Design
-    Physical Layer Setup (1.2d)           :active, p1a, 2026-03-02, 3d
-    Current State Analysis (9.3d)         :p1b, 2026-03-02, 12d
-    Transformation Analysis (9.45d)       :p1c, 2026-03-09, 12d
-    New DBT Model Design (8.33d)          :p1d, 2026-03-18, 10d
-    Design Approved                       :milestone, m1, 2026-04-10, 0d
+    Physical Layer Setup (1.2d)           :active, p1a, 2026-03-02, 2d
+    Current State Analysis (9.3d)         :p1b, 2026-03-02, 10d
+    Transformation Analysis (9.45d)       :p1c, 2026-03-09, 10d
+    New DBT Model Design (8.33d)          :p1d, 2026-03-16, 10d
+    Design Approved                       :milestone, m1, 2026-04-03, 0d
     
     section Phase 2: Build
-    DBT Model Build (12.95d)              :p2a, 2026-04-13, 15d
-    Semantic Layer (8.9d)                 :p2b, 2026-04-27, 10d
-    Orchestration Setup (6.3d)            :p2c, 2026-05-04, 8d
-    Governance Implementation (7.95d)     :p2d, 2026-05-11, 10d
-    Build Complete                        :milestone, m2, 2026-05-22, 0d
+    DBT Model Build (12.95d)              :p2a, 2026-04-06, 12d
+    Semantic Layer (8.9d)                 :p2b, 2026-04-13, 10d
+    Orchestration Setup (6.3d)            :p2c, 2026-04-20, 8d
+    Governance Implementation (7.95d)     :p2d, 2026-04-27, 10d
+    Build Complete                        :milestone, m2, 2026-05-08, 0d
     
     section Phase 3: Migration & Testing
-    Historical Data Migration (8.9d)      :crit, p3a, 2026-05-25, 10d
-    Testing (4.2d)                        :p3b, 2026-06-01, 5d
-    Deployment (2.0d)                     :p3c, 2026-06-08, 3d
-    Production Deployed                   :milestone, m3, 2026-06-26, 0d
+    Historical Data Migration (8.9d)      :crit, p3a, 2026-05-11, 8d
+    Testing (4.2d)                        :p3b, 2026-05-18, 5d
+    Deployment (2.0d)                     :p3c, 2026-05-22, 3d
+    DEV Deployed                          :milestone, m3, 2026-05-29, 0d
     
-    section Phase 4: Parallel Run
-    Parallel Run Support (12.0d)          :p4a, 2026-06-29, 60d
-    Documentation (9.0d)                  :p4b, 2026-08-10, 12d
-    Knowledge Transfer                    :p4c, 2026-08-24, 3d
-    Final Handover                        :milestone, m4, 2026-08-28, 0d
+    section Phase 4: Documentation
+    Documentation (9.0d)                  :p4a, 2026-06-01, 10d
+    Final Handover                        :milestone, m4, 2026-06-12, 0d
     
     section Resources
-    Lead Solution Architect (Wk 1-32)     :done, res1, 2026-03-02, 160d
-    Senior Solution Architect (Wk 7-20)   :done, res2, 2026-04-13, 70d
+    Lead Solution Architect (Wk 1-16)     :done, res1, 2026-03-02, 80d
+    Senior Solution Architect (Wk 6-14)   :done, res2, 2026-04-06, 45d
 ```
 
 ### Effort by Phase
 
 ```mermaid
 pie showData
-    title Effort Distribution by Phase (100.5 days) - AI-Assisted
+    title Effort Distribution by Phase (88.5 days) - AI-Assisted
     "Phase 1: Discovery & Design" : 28.3
     "Phase 2: Build" : 36.1
     "Phase 3: Migration & Testing" : 15.1
-    "Phase 4: Parallel Run & Handover" : 21.0
+    "Phase 4: Documentation & Handover" : 9.0
 ```
 
 ### Timeline Summary
 
 ```
-Week:  1  2  3  4  5  6 | 7  8  9 10 11 12 13 14 | 15 16 17 18 19 20 | 21 22 23 24 25 26 27 28 29 30 31 32
-       |--Discovery &---|-------Build------------|--Migration &------|--------Parallel Run & Handover--------|
-       |    Design      |                        |    Testing        |                                       |
+Week:  1  2  3  4  5 | 6  7  8  9 10 11 | 12 13 14 | 15 16
+       |--Discovery--|------Build-------|--Migr&---|--Docs-|
+       |   & Design  |                  |  Test    |       |
 
 Lead Solution Architect:
-       |===========================================================================================================|
-       Week 1-32 (Full engagement)
+       |=====================================================|
+       Week 1-16 (Full engagement)
 
 Senior Solution Architect:
-                         |===========================================|
-                         Week 7-20 (Build + Migration & Testing)
+                      |=======================|
+                      Week 6-14 (Build + Migration & Testing)
 ```
 
-**Total Duration:** ~32 weeks (8 months) including 3-month parallel run
+**Total Duration:** ~16 weeks (4 months)
 
 ---
 
@@ -631,8 +611,8 @@ Senior Solution Architect:
 
 | Role | FTE | Duration | Responsibilities | Required Skills & Expertise |
 |------|-----|----------|------------------|----------------------------|
-| **Lead Solution Architect** | 1.0 | Full engagement (32 weeks) | Solution architecture, complex DBT development, technical leadership, stakeholder management | DBT Core (advanced), Snowflake (advanced), Data modeling (advanced), SQL (advanced), Airflow, Semantic Views/Cortex Analyst, Solution design |
-| **Senior Solution Architect** | 1.0 | Weeks 7-20 (14 weeks) | DBT model development, migration scripts, testing | DBT Core (advanced), Snowflake, SQL (advanced), Python, Data migration, Testing frameworks |
+| **Lead Solution Architect** | 1.0 | Full engagement (16 weeks) | Solution architecture, complex DBT development, technical leadership, stakeholder management | DBT Core (advanced), Snowflake (advanced), Data modeling (advanced), SQL (advanced), Airflow, Semantic Views/Cortex Analyst, Cortex Code, Solution design |
+| **Senior Solution Architect** | 1.0 | Weeks 6-14 (9 weeks) | DBT model development, migration scripts, testing | DBT Core (advanced), Snowflake, SQL (advanced), Python, Data migration, Testing frameworks |
 
 ### 5.2 Canva Team Requirements
 
@@ -641,8 +621,8 @@ Senior Solution Architect:
 | **Domain SME (Kaihao Wang)** | 4-6 hrs/week | Full engagement | Requirements clarification, metrics definition, model validation, complexity breakdown |
 | **Technical Lead (Aiden Guerin)** | 2-4 hrs/week | Full engagement | Technical decisions, approvals, escalations |
 | **Data Platform Team** | As needed | Full engagement | Airflow infrastructure, code sharing mechanism, event triggers, database provisioning |
-| **QA/Testing Resource** | 2-4 hrs/week | Weeks 15-20 | UAT execution, business validation |
-| **Downstream Consumers** | As needed | Weeks 21-32 | Migration testing, feedback on new models |
+| **QA/Testing Resource** | 2-4 hrs/week | Weeks 12-14 | UAT execution, business validation |
+| **Downstream Consumers** | As needed | Weeks 15-26 | Migration testing, feedback on new models |
 
 ### 5.3 Infrastructure Requirements
 
@@ -650,7 +630,7 @@ Senior Solution Architect:
 |-------------|-------|----------|
 | 3 Snowflake databases (Conformed, Metrics, Semantic) | Platform Team | Week 1 |
 | Development environment access | Platform Team | Week 1 |
-| Airflow environment for orchestration | Platform Team | Week 11 |
+| Airflow environment for orchestration | Platform Team | Week 10 |
 | Compliant code sharing mechanism | Platform Team | Week 1-2 |
 | Access to existing DBT models and YAML files | Kaihao Wang | Week 1 |
 
@@ -668,9 +648,7 @@ Senior Solution Architect:
 | 6 | Who are the critical downstream consumers requiring migration notification? | Kaihao Wang | Documentation scope | Medium |
 | 7 | What are the specific data masking requirements for financial data? | Kaihao Wang | Governance complexity | Medium |
 | 8 | Will views mimicking old table signatures be required for backward compatibility? | Aiden Guerin | Additional development | Medium |
-| 9 | What is the rollback strategy if parallel run validation fails? | Joint decision | Risk mitigation | Low |
-| 10 | Is Airflow hourly execution possible, or must we start with daily? | Platform Team | Orchestration design | Low |
-| 11 | What is the acceptable variance threshold for parallel run validation? | Business stakeholders | Testing criteria | Low |
+| 9 | Is Airflow hourly execution possible, or must we start with daily? | Platform Team | Orchestration design | Low |
 
 ---
 
@@ -688,18 +666,17 @@ Senior Solution Architect:
 | A6 | All 14 target tables are native Snowflake tables | Workshop confirmed |
 | A7 | Foundation domain dependencies will remain available as-is | Workshop confirmed |
 | A8 | Platform team will provision databases and Airflow infrastructure | Workshop confirmed |
-| A9 | 3-month parallel run is required | Workshop confirmed |
-| A10 | Existing DBT YAML files provide adequate documentation | Workshop confirmed |
-| A11 | Metric definitions exist for Merchant Fee reporting; others require SME input | Workshop confirmed |
-| A12 | Compliant code sharing mechanism will be established within 2 weeks | Pending platform team |
-| A13 | SME availability of 4-6 hours/week throughout engagement | Workshop commitment |
-| A14 | No major changes to source models during migration period | Workshop understanding |
-| A15 | Upstream dependencies (remaining internal models) complete prior to initiative start | Domain owner confirmation |
-| A16 | Design reviews are approved in a timely fashion | MH effort assumption |
-| A17 | Deployment to UAT and production environments is not included in MH effort scope | MH effort assumption |
-| A18 | MH effort is restricted to DEV environment only | MH effort assumption |
-| A19 | Access to entire monolithic DBT project granted to understand cross-domain dependencies | Required for discovery |
-| A20 | Cortex Code CLI (or later version) can be connected to target Snowflake environment | Development tooling |
+| A9 | Existing DBT YAML files provide adequate documentation | Workshop confirmed |
+| A10 | Metric definitions exist for Merchant Fee reporting; others require SME input | Workshop confirmed |
+| A11 | Compliant code sharing mechanism will be established within 2 weeks | Pending platform team |
+| A12 | SME availability of 4-6 hours/week throughout engagement | Workshop commitment |
+| A13 | No major changes to source models during migration period | Workshop understanding |
+| A14 | Upstream dependencies (remaining internal models) complete prior to initiative start | Domain owner confirmation |
+| A15 | Design reviews are approved in a timely fashion | MH effort assumption |
+| A16 | Deployment to UAT and production environments is not included in MH effort scope | MH effort assumption |
+| A17 | MH effort is restricted to DEV environment only | MH effort assumption |
+| A18 | Access to entire monolithic DBT project granted to understand cross-domain dependencies | Required for discovery |
+| A19 | Cortex Code CLI (or later version) can be connected to target Snowflake environment | Development tooling |
 
 ### 7.2 Risks
 
@@ -710,14 +687,13 @@ Senior Solution Architect:
 | R3 | **Model complexity higher than estimated** - More complex models than 6-7/10 rating | Medium | High | Request complexity breakdown before engagement; buffer in estimates |
 | R4 | **SME availability** - Kaihao/Aiden unavailable for required workshops | Medium | High | Identify backup SMEs; flexible scheduling; document decisions |
 | R5 | **Source model changes during migration** - Bug fixes break alignment | Medium | Medium | Communication protocol; change notification process; weekly sync |
-| R6 | **Parallel run discrepancies** - Data mismatches difficult to reconcile | Medium | High | Clear validation criteria upfront; acceptance thresholds defined; root cause process |
-| R7 | **Foundation domain dependency issues** - Upstream data quality or availability | Low | High | Early dependency validation; escalation path to Foundation team |
-| R8 | **Semantic layer requirements unclear** - AI consumption needs not defined | Medium | Medium | Discovery workshop with stakeholders; phased semantic delivery |
-| R9 | **Downstream consumer migration delays** - Users slow to adopt new models | Low | Medium | Early communication; migration guide; extended parallel run if needed |
-| R10 | **Governance complexity** - RBAC/masking requirements more complex than expected | Low | Medium | Early governance assessment; involve security team |
-| R11 | **Platform team capacity** - Infrastructure provisioning delays | Low | High | Early engagement; clear timeline commitments; escalation path |
-| R12 | **Subscription pipeline dependency** - Hidden dependencies with out-of-scope pipeline | Low | Medium | Explicit interface definition; separate engagement tracking |
-| R13 | **Upstream dependencies not ready** - Internal team models incomplete at kickoff | Medium | High | Confirm delivery status before engagement start; delay kickoff if dependencies not met |
+| R6 | **Foundation domain dependency issues** - Upstream data quality or availability | Low | High | Early dependency validation; escalation path to Foundation team |
+| R7 | **Semantic layer requirements unclear** - AI consumption needs not defined | Medium | Medium | Discovery workshop with stakeholders; phased semantic delivery |
+| R8 | **Downstream consumer migration delays** - Users slow to adopt new models | Low | Medium | Early communication; migration guide |
+| R9 | **Governance complexity** - RBAC/masking requirements more complex than expected | Low | Medium | Early governance assessment; involve security team |
+| R10 | **Platform team capacity** - Infrastructure provisioning delays | Low | High | Early engagement; clear timeline commitments; escalation path |
+| R11 | **Subscription pipeline dependency** - Hidden dependencies with out-of-scope pipeline | Low | Medium | Explicit interface definition; separate engagement tracking |
+| R12 | **Upstream dependencies not ready** - Internal team models incomplete at kickoff | Medium | High | Confirm delivery status before engagement start; delay kickoff if dependencies not met |
 
 ---
 
