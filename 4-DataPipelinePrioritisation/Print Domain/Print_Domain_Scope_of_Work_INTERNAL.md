@@ -11,7 +11,7 @@
 
 ## Engagement Outcome
 
-This outcome-based engagement will deliver a fully modernised data pipeline for the Print Domain as part of Canva's enterprise data migration initiative. Snowflake will analyse, redesign, and rebuild the existing DBT project into a new three-layer architecture (Conformed, Metrics, Semantic), restructure the monolithic fact tables into grain-appropriate models, establish semantic views for Snowflake Intelligence, configure orchestration through Airflow (including 2-hour near real-time refresh), migrate 7.5 billion rows of historical fact_print_funnel data with validation, and deliver complete documentation—all validated through a parallel run period.
+This outcome-based engagement will deliver a fully modernised data pipeline for the Print Domain as part of Canva's enterprise data migration initiative. Snowflake will analyse, redesign, and rebuild the existing DBT project into a new three-layer architecture (Conformed, Metrics, Semantic), restructure the monolithic fact tables into grain-appropriate models, establish semantic views for Snowflake Intelligence, configure orchestration through Airflow (including 2-hour near real-time refresh), migrate 7.5 billion rows of historical fact_print_funnel data with validation, and deliver complete documentation.
 
 ---
 
@@ -63,7 +63,7 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | 4 | **Semantic Layer** | Create 2 semantic views and models (Print Funnel, Print Ordered) for Snowflake Intelligence |
 | 5 | **Orchestration** | Event-based (2-hour) orchestration for Fact Print Ordered; daily scheduled for Fact Print Funnel via Airflow |
 | 6 | **Historical Data Migration** | Full historical data migration for fact_print_funnel (7.5B rows, 2.5TB) with validation |
-| 7 | **Testing** | Data quality tests, unit tests, integration tests, parallel run validation |
+| 7 | **Testing** | Data quality tests, unit tests, integration tests |
 | 8 | **Documentation** | Solution design, data architecture, migration guide for downstream consumers |
 
 ---
@@ -75,7 +75,7 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | **Governance Implementation** | No policies or classifications to be migrated per domain owner confirmation |
 | **Upstream Dependency Migration** | Source data consumed as-is from current location (4 source services) |
 | **Downstream Consumer Re-pointing** | Migration guide provided, but actual re-pointing is consumer responsibility |
-| **Decommissioning Old Tables** | Not included; old tables remain during and after parallel run |
+| **Decommissioning Old Tables** | Not included; separate operational activity |
 | **Source Data Ingestion** | All source data already available in Snowflake |
 | **Infrastructure Provisioning** | Platform team responsibility (databases, Airflow infrastructure) |
 | **Productionization** | Handled by Canva internal team |
@@ -135,7 +135,7 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | Overall complexity rating | 80% medium, 20% complex | Confirmed by Kevin |
 | Data volume - fact_print_funnel | 7.5 billion rows, 2.5 TB | Requires full historical migration |
 | Data volume - fact_print_ordered | 30 million rows | No migration needed - rebuild from source |
-| Parallel run duration | TBD | Not yet defined by domain owner |
+
 | Refresh frequency - fact_print_ordered | Event-based (2-hour) | Near real-time requirement |
 | Refresh frequency - fact_print_funnel | Daily scheduled | Offline daily process |
 | Target tables type | Native Snowflake tables | Confirmed |
@@ -254,20 +254,7 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | Data quality testing | Accuracy, completeness, consistency | 4.0 |
 | **Subtotal** | | **12.0** |
 
-#### 3.2.10 Parallel Run Support
-
-*MH Effort: 1.5 days per week for 8 weeks (2-month parallel run period estimated).*
-
-| Activity | Description | Effort (Days) |
-|----------|-------------|---------------|
-| Parallel run setup | Configure dual-pipeline execution | 2.0 |
-| Monitoring & validation | Weekly validation checks (8 weeks) | 4.0 |
-| Discrepancy investigation | Root cause analysis and fixes | 3.0 |
-| Stakeholder reporting | Status updates and issue tracking | 2.0 |
-| Weekly support | Ongoing support during parallel run | 4.0 |
-| **Subtotal** | | **15.0** |
-
-#### 3.2.11 Documentation
+#### 3.2.10 Documentation
 
 *Note: Migration guide and runbooks not included in scope.*
 
@@ -278,7 +265,7 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | Knowledge transfer | 2 sessions (1 per reporting area) x 1 hour | 0.5 |
 | **Subtotal** | | **5.5** |
 
-#### 3.2.12 Deployment
+#### 3.2.11 Deployment
 
 *Note: MH effort is restricted to DEV environment only. Deployment to TEST/UAT and Production environments is not included.*
 
@@ -302,12 +289,11 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | Orchestration Setup | 8.5 |
 | Historical Data Migration | 10.0 |
 | Testing | 12.0 |
-| Parallel Run Support | 15.0 |
 | Documentation | 5.5 |
 | Deployment | 2.0 |
-| **Total Base Effort** | **112.3 days** |
-| **Contingency (15%)** | **16.8 days** |
-| **Grand Total** | **129.1 days** |
+| **Total Base Effort** | **97.3 days** |
+| **Contingency (15%)** | **14.6 days** |
+| **Grand Total** | **111.9 days** |
 
 ---
 
@@ -318,10 +304,10 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | **Phase 1: Discovery & Design** | Physical layer setup, current state analysis, transformation analysis, new model design | 37.3 |
 | **Phase 2: Build** | DBT model build, semantic layer, orchestration | 30.5 |
 | **Phase 3: Migration & Testing** | Historical migration, testing, deployment | 24.0 |
-| **Phase 4: Parallel Run & Handover** | Parallel run support, documentation, knowledge transfer | 20.5 |
-| **Subtotal** | | **112.3** |
-| **Contingency (15%)** | | **16.8** |
-| **Grand Total** | | **129.1** |
+| **Phase 4: Documentation & Handover** | Documentation, knowledge transfer | 5.5 |
+| **Subtotal** | | **97.3** |
+| **Contingency (15%)** | | **14.6** |
+| **Grand Total** | | **111.9** |
 
 ---
 
@@ -382,19 +368,14 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | Dev environment deployment | 2.0 | Initial deployment |
 | **Subtotal** | **24.0** | |
 
-#### Phase 4: Parallel Run & Handover (20.5 days)
+#### Phase 4: Documentation & Handover (5.5 days)
 
 | Activity | Days | Calculation |
 |----------|------|-------------|
-| Parallel run setup | 2.0 | Dual-pipeline configuration |
-| Monitoring & validation | 4.0 | Weekly checks over 8 weeks |
-| Discrepancy investigation | 3.0 | Root cause and fixes |
-| Stakeholder reporting | 2.0 | Status updates |
-| Weekly support | 4.0 | Ongoing support during parallel run |
 | Solution design document | 3.0 | Architecture documentation |
 | Data architecture document | 2.0 | Data model specs |
 | Knowledge transfer | 0.5 | 2 sessions x 1 hour |
-| **Subtotal** | **20.5** | |
+| **Subtotal** | **5.5** | |
 
 ---
 
@@ -451,12 +432,7 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | | | **Subtotal** | **12.0** | |
 | **Deployment** | 3 | Dev environment deployment | 2.0 | Initial deployment |
 | | | **Subtotal** | **2.0** | |
-| **Parallel Run Support** | 4 | Parallel run setup | 2.0 | Dual-pipeline configuration |
-| | 4 | Monitoring & validation | 4.0 | Weekly checks (8 weeks) |
-| | 4 | Discrepancy investigation | 3.0 | Root cause and fixes |
-| | 4 | Stakeholder reporting | 2.0 | Status updates |
 | | 4 | Weekly support | 4.0 | Ongoing support |
-| | | **Subtotal** | **15.0** | |
 | **Documentation** | 4 | Solution design document | 3.0 | Architecture documentation |
 | | 4 | Data architecture document | 2.0 | Data model specs |
 | | 4 | Knowledge transfer | 0.5 | 2 sessions x 1 hour |
@@ -466,11 +442,11 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | | **Phase 1** | Discovery & Design | **37.3** | |
 | | **Phase 2** | Build | **30.5** | |
 | | **Phase 3** | Migration & Testing | **24.0** | |
-| | **Phase 4** | Parallel Run & Handover | **20.5** | |
+| | **Phase 4** | Documentation & Handover | **5.5** | |
 | | | | | |
-| | | **Total Base Effort** | **112.3** | |
-| | | **Contingency (15%)** | **16.8** | |
-| | | **Grand Total** | **129.1** | |
+| | | **Total Base Effort** | **97.3** | |
+| | | **Contingency (15%)** | **14.6** | |
+| | | **Grand Total** | **111.9** | |
 
 ---
 
@@ -483,7 +459,6 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 | Additional event types beyond 50 require phase mapping | +3-5 days |
 | SME availability drops to 2 hrs/week | +8-12 days (waiting time) |
 | Code sharing mechanism delayed by 4+ weeks | +8-12 days (rework/discovery) |
-| Parallel run extended beyond 2 months | +2 days per additional month |
 | Semantic views increase from 2 to 4 | +5-8 days |
 | Historical data volume larger than 2.5TB | +3-5 days migration |
 | Source service dependency issues | +5-10 days (investigation/workarounds) |
@@ -545,19 +520,16 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 - All tests passing
 - Production deployment complete
 
-### Phase 4: Parallel Run & Handover (Weeks 17-24)
+### Phase 4: Documentation & Handover (Weeks 17-18)
 
-**Objectives:** Validate in production, document, transfer knowledge
+**Objectives:** Document solution, transfer knowledge
 
 | Week | Activities |
 |------|------------|
-| 17-20 | Active parallel run monitoring, weekly validation |
-| 21-22 | Continued monitoring, discrepancy resolution |
-| 23 | Documentation completion |
-| 24 | Knowledge transfer, final handover |
+| 17 | Documentation completion |
+| 18 | Knowledge transfer, final handover |
 
 **Key Milestones:**
-- Parallel run validation complete
 - Documentation delivered
 - Knowledge transfer complete
 
@@ -565,7 +537,7 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 
 ```mermaid
 gantt
-    title Print Domain - Project Timeline (24 Weeks)
+    title Print Domain - Project Timeline (18 Weeks)
     dateFormat  YYYY-MM-DD
     axisFormat  Wk %W
     tickInterval 1week
@@ -589,13 +561,12 @@ gantt
     Deployment (2.0d)                     :p3c, 2026-06-01, 5d
     7.5B Rows Migrated                    :milestone, m3, 2026-06-05, 0d
     
-    section Phase 4: Parallel Run
-    Parallel Run Support (15.0d)          :p4a, 2026-06-08, 40d
-    Documentation (5.5d)                  :p4b, 2026-07-06, 15d
-    Final Handover                        :milestone, m4, 2026-07-17, 0d
+    section Phase 4: Documentation
+    Documentation (5.5d)                  :p4a, 2026-06-08, 10d
+    Final Handover                        :milestone, m4, 2026-06-19, 0d
     
     section Resources
-    Lead Solution Architect (Wk 1-24)     :done, res1, 2026-03-02, 120d
+    Lead Solution Architect (Wk 1-18)     :done, res1, 2026-03-02, 90d
     Senior Solution Architect (Wk 7-16)   :done, res2, 2026-04-13, 50d
 ```
 
@@ -603,23 +574,23 @@ gantt
 
 ```mermaid
 pie showData
-    title Effort Distribution by Phase (112.3 days)
+    title Effort Distribution by Phase (97.3 days)
     "Phase 1: Discovery & Design" : 37.3
     "Phase 2: Build" : 30.5
     "Phase 3: Migration & Testing" : 24.0
-    "Phase 4: Parallel Run & Handover" : 20.5
+    "Phase 4: Documentation & Handover" : 5.5
 ```
 
 ### Timeline Summary
 
 ```
 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════
-                                    PRINT DOMAIN - PROJECT TIMELINE (24 WEEKS)
+                                    PRINT DOMAIN - PROJECT TIMELINE (18 WEEKS)
 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════
 
-WEEK     1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19   20   21   22   23   24
-         │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │
-─────────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘
+WEEK     1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18
+         │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │
+─────────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║ PHASE 1: DISCOVERY & DESIGN (37.3 days)                                                                                   ║
@@ -694,34 +665,28 @@ WEEK     1    2    3    4    5    6    7    8    9   10   11   12   13   14   15
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║ PHASE 4: PARALLEL RUN & HANDOVER (20.5 days)                                                                              ║
+║ PHASE 4: DOCUMENTATION & HANDOVER (5.5 days)                                                                              ║
 ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║ Week 17-24                                                                                                                ║
-║                                                                           ┌───────────────────────────────────────────┐   ║
-║                                                                           │ Parallel Run Support (15.0d)              │   ║
-║                                                                           │ ████████████████████████████████████████  │   ║
-║                                                                           │ Wk 17-24 (8 weeks monitoring)             │   ║
-║                                                                           └───────────────────────────────────────────┘   ║
+║ Week 17-18                                                                                                                ║
 ║                                                                           ┌─────────────────────────┐                     ║
-║                                                                           │ Documentation (5.5d)    │ Wk 22-24           ║
+║                                                                           │ Documentation (5.5d)    │ Wk 17-18           ║
 ║                                                                           │ ██████████████████████  │                     ║
 ║                                                                           └─────────────────────────┘                     ║
 ║                                                                                                                           ║
 ║ MILESTONES:                                                                                                               ║
-║   ◆ Wk 20: Mid-parallel run checkpoint                                                                                    ║
-║   ◆ Wk 23: Parallel run validation complete, Documentation delivered                                                      ║
-║   ◆ Wk 24: Knowledge transfer complete, Final handover                                                                    ║
+║   ◆ Wk 17: Documentation delivered                                                                                        ║
+║   ◆ Wk 18: Knowledge transfer complete, Final handover                                                                    ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
                                               RESOURCE ALLOCATION
 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
-WEEK     1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19   20   21   22   23   24
-         │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │
+WEEK     1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18
+         │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │    │
 
-Lead SA  ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
-         Week 1 ─────────────────────────────────────────────────────────────────────────────────────────────────────► Week 24
+Lead SA  ████████████████████████████████████████████████████████████████████████████████████████
+         Week 1 ─────────────────────────────────────────────────────────────────────────► Week 18
 
 Senior SA                              ██████████████████████████████████████████████████████████
                                        Week 7 ─────────────────────────────────────────────────► Week 16
@@ -736,12 +701,12 @@ Senior SA                              █████████████�
   Wk 11 ◆ Orchestration operational
   Wk 14 ◆ Data migration complete (7.5B rows)
   Wk 16 ◆ Testing complete, DEV deployed
-  Wk 24 ◆ Final handover
+  Wk 18 ◆ Final handover
 
 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 ```
 
-**Total Duration:** ~24 weeks (6 months) including 2-month parallel run
+**Total Duration:** ~18 weeks (4.5 months)
 
 **Kevin's Target:** End of March completion for fact_print_ordered data model
 
@@ -753,7 +718,7 @@ Senior SA                              █████████████�
 
 | Role | FTE | Duration | Responsibilities | Required Skills & Expertise |
 |------|-----|----------|------------------|----------------------------|
-| **Lead Solution Architect** | 1.0 | Full engagement (24 weeks) | Solution architecture, complex DBT development, technical leadership, stakeholder management, large-scale data migration design | DBT Core (advanced), Snowflake (advanced), Data modeling (advanced), SQL (advanced), Airflow, Semantic Views/Cortex Analyst, Solution design, Large-scale data migration |
+| **Lead Solution Architect** | 1.0 | Full engagement (18 weeks) | Solution architecture, complex DBT development, technical leadership, stakeholder management, large-scale data migration design | DBT Core (advanced), Snowflake (advanced), Data modeling (advanced), SQL (advanced), Airflow, Semantic Views/Cortex Analyst, Solution design, Large-scale data migration |
 | **Senior Solution Architect** | 1.0 | Weeks 7-16 (10 weeks) | DBT model development, migration scripts, testing | DBT Core (advanced), Snowflake, SQL (advanced), Python, Data migration, Testing frameworks |
 
 ### 5.2 Canva Team Requirements
@@ -764,7 +729,7 @@ Senior SA                              █████████████�
 | **Technical Lead** | 2-4 hrs/week | Full engagement | Technical decisions, approvals, escalations |
 | **Data Platform Team** | As needed | Full engagement | Airflow infrastructure, code sharing mechanism, event triggers (2-hour), database provisioning |
 | **QA/Testing Resource** | 2-4 hrs/week | Weeks 12-16 | Testing execution, business validation |
-| **Downstream Consumers** | As needed | Weeks 17-24 | Migration testing, feedback on new models |
+| **Downstream Consumers** | As needed | Weeks 17-18 | Migration testing, feedback on new models |
 | **Other Domain Owners** | As needed | Weeks 1-6 | Confirm dependencies on intermediary tables |
 
 ### 5.3 Infrastructure Requirements
@@ -788,14 +753,11 @@ Senior SA                              █████████████�
 | 2 | What are the specific metric definitions for semantic layer? | Kevin Mariono | Impacts semantic layer effort | High |
 | 3 | How final is the target data model (future state) presented? | Kevin Mariono | May require redesign effort | High |
 | 4 | Are other domains dependent on intermediary tables? Which ones? | Kevin Mariono | May block decommissioning | High |
-| 5 | What is the parallel run duration requirement? | Kevin Mariono | Timeline impact | Medium |
-| 6 | What are the exact revenue allocation rules for Print Ordered? | Kevin Mariono | Complex design challenge | Medium |
-| 7 | What are the specific 2-hour event trigger requirements? | Kevin Mariono | Orchestration design | Medium |
-| 8 | Who are the critical downstream consumers requiring migration notification? | Kevin Mariono | Documentation scope | Medium |
-| 9 | Will views mimicking old table signatures be required for backward compatibility? | Technical Lead | Additional development | Medium |
-| 10 | What is the rollback strategy if parallel run validation fails? | Joint decision | Risk mitigation | Low |
-| 11 | Is Airflow 2-hour execution possible, or must we use alternative triggering? | Platform Team | Orchestration design | Medium |
-| 12 | What is the acceptable variance threshold for parallel run validation? | Business stakeholders | Testing criteria | Low |
+| 5 | What are the exact revenue allocation rules for Print Ordered? | Kevin Mariono | Complex design challenge | Medium |
+| 6 | What are the specific 2-hour event trigger requirements? | Kevin Mariono | Orchestration design | Medium |
+| 7 | Who are the critical downstream consumers requiring migration notification? | Kevin Mariono | Documentation scope | Medium |
+| 8 | Will views mimicking old table signatures be required for backward compatibility? | Technical Lead | Additional development | Medium |
+| 9 | Is Airflow 2-hour execution possible, or must we use alternative triggering? | Platform Team | Orchestration design | Medium |
 
 ---
 
@@ -827,9 +789,8 @@ Senior SA                              █████████████�
 | A20 | Deployment to UAT and production environments is not included in MH effort scope | MH effort assumption |
 | A21 | MH effort is restricted to DEV environment only | MH effort assumption |
 | A22 | Target 30% reduction in model count through consolidation | Meeting confirmed |
-| A23 | Parallel run period estimated at 2 months (TBD by domain owner) | Not yet defined |
-| A24 | Access to entire monolithic DBT project granted to understand cross-domain dependencies | Required for discovery |
-| A25 | Cortex Code CLI (or later version) can be connected to target Snowflake environment | Development tooling |
+| A23 | Access to entire monolithic DBT project granted to understand cross-domain dependencies | Required for discovery |
+| A24 | Cortex Code CLI (or later version) can be connected to target Snowflake environment | Development tooling |
 
 ### 7.2 Risks
 
@@ -841,13 +802,12 @@ Senior SA                              █████████████�
 | R4 | **Event type mapping complexity** - 50+ events difficult to map to phases | Medium | Medium | Early SME engagement; iterative design approach; clear phase definitions |
 | R5 | **SME availability** - Kevin unavailable for required workshops | Medium | High | Identify backup SMEs; flexible scheduling; document decisions |
 | R6 | **Source model changes during migration** - Bug fixes break alignment | Medium | Medium | Communication protocol; change notification process; weekly sync |
-| R7 | **Parallel run discrepancies** - Data mismatches difficult to reconcile | Medium | High | Clear validation criteria upfront; acceptance thresholds defined |
-| R8 | **Revenue allocation complexity** - Rules more complex than expected | High | Medium | Early design focus; SME involvement; iterative approach |
-| R9 | **2-hour orchestration complexity** - Event-based triggers challenging | Medium | Medium | Platform team early engagement; alternative approaches identified |
-| R10 | **Other domain dependencies** - Intermediary tables used by other domains | Medium | High | Kevin to communicate with other domain owners; impact assessment |
-| R11 | **No existing documentation** - Reverse engineering takes longer than expected | Medium | Medium | Additional buffer in estimates; SME availability |
-| R12 | **Grain mismatch resolution** - More complex than anticipated | Medium | Medium | Early design workshops; proof of concept for complex joins |
-| R13 | **Platform team capacity** - Infrastructure provisioning delays | Low | High | Early engagement; clear timeline commitments; escalation path |
+| R7 | **Revenue allocation complexity** - Rules more complex than expected | High | Medium | Early design focus; SME involvement; iterative approach |
+| R8 | **2-hour orchestration complexity** - Event-based triggers challenging | Medium | Medium | Platform team early engagement; alternative approaches identified |
+| R9 | **Other domain dependencies** - Intermediary tables used by other domains | Medium | High | Kevin to communicate with other domain owners; impact assessment |
+| R10 | **No existing documentation** - Reverse engineering takes longer than expected | Medium | Medium | Additional buffer in estimates; SME availability |
+| R11 | **Grain mismatch resolution** - More complex than anticipated | Medium | Medium | Early design workshops; proof of concept for complex joins |
+| R12 | **Platform team capacity** - Infrastructure provisioning delays | Low | High | Early engagement; clear timeline commitments; escalation path |
 
 ---
 
