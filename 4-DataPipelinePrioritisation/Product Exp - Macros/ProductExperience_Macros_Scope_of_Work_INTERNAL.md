@@ -157,11 +157,10 @@ This outcome-based engagement will deliver a consolidated set of DBT macros for 
 | 2 | **Discovery & Requirements Consolidation** | Analyse existing implementations for Funnel, Health/Engagement; document consolidated requirements for all macros |
 | 3 | **Macro Design & Approval** | Design each macro with parameters, business logic, output schema; obtain Canva stakeholder approval |
 | 4 | **DBT Macro Development** | Build 5 parameterised DBT macros with subscription support |
-| 5 | **Metrics Layer Dimensional Models** | Create dimensional models for each macro output in metrics layer |
-| 6 | **Semantic Layer** | Create 5 semantic views (one per macro) for Snowflake Intelligence |
-| 7 | **Orchestration** | Configure Airflow for daily scheduled execution |
-| 8 | **Testing** | Data quality tests, unit tests, integration tests |
-| 9 | **Documentation** | Solution design, macro specifications, parameter documentation |
+| 5 | **Semantic Layer** | Create 5 semantic views (one per macro) for Snowflake Intelligence |
+| 6 | **Orchestration** | Configure Airflow for daily scheduled execution |
+| 7 | **Testing** | Data quality tests, unit tests, integration tests |
+| 8 | **Documentation** | Solution design, macro specifications, parameter documentation |
 
 ---
 
@@ -282,16 +281,7 @@ This outcome-based engagement will deliver a consolidated set of DBT macros for 
 | Audience | Implement criteria matching | Inclusion/exclusion logic | Entity membership table | Criteria evaluation | 4.0 |
 | **Subtotal** | | | | | **21.0** |
 
-#### 3.2.5 Metrics Layer Dimensional Modelling
-
-| Activity | Description | Calculation | Effort (Days) |
-|----------|-------------|-------------|---------------|
-| Dimensional model design | Design star schema for each macro output | 5 macros x 0.5 days | 2.5 |
-| Granular tables | Design granular output tables | 5 macros x 0.3 days | 1.5 |
-| Aggregated tables | Design pre-aggregated tables for performance | 5 macros x 0.3 days | 1.5 |
-| **Subtotal** | | | **5.5** |
-
-#### 3.2.6 Semantic Layer Development
+#### 3.2.5 Semantic Layer Development
 
 | Activity | Description | Calculation | Effort (Days) |
 |----------|-------------|-------------|---------------|
@@ -301,7 +291,7 @@ This outcome-based engagement will deliver a consolidated set of DBT macros for 
 | Snowflake Intelligence validation | Test with Cortex Analyst | 5 views x 0.3 days | 1.5 |
 | **Subtotal** | | | **8.0** |
 
-#### 3.2.7 Orchestration Configuration
+#### 3.2.6 Orchestration Configuration
 
 | Activity | Description | Effort (Days) |
 |----------|-------------|---------------|
@@ -310,19 +300,19 @@ This outcome-based engagement will deliver a consolidated set of DBT macros for 
 | Testing & validation | End-to-end orchestration testing | 1.0 |
 | **Subtotal** | | **3.0** |
 
-#### 3.2.8 Testing
+#### 3.2.7 Testing
 
 *Assumption: Deployment to UAT and production environments is not included in MH effort scope.*
 
 | Activity | Description | Effort (Days) |
 |----------|-------------|---------------|
-| Unit test development | Tests for each macro | 3.0 |
+| Unit test development | Tests for each macro | 0 |
 | Integration testing | End-to-end pipeline validation | 3.0 |
 | Data quality testing | Accuracy, completeness, consistency | 3.0 |
 | Parameter validation testing | Test various parameter combinations | 2.0 |
-| **Subtotal** | | **11.0** |
+| **Subtotal** | | **8.0** |
 
-#### 3.2.9 Documentation
+#### 3.2.8 Documentation
 
 | Activity | Description | Effort (Days) |
 |----------|-------------|---------------|
@@ -332,7 +322,7 @@ This outcome-based engagement will deliver a consolidated set of DBT macros for 
 | Knowledge transfer | 2 sessions (overview + deep dive) x 1 hour | 0.5 |
 | **Subtotal** | | **5.5** |
 
-#### 3.2.10 Deployment
+#### 3.2.9 Deployment
 
 *Note: MH effort is restricted to DEV environment only.*
 
@@ -351,15 +341,14 @@ This outcome-based engagement will deliver a consolidated set of DBT macros for 
 | Discovery & Requirements Consolidation | 16.5 |
 | Macro Design (with Approvals) | 16.0 |
 | DBT Macro Development | 21.0 |
-| Metrics Layer Dimensional Modelling | 5.5 |
 | Semantic Layer Development | 8.0 |
 | Orchestration Configuration | 3.0 |
-| Testing | 11.0 |
+| Testing | 8.0 |
 | Documentation | 5.5 |
 | Deployment | 1.5 |
-| **Total Base Effort** | **89.0 days** |
-| **Contingency (15%)** | **13.4 days** |
-| **Grand Total** | **102.4 days** |
+| **Total Base Effort** | **80.5 days** |
+| **Contingency (15%)** | **12.1 days** |
+| **Grand Total** | **92.6 days** |
 
 ---
 
@@ -368,12 +357,12 @@ This outcome-based engagement will deliver a consolidated set of DBT macros for 
 | Phase | Activities Included | Effort (Days) |
 |-------|---------------------|---------------|
 | **Phase 1: Discovery & Design** | Physical layer setup, discovery, requirements consolidation, macro design with approvals | 33.5 |
-| **Phase 2: Build** | DBT macro development, metrics layer modelling, semantic layer, orchestration | 37.5 |
-| **Phase 3: Testing & Deployment** | Testing, deployment | 12.5 |
+| **Phase 2: Build** | DBT macro development, semantic layer, orchestration | 32.0 |
+| **Phase 3: Testing & Deployment** | Testing, deployment | 9.5 |
 | **Phase 4: Documentation & Handover** | Documentation, knowledge transfer | 5.5 |
-| **Subtotal** | | **89.0** |
-| **Contingency (15%)** | | **13.4** |
-| **Grand Total** | | **102.4** |
+| **Subtotal** | | **80.5** |
+| **Contingency (15%)** | | **12.1** |
+| **Grand Total** | | **92.6** |
 
 ---
 
@@ -396,7 +385,7 @@ This outcome-based engagement will deliver a consolidated set of DBT macros for 
 | Audience design & approval | 3.0 | Parameters + logic + schema + review |
 | **Subtotal** | **33.5** | |
 
-#### Phase 2: Build (34.5 days)
+#### Phase 2: Build (32.0 days)
 
 | Activity | Days | Calculation |
 |----------|------|-------------|
@@ -405,9 +394,6 @@ This outcome-based engagement will deliver a consolidated set of DBT macros for 
 | Funnel macro build | 4.5 | Complex scope handling |
 | Health/Engagement macro build | 4.5 | Scoring logic + categories |
 | Audience macro build | 4.0 | Criteria matching |
-| Dimensional model design | 2.5 | 5 macros x 0.5 days |
-| Granular tables | 1.5 | 5 macros x 0.3 days |
-| Aggregated tables | 1.5 | 5 macros x 0.3 days |
 | Semantic requirements discovery | 1.5 | 5 macros x 0.3 days |
 | Semantic model design | 2.5 | 5 models x 0.5 days |
 | Semantic view build | 2.5 | 5 views x 0.5 days |
@@ -415,18 +401,18 @@ This outcome-based engagement will deliver a consolidated set of DBT macros for 
 | Airflow DAG configuration | 1.5 | 5 macro dependencies |
 | Schedule configuration | 0.5 | Daily schedules |
 | Orchestration testing | 1.0 | End-to-end validation |
-| **Subtotal** | **37.5** | |
+| **Subtotal** | **32.0** | |
 
 #### Phase 3: Testing & Deployment (12.5 days)
 
 | Activity | Days | Calculation |
 |----------|------|-------------|
-| Unit test development | 3.0 | Per macro tests |
+| Unit test development | 0 | Not in scope |
 | Integration testing | 3.0 | End-to-end validation |
 | Data quality testing | 3.0 | Accuracy, completeness |
 | Parameter validation testing | 2.0 | Various combinations |
 | Dev environment deployment | 1.5 | Initial deployment |
-| **Subtotal** | **12.5** | |
+| **Subtotal** | **9.5** | |
 
 #### Phase 4: Documentation & Handover (5.5 days)
 
@@ -465,10 +451,6 @@ This outcome-based engagement will deliver a consolidated set of DBT macros for 
 | | 2 | Health/Engagement macro build | 4.5 | Scoring categories |
 | | 2 | Audience macro build | 4.0 | Criteria matching |
 | | | **Subtotal** | **21.0** | |
-| **Metrics Layer Modelling** | 2 | Dimensional model design | 2.5 | 5 macros x 0.5 days |
-| | 2 | Granular tables | 1.5 | 5 macros x 0.3 days |
-| | 2 | Aggregated tables | 1.5 | 5 macros x 0.3 days |
-| | | **Subtotal** | **5.5** | |
 | **Semantic Layer** | 2 | Requirements discovery | 1.5 | 5 macros x 0.3 days |
 | | 2 | Semantic model design | 2.5 | 5 models x 0.5 days |
 | | 2 | Semantic view build | 2.5 | 5 views x 0.5 days |
@@ -478,11 +460,11 @@ This outcome-based engagement will deliver a consolidated set of DBT macros for 
 | | 2 | Schedule configuration | 0.5 | Daily schedules |
 | | 2 | Testing & validation | 1.0 | End-to-end testing |
 | | | **Subtotal** | **3.0** | |
-| **Testing** | 3 | Unit test development | 3.0 | Per macro tests |
+| **Testing** | 3 | Unit test development | 0 | Not in scope |
 | | 3 | Integration testing | 3.0 | End-to-end validation |
 | | 3 | Data quality testing | 3.0 | Accuracy, completeness |
 | | 3 | Parameter validation testing | 2.0 | Various combinations |
-| | | **Subtotal** | **11.0** | |
+| | | **Subtotal** | **8.0** | |
 | **Deployment** | 3 | Dev environment deployment | 1.5 | Initial deployment |
 | | | **Subtotal** | **1.5** | |
 | **Documentation** | 4 | Solution design document | 2.0 | Architecture documentation |
@@ -493,13 +475,13 @@ This outcome-based engagement will deliver a consolidated set of DBT macros for 
 | | | | | |
 | **PHASE TOTALS** | | | | |
 | | **Phase 1** | Discovery & Design | **33.5** | |
-| | **Phase 2** | Build | **37.5** | |
-| | **Phase 3** | Testing & Deployment | **12.5** | |
+| | **Phase 2** | Build | **32.0** | |
+| | **Phase 3** | Testing & Deployment | **9.5** | |
 | | **Phase 4** | Documentation & Handover | **5.5** | |
 | | | | | |
-| | | **Total Base Effort** | **89.0** | |
-| | | **Contingency (15%)** | **13.4** | |
-| | | **Grand Total** | **102.4** | |
+| | | **Total Base Effort** | **80.5** | |
+| | | **Contingency (15%)** | **12.1** | |
+| | | **Grand Total** | **92.6** | |
 
 ---
 
@@ -549,8 +531,8 @@ This outcome-based engagement will deliver a consolidated set of DBT macros for 
 |------|------------|
 | 6-7 | Build MAU and Retention macros |
 | 8-9 | Build Funnel and Health/Engagement macros |
-| 10 | Build Audience macro, begin metrics layer dimensional modelling |
-| 11 | Complete metrics layer models, semantic layer development |
+| 10 | Build Audience macro |
+| 11 | Semantic layer development |
 | 12 | Semantic view validation, orchestration configuration |
 
 **Key Milestones:**
@@ -590,27 +572,26 @@ This outcome-based engagement will deliver a consolidated set of DBT macros for 
 
 ```mermaid
 gantt
-    title Product Experience Domain - Macros Timeline (17 Weeks)
+    title Product Experience Domain - Macros Timeline (16 Weeks)
     dateFormat  YYYY-MM-DD
     axisFormat  Wk %W
     tickInterval 1week
     
     section Phase 1: Discovery & Design
     Physical Layer Setup (1.0d)           :active, p1a, 2026-03-02, 3d
-    MAU/Retention Discovery (3.0d)        :p1b, 2026-03-02, 10d
-    Funnel Discovery (4.0d)               :p1c, 2026-03-09, 10d
-    Health/Engagement Discovery (3.0d)    :p1d, 2026-03-16, 10d
+    MAU/Retention Discovery (6.0d)        :p1b, 2026-03-02, 10d
+    Funnel Discovery (4.5d)               :p1c, 2026-03-09, 10d
+    Health/Engagement Discovery (3.5d)    :p1d, 2026-03-16, 10d
     Audience Requirements (2.5d)          :p1e, 2026-03-23, 7d
-    Macro Designs & Approvals (13.0d)     :p1f, 2026-03-16, 21d
+    Macro Designs & Approvals (16.0d)     :p1f, 2026-03-16, 21d
     All Designs Approved                  :milestone, m1, 2026-04-03, 0d
     
     section Phase 2: Build
-    MAU/Retention Macro Build (6.0d)      :p2a, 2026-04-06, 14d
-    Funnel/Health Macro Build (8.0d)      :p2b, 2026-04-14, 14d
+    MAU/Retention Macro Build (8.0d)      :p2a, 2026-04-06, 14d
+    Funnel/Health Macro Build (9.0d)      :p2b, 2026-04-14, 14d
     Audience Macro Build (4.0d)           :p2c, 2026-04-27, 7d
-    Metrics Layer Modelling (5.5d)        :p2d, 2026-04-27, 10d
-    Semantic Layer (8.0d)                 :p2e, 2026-05-04, 14d
-    Orchestration (3.0d)                  :p2f, 2026-05-11, 7d
+    Semantic Layer (8.0d)                 :p2d, 2026-04-27, 14d
+    Orchestration (3.0d)                  :p2e, 2026-05-04, 7d
     Build Complete                        :milestone, m2, 2026-05-22, 0d
     
     section Phase 3: Testing & Deployment
@@ -623,168 +604,85 @@ gantt
     Final Handover                        :milestone, m4, 2026-06-26, 0d
     
     section Resources
-    Lead Solution Architect (Wk 1-17)     :done, res1, 2026-03-02, 85d
-    Senior Solution Architect (Wk 6-15)   :done, res2, 2026-04-06, 50d
+    Lead Solution Architect (Wk 1-16)     :done, res1, 2026-03-02, 80d
+    Senior Solution Architect (Wk 6-14)   :done, res2, 2026-04-06, 45d
 ```
 
 ### Effort by Phase
 
 ```mermaid
 pie showData
-    title Effort Distribution by Phase (89.0 days)
+    title Effort Distribution by Phase (80.5 days)
     "Phase 1: Discovery & Design" : 33.5
-    "Phase 2: Build" : 37.5
-    "Phase 3: Testing & Deployment" : 12.5
+    "Phase 2: Build" : 32.0
+    "Phase 3: Testing & Deployment" : 9.5
     "Phase 4: Documentation & Handover" : 5.5
 ```
 
 ### Timeline Summary
 
 ```
-==============================================================================================
-                   PRODUCT EXPERIENCE DOMAIN - MACROS CONSOLIDATION TIMELINE (17 WEEKS)
-==============================================================================================
+==============================================================================
+              PRODUCT EXPERIENCE DOMAIN - MACROS TIMELINE (16 WEEKS)
+==============================================================================
 
-WEEK     1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17
-         |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
----------+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+WEEK     1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16
+         |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
 
 +=========================================================================+
-| PHASE 1: DISCOVERY & DESIGN (26.5 days)                                 |
+| PHASE 1: DISCOVERY & DESIGN (33.5 days)                 Weeks 1-5       |
 +=========================================================================+
-| Week 1-5                                                                |
-| +---------------------------+                                           |
-| | Physical Layer (1.0d)     | Wk 1                                      |
-| | ----                      |                                           |
-| +---------------------------+                                           |
-| +-----------------------------------------------+                       |
-| | MAU/Retention Discovery (3.0d)                | Wk 1-2                 |
-| | -------------------                           |                       |
-| +-----------------------------------------------+                       |
-| +-----------------------------------------------+                       |
-| | Funnel Discovery & Consolidation (4.0d)       | Wk 2-3                 |
-| | -------------------------                     |                       |
-| +-----------------------------------------------+                       |
-| +-----------------------------------------------+                       |
-| | Health/Engagement Discovery (3.0d)            | Wk 3-4                 |
-| | -------------------                           |                       |
-| +-----------------------------------------------+                       |
-| +-------------------------------+                                       |
-| | Audience Requirements (2.5d)  | Wk 4                                  |
-| | -----------------             |                                       |
-| +-------------------------------+                                       |
-| +-------------------------------------------------------+               |
-| | Macro Designs & Stakeholder Approvals (13.0d)         | Wk 3-5        |
-| | -----------------------------------------             |               |
-| +-------------------------------------------------------+               |
-|                                                                         |
-| MILESTONES:                                                             |
-|   * Wk 2: MAU & Retention requirements consolidated                     |
-|   * Wk 3: Funnel requirements consolidated                              |
-|   * Wk 4: Health/Engagement & Audience requirements complete            |
-|   * Wk 5: All 5 macro designs approved by Canva stakeholders            |
+|  Physical Layer Setup (1.0d)                                            |
+|  MAU/Retention Discovery (6.0d)                                         |
+|  Funnel Discovery & Consolidation (4.5d)                                |
+|  Health/Engagement Discovery (3.5d)                                     |
+|  Audience Requirements (2.5d)                                           |
+|  Macro Designs & Stakeholder Approvals (16.0d)                          |
 +=========================================================================+
 
 +=========================================================================+
-| PHASE 2: BUILD (34.5 days)                                              |
+| PHASE 2: BUILD (32.0 days)                              Weeks 6-11      |
 +=========================================================================+
-| Week 6-12                                                               |
-|              +---------------------------+                              |
-|              | MAU/Retention Build (6d)  | Wk 6-7                        |
-|              | --------------------      |                              |
-|              +---------------------------+                              |
-|              +---------------------------+                              |
-|              | Funnel/Health Build (8d)  | Wk 8-9                        |
-|              | ----------------------    |                              |
-|              +---------------------------+                              |
-|                        +-------------------+                            |
-|                        | Audience Build (4d)| Wk 10                      |
-|                        | --------------    |                            |
-|                        +-------------------+                            |
-|                        +-------------------------------+                |
-|                        | Metrics Layer Modelling (5.5d)| Wk 10-11       |
-|                        | -----------------------       |                |
-|                        +-------------------------------+                |
-|                              +---------------------------+              |
-|                              | Semantic Layer (8.0d)     | Wk 11-12     |
-|                              | -------------------       |              |
-|                              +---------------------------+              |
-|                                    +-------------------+                |
-|                                    | Orchestration (3d)| Wk 12          |
-|                                    | --------------    |                |
-|                                    +-------------------+                |
-|                                                                         |
-| MILESTONES:                                                             |
-|   * Wk 7: MAU & Retention macros complete                               |
-|   * Wk 9: Funnel & Health/Engagement macros complete                    |
-|   * Wk 10: Audience macro complete                                      |
-|   * Wk 12: Semantic views deployed, Orchestration operational           |
+|  MAU/Retention Macro Build (8.0d)                                       |
+|  Funnel/Health Macro Build (9.0d)                                       |
+|  Audience Macro Build (4.0d)                                            |
+|  Semantic Layer Development (8.0d)                                      |
+|  Orchestration Configuration (3.0d)                                     |
 +=========================================================================+
 
 +=========================================================================+
-| PHASE 3: TESTING & DEPLOYMENT (12.5 days)                               |
+| PHASE 3: TESTING & DEPLOYMENT (9.5 days)               Weeks 12-14     |
 +=========================================================================+
-| Week 13-15                                                              |
-|                                    +---------------------------+        |
-|                                    | Testing (11.0d)           | Wk 13-14|
-|                                    | ----------------------    |        |
-|                                    +---------------------------+        |
-|                                          +-------------+                |
-|                                          | Deploy (1.5d)| Wk 15         |
-|                                          | --------    |                |
-|                                          +-------------+                |
-|                                                                         |
-| MILESTONES:                                                             |
-|   * Wk 14: All tests passing                                            |
-|   * Wk 15: DEV deployment complete                                      |
+|  Unit/Integration/Data Quality Testing (11.0d)                          |
+|  DEV Deployment (1.5d)                                                  |
 +=========================================================================+
 
 +=========================================================================+
-| PHASE 4: DOCUMENTATION & HANDOVER (5.5 days)                            |
+| PHASE 4: DOCUMENTATION & HANDOVER (5.5 days)            Weeks 15-16     |
 +=========================================================================+
-| Week 16-17                                                              |
-|                                                +-------------------+    |
-|                                                | Documentation     | Wk 16-17|
-|                                                | (5.5d) --------   |    |
-|                                                +-------------------+    |
-|                                                                         |
-| MILESTONES:                                                             |
-|   * Wk 16: Documentation delivered                                      |
-|   * Wk 17: Knowledge transfer complete, Final handover                  |
+|  Documentation (5.0d)                                                   |
+|  Knowledge Transfer (0.5d)                                              |
 +=========================================================================+
 
-==============================================================================================
-                                    RESOURCE ALLOCATION
-==============================================================================================
-
-WEEK     1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17
-         |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
-
-Lead SA  =========================================================================
-         Week 1 ----------------------------------------------------------------> Week 17
-
-Senior SA                           ================================================
-                                    Week 6 ---------------------------------------> Week 15
-
-==============================================================================================
-                                  KEY MILESTONES SUMMARY
-==============================================================================================
-
+==============================================================================
+                              KEY MILESTONES
+==============================================================================
   Wk 1  * Project kickoff, Infrastructure ready
   Wk 5  * All 5 macro designs approved by Canva stakeholders
   Wk 7  * MAU & Retention macros complete
   Wk 9  * Funnel & Health/Engagement macros complete
   Wk 10 * Audience macro complete
-  Wk 12 * Semantic views deployed, Orchestration operational
-  Wk 15 * Testing complete, DEV deployed
-  Wk 17 * Final handover
-
-==============================================================================================
+  Wk 11 * Semantic views deployed, Orchestration operational
+  Wk 14 * Testing complete, DEV deployed
+  Wk 16 * Final handover
+==============================================================================
 ```
 
-**Total Duration:** ~19-20 weeks (5 months)
+**Total Duration:** ~16 weeks (4 months)
 
 ---
+
+## 5. Resourcing Needs
 
 ## 5. Resourcing Needs
 
@@ -792,8 +690,8 @@ Senior SA                           ============================================
 
 | Role | FTE | Duration | Responsibilities | Required Skills & Expertise |
 |------|-----|----------|------------------|----------------------------|
-| **Lead Solution Architect** | 1.0 | Full engagement (17 weeks) | Solution architecture, macro design, complex DBT development, technical leadership, stakeholder management | DBT Core (advanced), Snowflake (advanced), Data modeling (advanced), SQL (advanced), Airflow, Semantic Views/Cortex Analyst, Solution design |
-| **Senior Solution Architect** | 1.0 | Weeks 6-15 (10 weeks) | DBT macro development, testing | DBT Core (advanced), Snowflake, SQL (advanced), Python, Testing frameworks |
+| **Lead Solution Architect** | 1.0 | Full engagement (16 weeks) | Solution architecture, macro design, complex DBT development, technical leadership, stakeholder management | DBT Core (advanced), Snowflake (advanced), Data modeling (advanced), SQL (advanced), Airflow, Semantic Views/Cortex Analyst, Solution design |
+| **Senior Solution Architect** | 1.0 | Weeks 6-14 (9 weeks) | DBT macro development, testing | DBT Core (advanced), Snowflake, SQL (advanced), Python, Testing frameworks |
 
 ### 5.2 Canva Team Requirements
 
@@ -802,7 +700,7 @@ Senior SA                           ============================================
 | **Domain SME (Mike/Owen/Soumya)** | 4-6 hrs/week | Full engagement | Requirements clarification, existing implementation review, design validation, parameter definition |
 | **Technical Lead** | 2-4 hrs/week | Full engagement | Technical decisions, approvals, escalations |
 | **Data Platform Team** | As needed | Full engagement | Airflow infrastructure, database provisioning |
-| **QA/Testing Resource** | 2-4 hrs/week | Weeks 13-15 | Testing execution, business validation |
+| **QA/Testing Resource** | 2-4 hrs/week | Weeks 12-14 | Testing execution, business validation |
 | **GenAI/TE/DE Team Representatives** | As needed | Weeks 2-4 | Funnel/Health macro discovery and consolidation |
 
 ### 5.3 Infrastructure Requirements
@@ -811,7 +709,7 @@ Senior SA                           ============================================
 |-------------|-------|----------|
 | Metrics layer database/schemas | Platform Team | Week 1 |
 | Development environment access | Platform Team | Week 1 |
-| Airflow environment for orchestration | Platform Team | Week 12 |
+| Airflow environment for orchestration | Platform Team | Week 11 |
 | Access to existing macro implementations | Owen/Mike/Soumya | Week 1 |
 | Access to source data (standardised format) | Platform Team | Week 1 |
 | Design review/approval process | Canva Stakeholders | Weeks 3-5 |
