@@ -71,6 +71,8 @@ Canva will receive:
 - Upstream dependencies sourced directly from original domains
 - Design approval cycles may extend timeline
 
+- Snowflake Cortex Code AI-assisted development is used to achieve 30% effort reduction on scalable activities
+
 ## 8. Effort Analysis
 | Activity Category | Higher-Level Category | Effort (Days) | % |
 |-------------------|----------------------|---------------|---|
@@ -145,8 +147,11 @@ Canva will receive:
 ## 7. Assumptions
 - PDF documentation provided; some reverse engineering may be required
 - Complex production environment handled by Canva internal team
+- Snowflake Cortex Code AI-assisted development is used to achieve 30% effort reduction on scalable activities
 - Data volume manageable for rebuild from source approach
 - SME availability at 4+ hours per week
+
+- Snowflake Cortex Code AI-assisted development is used to achieve 30% effort reduction on scalable activities
 
 ## 8. Effort Analysis
 | Activity Category | Higher-Level Category | Effort (Days) | % |
@@ -226,6 +231,8 @@ Canva will receive:
 - No historical backfill required (separate activity if needed)
 - Unit test development explicitly out of scope
 
+- Snowflake Cortex Code AI-assisted development is used to achieve 30% effort reduction on scalable activities
+
 ## 8. Effort Analysis
 | Activity Category | Higher-Level Category | Effort (Days) | % |
 |-------------------|----------------------|---------------|---|
@@ -295,6 +302,8 @@ Canva will receive:
 - Initial business requirements documented and available
 - No governance changes required (uses existing marketing RBAC roles)
 - Attribution logic complexity aligns with initial assessment
+
+- Snowflake Cortex Code AI-assisted development is used to achieve 30% effort reduction on scalable activities
 
 ## 8. Effort Analysis
 | Activity Category | Higher-Level Category | Effort (Days) | % |
@@ -369,6 +378,8 @@ Canva will receive:
 - Source data already available in Snowflake (no ingestion required)
 - Revenue allocation rules will be defined during design phase
 - Code sharing mechanism available during engagement
+
+- Snowflake Cortex Code AI-assisted development is used to achieve 30% effort reduction on scalable activities
 
 ## 8. Effort Analysis
 | Activity Category | Higher-Level Category | Effort (Days) | % |
@@ -447,6 +458,8 @@ Canva will receive:
 - Metrics Alerts confirmation pending from Nicholas Prima
 - Foundation domain tables consumed as-is
 
+- Snowflake Cortex Code AI-assisted development is used to achieve 30% effort reduction on scalable activities
+
 ## 8. Effort Analysis
 | Activity Category | Higher-Level Category | Effort (Days) | % |
 |-------------------|----------------------|---------------|---|
@@ -523,6 +536,9 @@ Canva will receive:
 - Airflow V2 supports event triggering (alternative approach adds 3-5 days if not available)
 - Semantic views explicitly de-scoped per stakeholder confirmation
 - Production deployment handled by Canva internal team
+- Snowflake Cortex Code AI-assisted development is used to achieve 30% effort reduction on scalable activities
+
+- Snowflake Cortex Code AI-assisted development is used to achieve 30% effort reduction on scalable activities
 
 ## 8. Effort Analysis
 | Activity Category | Higher-Level Category | Effort (Days) | % |
@@ -597,6 +613,8 @@ Canva will receive:
 - No historical data migration required
 - Legacy JIRA instance capacity dependent (adds 15-25 days if included)
 - SME availability at 4+ hours per week
+
+- Snowflake Cortex Code AI-assisted development is used to achieve 30% effort reduction on scalable activities
 
 ## 8. Effort Analysis
 | Activity Category | Higher-Level Category | Effort (Days) | % |
