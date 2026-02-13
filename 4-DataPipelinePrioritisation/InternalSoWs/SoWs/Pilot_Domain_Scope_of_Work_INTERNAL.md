@@ -325,21 +325,21 @@ The Pilot Domain already has an existing DBT project (Feature Catalog) with a th
 | | | **Subtotal** | **3.5** | | **3.5** | |
 | **Deployment** | 3 | Dev environment deployment | 1.0 | No | 1.0 | Initial deployment |
 | | | **Subtotal** | **1.0** | | **1.0** | |
-| **Documentation** | 4 | Solution design document | 2.0 | No | 2.0 | Architecture documentation |
-| | 4 | Data architecture document | 1.0 | No | 1.0 | Data model specs |
-| | 4 | Production deployment guide | 1.5 | No | 1.5 | Go-to-production guide |
+| **Documentation** | 4 | Solution design document | 2.0 | Yes | 1.4 | Architecture documentation |
+| | 4 | Data architecture document | 1.0 | Yes | 0.7 | Data model specs |
+| | 4 | Production deployment guide | 1.5 | Yes | 1.05 | Go-to-production guide |
 | | 4 | Knowledge transfer | 0.25 | No | 0.25 | 1 session x 1 hour |
-| | | **Subtotal** | **4.75** | | **4.75** | |
+| | | **Subtotal** | **4.75** | | **3.4** | |
 | | | | | | | |
 | **PHASE TOTALS** | | | | | | |
 | | **Phase 1** | Discovery & Design | **2.0** | | **1.475** | |
 | | **Phase 2** | Build | **12.5** | | **9.95** | |
 | | **Phase 3** | Testing & Deployment | **4.5** | | **4.5** | |
-| | **Phase 4** | Documentation & Handover | **4.75** | | **4.75** | |
+| | **Phase 4** | Documentation & Handover | **4.75** | | **3.4** | |
 | | | | | | | |
-| | | **Total Base Effort** | **23.75** | | **20.675** | |
-| | | **Contingency (15%)** | **3.56** | | **3.10** | |
-| | | **Grand Total** | **27.31** | | **23.78** | |
+| | | **Total Base Effort** | **23.75** | | **19.325** | |
+| | | **Contingency (15%)** | **3.56** | | **2.90** | |
+| | | **Grand Total** | **27.31** | | **22.22** | |
 
 ---
 

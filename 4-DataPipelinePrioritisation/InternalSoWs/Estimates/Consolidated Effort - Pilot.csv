@@ -1,26 +1,26 @@
 Domain,Category,Phase,Activity,Effort (Days),Can be expedited / scaled with CoCo,Effort with AI Scale,Calculation
 Pilot,Physical Layer Setup,1,Database creation,0.25,Yes,0.175,1 database
 Pilot,Physical Layer Setup,1,Schema creation,0.25,Yes,0.175,Schemas per database
-Pilot,Physical Layer Setup,1,Access configuration,0.25,,0.25,Initial role grants
+Pilot,Physical Layer Setup,1,Access configuration,0.25,No,0.25,Initial role grants
 Pilot,Current State Analysis,1,DBT project review,0.5,Yes,0.35,Existing project
 Pilot,Current State Analysis,1,Table analysis,0.75,Yes,0.525,3 tables
 Pilot,Surrogate Key Implementation,2,Surrogate key design,0.5,Yes,0.35,Design approach
-Pilot,Surrogate Key Implementation,2,DBT model modifications,1.5,Yes,1.05,3 models x 0.5 days
-Pilot,Surrogate Key Implementation,2,New dimension table,1,,1,1 table
-Pilot,Surrogate Key Implementation,2,Testing surrogate keys,0.5,,0.5,Validation
-Pilot,DBT Model Repointing,2,Repointing design,0.5,,0.5,Database references
-Pilot,DBT Model Repointing,2,DBT model modifications,4,Yes,2.8,16 models x 0.25 days
+Pilot,Surrogate Key Implementation,2,DBT model modifications,1.5,Yes,1.05,3 models x 0.5
+Pilot,Surrogate Key Implementation,2,New dimension table,1,No,1,1 table
+Pilot,Surrogate Key Implementation,2,Testing surrogate keys,0.5,No,0.5,Validation
+Pilot,DBT Model Repointing,2,Repointing design,0.5,No,0.5,Database references
+Pilot,DBT Model Repointing,2,DBT model modifications,4,Yes,2.8,16 models x 0.25
 Pilot,DBT Model Repointing,2,Configuration updates,0.5,Yes,0.35,YAML configs
-Pilot,Orchestration Setup,2,Orchestration design,1,,1,Event-triggered patterns
+Pilot,Orchestration Setup,2,Orchestration design,1,No,1,Event-triggered patterns
 Pilot,Orchestration Setup,2,Airflow DAG development,2,Yes,1.4,Kubernetes to Airflow
-Pilot,Orchestration Setup,2,Testing & validation,1,,1,End-to-end testing
-Pilot,Testing,3,Integration testing,2,,2,End-to-end validation
-Pilot,Testing,3,Data quality testing,1.5,,1.5,"Accuracy, completeness"
-Pilot,Deployment,3,Dev environment deployment,1,,1,Initial deployment
-Pilot,Documentation,4,Solution design document,2,,2,Architecture documentation
-Pilot,Documentation,4,Data architecture document,1,,1,Data model specs
-Pilot,Documentation,4,Production deployment guide,1.5,,1.5,Go-to-production guide
-Pilot,Documentation,4,Knowledge transfer,0.25,,0.25,1 session x 1 hour
-Pilot,Contingency (15%),5,Contingency (15%),3.5625,,3.5625,15%
+Pilot,Orchestration Setup,2,Testing & validation,1,No,1,End-to-end testing
+Pilot,Testing,3,Integration testing,2,No,2,End-to-end validation
+Pilot,Testing,3,Data quality testing,1.5,No,1.5,"Accuracy, completeness"
+Pilot,Deployment,3,Dev environment deployment,1,No,1,Initial deployment
+Pilot,Documentation,4,Solution design document,2,Yes,1.4,Architecture documentation
+Pilot,Documentation,4,Data architecture document,1,Yes,0.7,Data model specs
+Pilot,Documentation,4,Production deployment guide,1.5,Yes,1.05,Go-to-production guide
+Pilot,Documentation,4,Knowledge transfer,0.25,No,0.25,1 session x 1 hour
+Pilot,Contingency (15%),5,Contingency (15%),3.5625,No,2.89875,15%
 ,,,,,,,
-,,Total,,,,24.2375,
+,,Total,,,,22.22375,
