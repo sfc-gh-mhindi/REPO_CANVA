@@ -477,30 +477,30 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 
 ## 4. High-Level Execution Plan
 
-### Phase 1: Discovery & Design (Weeks 1-5)
+### Phase 1: Discovery & Design (Weeks 1-6)
 
 **Objectives:** Understand current state, design target architecture, obtain approval
 
 | Week | Activities |
 |------|------------|
-| 1-2 | Physical layer setup, receive sample DBT models, begin table analysis (AI-assisted) |
-| 3-4 | Complete data profiling, dependency mapping, DBT model analysis (AI-assisted) |
-| 5 | Target model design, design review with stakeholders, obtain sign-off |
+| 1-2 | Physical layer setup, receive sample DBT models, begin table analysis |
+| 3-4 | Complete data profiling, dependency mapping, DBT model analysis |
+| 5-6 | Target model design, design review with stakeholders, obtain sign-off |
 
 **Key Milestones:**
 - Solution Design Document approved
 - DBT model complexity breakdown confirmed
 - Target data model design signed off
 
-### Phase 2: Build (Weeks 6-11)
+### Phase 2: Build (Weeks 7-13)
 
 **Objectives:** Develop all DBT models, semantic layer, orchestration, governance
 
 | Week | Activities |
 |------|------------|
-| 6-7 | Build Conformed layer DBT models, reusable macros (AI-assisted) |
-| 8-9 | Build Metrics layer DBT models, semantic layer development (AI-assisted) |
-| 10-11 | Orchestration setup, governance implementation |
+| 7-8 | Build Conformed layer DBT models, reusable macros |
+| 9-11 | Build Metrics layer DBT models, semantic layer development |
+| 12-13 | Orchestration setup, governance implementation |
 
 **Key Milestones:**
 - Conformed layer models complete
@@ -508,29 +508,29 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 - Semantic views deployed
 - Orchestration operational
 
-### Phase 3: Migration & Testing (Weeks 12-14)
+### Phase 3: Migration & Testing (Weeks 14-17)
 
-**Objectives:** Migrate data, test thoroughly, deploy to production
+**Objectives:** Migrate data, test thoroughly, deploy to DEV
 
 | Week | Activities |
 |------|------------|
-| 12 | Migration script development (AI-assisted), test migration |
-| 13 | Full historical migration, data reconciliation |
-| 14 | Data quality testing, production deployment |
+| 14-15 | Migration script development, test migration |
+| 16 | Full historical migration, data reconciliation |
+| 17 | Data quality testing, DEV deployment |
 
 **Key Milestones:**
 - Historical data migrated and validated
 - All tests passing
 - Production deployment complete
 
-### Phase 4: Documentation & Handover (Weeks 15-16)
+### Phase 4: Documentation & Handover (Weeks 18-19)
 
 **Objectives:** Document solution, transfer knowledge
 
 | Week | Activities |
 |------|------------|
-| 15 | Documentation completion, migration guide |
-| 16 | Knowledge transfer, final handover |
+| 18 | Documentation completion, migration guide |
+| 19 | Knowledge transfer, final handover |
 
 **Key Milestones:**
 - Documentation delivered
@@ -540,68 +540,68 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 
 ```mermaid
 gantt
-    title Monetisation Domain - Project Timeline (16 Weeks) - AI-Assisted
+    title Monetisation Domain - Project Timeline (19 Weeks)
     dateFormat  YYYY-MM-DD
     axisFormat  Wk %W
     tickInterval 1week
     
     section Phase 1: Discovery & Design
-    Physical Layer Setup (1.2d)           :active, p1a, 2026-03-02, 2d
-    Current State Analysis (9.3d)         :p1b, 2026-03-02, 10d
-    Transformation Analysis (9.45d)       :p1c, 2026-03-09, 10d
-    New DBT Model Design (8.33d)          :p1d, 2026-03-16, 10d
-    Design Approved                       :milestone, m1, 2026-04-03, 0d
+    Physical Layer Setup (1.5d)           :active, p1a, 2026-03-02, 2d
+    Current State Analysis (12.0d)        :p1b, 2026-03-02, 12d
+    Transformation Analysis (13.5d)       :p1c, 2026-03-09, 14d
+    New DBT Model Design (11.9d)          :p1d, 2026-03-23, 12d
+    Design Approved                       :milestone, m1, 2026-04-10, 0d
     
     section Phase 2: Build
-    DBT Model Build (12.95d)              :p2a, 2026-04-06, 12d
-    Semantic Layer (8.9d)                 :p2b, 2026-04-13, 10d
-    Orchestration Setup (6.3d)            :p2c, 2026-04-20, 8d
-    Governance Implementation (7.95d)     :p2d, 2026-04-27, 10d
-    Build Complete                        :milestone, m2, 2026-05-08, 0d
+    DBT Model Build (18.5d)               :p2a, 2026-04-13, 15d
+    Semantic Layer (11.0d)                :p2b, 2026-04-27, 12d
+    Orchestration Setup (7.5d)            :p2c, 2026-05-11, 8d
+    Governance Implementation (9.0d)      :p2d, 2026-05-18, 10d
+    Build Complete                        :milestone, m2, 2026-05-29, 0d
     
     section Phase 3: Migration & Testing
-    Historical Data Migration (8.9d)      :crit, p3a, 2026-05-11, 8d
-    Testing (4.2d)                        :p3b, 2026-05-18, 5d
-    Deployment (2.0d)                     :p3c, 2026-05-22, 3d
-    DEV Deployed                          :milestone, m3, 2026-05-29, 0d
+    Historical Data Migration (11.0d)     :crit, p3a, 2026-06-01, 10d
+    Testing (6.0d)                        :p3b, 2026-06-08, 6d
+    Deployment (2.0d)                     :p3c, 2026-06-15, 3d
+    DEV Deployed                          :milestone, m3, 2026-06-19, 0d
     
     section Phase 4: Documentation
-    Documentation (9.0d)                  :p4a, 2026-06-01, 10d
-    Final Handover                        :milestone, m4, 2026-06-12, 0d
+    Documentation (9.0d)                  :p4a, 2026-06-22, 10d
+    Final Handover                        :milestone, m4, 2026-07-03, 0d
     
     section Resources
-    Lead Solution Architect (Wk 1-16)     :done, res1, 2026-03-02, 80d
-    Senior Solution Architect (Wk 6-14)   :done, res2, 2026-04-06, 45d
+    Lead Solution Architect (Wk 1-19)     :done, res1, 2026-03-02, 95d
+    Senior Solution Architect (Wk 7-17)   :done, res2, 2026-04-13, 55d
 ```
 
 ### Effort by Phase
 
 ```mermaid
 pie showData
-    title Effort Distribution by Phase (88.5 days) - AI-Assisted
-    "Phase 1: Discovery & Design" : 28.3
-    "Phase 2: Build" : 36.1
-    "Phase 3: Migration & Testing" : 15.1
+    title Effort Distribution by Phase (112.9 days)
+    "Phase 1: Discovery & Design" : 38.9
+    "Phase 2: Build" : 46.0
+    "Phase 3: Migration & Testing" : 19.0
     "Phase 4: Documentation & Handover" : 9.0
 ```
 
 ### Timeline Summary
 
 ```
-Week:  1  2  3  4  5 | 6  7  8  9 10 11 | 12 13 14 | 15 16
-       |--Discovery--|------Build-------|--Migr&---|--Docs-|
-       |   & Design  |                  |  Test    |       |
+Week:  1  2  3  4  5  6 | 7  8  9 10 11 12 13 | 14 15 16 17 | 18 19
+       |--Discovery & --|-------Build---------|--Migration--|--Docs-|
+       |   Design       |                     |  & Test     |       |
 
 Lead Solution Architect:
-       |=====================================================|
-       Week 1-16 (Full engagement)
+       |==========================================================|
+       Week 1-19 (Full engagement)
 
 Senior Solution Architect:
-                      |=======================|
-                      Week 6-14 (Build + Migration & Testing)
+                         |============================|
+                         Week 7-17 (Build + Migration & Testing)
 ```
 
-**Total Duration:** ~16 weeks (4 months)
+**Total Duration:** ~19 weeks (4.75 months)
 
 ---
 
@@ -611,8 +611,8 @@ Senior Solution Architect:
 
 | Role | FTE | Duration | Responsibilities | Required Skills & Expertise |
 |------|-----|----------|------------------|----------------------------|
-| **Lead Solution Architect** | 1.0 | Full engagement (16 weeks) | Solution architecture, complex DBT development, technical leadership, stakeholder management | DBT Core (advanced), Snowflake (advanced), Data modeling (advanced), SQL (advanced), Airflow, Semantic Views/Cortex Analyst, Cortex Code, Solution design |
-| **Senior Solution Architect** | 1.0 | Weeks 6-14 (9 weeks) | DBT model development, migration scripts, testing | DBT Core (advanced), Snowflake, SQL (advanced), Python, Data migration, Testing frameworks |
+| **Lead Solution Architect** | 1.0 | Full engagement (19 weeks) | Solution architecture, complex DBT development, technical leadership, stakeholder management | DBT Core (advanced), Snowflake (advanced), Data modeling (advanced), SQL (advanced), Airflow, Semantic Views/Cortex Analyst, Cortex Code, Solution design |
+| **Senior Solution Architect** | 1.0 | Weeks 7-17 (11 weeks) | DBT model development, migration scripts, testing | DBT Core (advanced), Snowflake, SQL (advanced), Python, Data migration, Testing frameworks |
 
 ### 5.2 Canva Team Requirements
 

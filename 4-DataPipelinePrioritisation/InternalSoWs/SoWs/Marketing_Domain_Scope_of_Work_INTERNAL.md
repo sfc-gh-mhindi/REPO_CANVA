@@ -468,7 +468,7 @@ The pipeline will support reporting on two primary areas:
 
 | Week | Activities |
 |------|------------|
-| 7 | Unit testing, integration testing |
+| 7 | Integration testing |
 | 8 | Data quality testing, DEV deployment |
 
 **Key Milestones:**
@@ -509,8 +509,8 @@ gantt
     Build Complete                        :milestone, m2, 2026-05-15, 0d
     
     section Phase 3: Testing & Deployment
-    Testing (6.0d)                        :p3a, 2026-05-18, 8d
-    Deployment (1.0d)                     :p3b, 2026-05-26, 2d
+    Testing (4.0d)                        :p3a, 2026-05-18, 6d
+    Deployment (1.0d)                     :p3b, 2026-05-25, 2d
     DEV Deployed                          :milestone, m3, 2026-05-29, 0d
     
     section Phase 4: Documentation
@@ -525,10 +525,10 @@ gantt
 
 ```mermaid
 pie showData
-    title Effort Distribution by Phase (40.4 days)
+    title Effort Distribution by Phase (38.4 days)
     "Phase 1: Discovery & Design" : 14.6
     "Phase 2: Build" : 15.05
-    "Phase 3: Testing & Deployment" : 7.0
+    "Phase 3: Testing & Deployment" : 5.0
     "Phase 4: Documentation & Handover" : 3.75
 ```
 

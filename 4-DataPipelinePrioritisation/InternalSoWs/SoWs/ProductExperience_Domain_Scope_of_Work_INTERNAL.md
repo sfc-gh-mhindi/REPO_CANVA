@@ -470,7 +470,7 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 
 | Week | Activities |
 |------|------------|
-| 6 | Unit test development, integration testing |
+| 6 | Integration testing |
 | 7 | Data quality testing, DEV deployment |
 
 **Key Milestones:**
@@ -512,7 +512,7 @@ gantt
     Orchestration Live                    :milestone, m2, 2026-04-03, 0d
     
     section Phase 3: Testing & Deployment
-    Testing (6.0d)                        :p3a, 2026-04-06, 10d
+    Testing (4.0d)                        :p3a, 2026-04-06, 8d
     Deployment (1.0d)                     :p3b, 2026-04-14, 3d
     DEV Deployed                          :milestone, m3, 2026-04-17, 0d
     
@@ -528,10 +528,10 @@ gantt
 
 ```mermaid
 pie showData
-    title Effort Distribution by Phase (34.4 days)
+    title Effort Distribution by Phase (32.4 days)
     "Phase 1: Discovery & Design" : 14.65
     "Phase 2: Build" : 10.0
-    "Phase 3: Testing & Deployment" : 7.0
+    "Phase 3: Testing & Deployment" : 5.0
     "Phase 4: Documentation & Handover" : 2.75
 ```
 
