@@ -31,7 +31,9 @@
 ## 1. Scope
 - Analyse ~250 existing DBT models with significant overlap/duplication
 - Redesign into three-layer architecture with target 30% model reduction
-- Consolidate ~30 end-user tables
+- Consolidate ~30 end-user tables into streamlined reporting structure
+- Create 7 semantic views for Snowflake Intelligence natural language queries
+- Configure daily Airflow orchestration for automated refresh
 
 ## 2. Migration
 - **Existing:** ~250 DBT models with significant duplication, ~30 end-user tables
@@ -111,6 +113,8 @@ Canva will receive:
 ## 1. Scope
 - Analyse and redesign monolithic dim_editor_session table into proper star schema
 - Rebuild 7 DBT models into three-layer architecture
+- Separate dimensional attributes (user, device, design, platform) from session facts
+- Create semantic view for Editor Session analytics
 - Configure daily Airflow orchestration
 
 ## 2. Migration
@@ -151,7 +155,6 @@ Canva will receive:
 - Data volume manageable for rebuild from source approach
 - SME availability at 4+ hours per week
 
-- Snowflake Cortex Code AI-assisted development is used
 
 ## 8. Effort Analysis
 | Activity Category | Higher-Level Category | Effort (Days) | % |
@@ -186,9 +189,11 @@ Canva will receive:
 # Domain 3: Product Experience - Macros Consolidation
 
 ## 1. Scope
-- Design and build 5 parameterised DBT macros for standardised reporting
+- Design and build 5 parameterised DBT macros for standardised reporting (MAU, Retention, Funnel, Health/Engagement, Audience)
 - Consolidate fragmented implementations across teams (GenAI, TE, DE)
-- Create metrics layer models for macro outputs
+- Create metrics layer dimensional models for macro outputs
+- Build 5 semantic views for Snowflake Intelligence
+- Configure Airflow orchestration for automated metric generation
 
 ## 2. Migration
 - **Existing:** Multiple fragmented implementations across teams
@@ -266,7 +271,9 @@ Canva will receive:
 ## 1. Scope
 - Design and build new Marketplace Flow Pipeline for marketing analytics
 - Create Metrics layer dimensional model for marketplace session tracking
-- Develop DBT models consuming Discovery + Foundation domain data
+- Develop ~8 DBT models consuming Discovery + Foundation domain data
+- Build 3 semantic views (Marketplace Landing Page, Editor Outcomes, Attribution)
+- Configure daily Airflow orchestration for automated refresh
 
 ## 2. Migration
 - **Existing:** No existing DBT models
@@ -339,6 +346,7 @@ Canva will receive:
 - Analyse, redesign, and rebuild existing DBT project into three-layer architecture
 - Restructure 2 monolithic fact tables into ~9 grain-appropriate models
 - Migrate 7.5 billion rows of historical fact_print_funnel data
+- Create 2 semantic views for Snowflake Intelligence
 - Configure orchestration (2-hour near real-time + daily schedules)
 
 ## 2. Migration
@@ -416,9 +424,10 @@ Canva will receive:
 
 ## 1. Scope
 - Analyse, redesign, and rebuild existing DBT project into three-layer architecture
-- Build models for 4 reporting pipelines (14 tables total)
+- Build models for 4 reporting pipelines: Merchant Fee, Payout, Coupon & Offer, Refund & Dispute
 - Migrate historical data with validation
 - Implement data governance (classifications, masking, RAP, RBAC)
+- Create 4 semantic views for Snowflake Intelligence natural language queries
 
 ## 2. Migration
 - **Existing:** 14 tables across 4 reporting areas, 31 DBT models
@@ -496,9 +505,10 @@ Canva will receive:
 
 ## 1. Scope
 - Add surrogate keys to 3 fact tables in existing conformed database
-- Create 1 new dimension table
+- Create 1 new dimension table for improved join performance
 - Repoint 16 fact tables to new metrics database location via DBT modifications
 - Configure event-triggered Airflow orchestration
+- Deliver production deployment guide and architecture documentation
 
 ## 2. Migration
 - **Existing:** Feature Catalog DBT project with three-layer architecture already in place
@@ -538,7 +548,6 @@ Canva will receive:
 - Production deployment handled by Canva internal team
 - Snowflake Cortex Code AI-assisted development is used
 
-- Snowflake Cortex Code AI-assisted development is used
 
 ## 8. Effort Analysis
 | Activity Category | Higher-Level Category | Effort (Days) | % |
@@ -572,7 +581,8 @@ Canva will receive:
 ## 1. Scope
 - Discover and evaluate ingestion methodologies (Delta Share vs OpenFlow)
 - Analyse and redesign 150 existing DBT models into four-layer architecture
-- Build data models for 7 JIRA entities
+- Build data models for 7 JIRA entities with target 50% model consolidation
+- Create 7 semantic views for Snowflake Intelligence
 - Implement data governance (classifications, masking, tagging)
 
 ## 2. Migration
