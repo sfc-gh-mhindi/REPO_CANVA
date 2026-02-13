@@ -589,14 +589,13 @@ Canva will receive:
 - **Existing:** 150 DBT models with significant duplication
 - **Migration Work:**
   - Create 4 Snowflake databases (Landing, Conformed, Metrics, Semantic)
-  - Evaluate and productionize ingestion pipeline (Delta Share or OpenFlow)
   - DBT model consolidation (target 50% reduction to ~75 models)
   - Create 7 semantic views (one per JIRA entity)
   - Migrate orchestration from Snowflake Tasks to Airflow
-  - Implement data governance framework (classifications, tagging, masking policies)
 
 ## 3. New
-- None (all work relates to migrating/restructuring existing pipelines and ingestion)
+- Evaluate and productionize ingestion pipeline (Delta Share or OpenFlow)
+- Implement data governance framework (classifications, tagging, masking policies)
 
 ## 4. Outcomes
 Canva will receive:
