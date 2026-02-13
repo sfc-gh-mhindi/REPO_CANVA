@@ -162,7 +162,7 @@ The engagement includes discovery and implementation of the optimal ingestion me
 | Existing Delta Share POC | Available | Workshop confirmed |
 | SME availability | 4-6 hours/week | Expected commitment |
 | Access to entire monolithic DBT project | Required | Cross-domain dependency analysis |
-| Cortex Code CLI access | Required | Development tooling |
+| Cortex Code access | Required | Development tooling |
 
 ---
 
@@ -388,74 +388,74 @@ The engagement includes discovery and implementation of the optimal ingestion me
 
 ### 3.6 Consolidated Effort Table
 
-| Category | Phase | Activity | Effort (Days) | Calculation |
-|----------|-------|----------|---------------|-------------|
-| **Physical Layer Setup** | 1 | Database creation | 0.25 | 4 databases |
-| | 1 | Schema creation | 0.15 | Schemas per database |
-| | 1 | Access configuration | 0.1 | Initial role grants |
-| | | **Subtotal** | **0.5** | |
-| **Ingestion Discovery** | 1 | Delta Share POC review | 2.0 | Analyse existing code |
-| | 1 | OpenFlow evaluation | 2.0 | Assess capabilities |
-| | 1 | Recommendation documentation | 1.0 | Document findings |
-| | | **Subtotal** | **5.0** | |
-| **Ingestion Build** | 2 | Ingestion build | 5.0 | Selected approach |
-| | 2 | Airflow migration | 1.0 | Migrate from SF Tasks |
-| | 2 | Testing & validation | 1.0 | End-to-end testing |
-| | | **Subtotal** | **7.0** | |
-| **Current State Analysis** | 1 | DBT model inventory | 2.0 | Catalogue 150 models |
-| | 1 | Simple model analysis | 9.0 | 90 models x 0.1 days |
-| | 1 | Medium model analysis | 9.0 | 45 models x 0.2 days |
-| | 1 | Complex model analysis | 6.0 | 15 models x 0.4 days |
-| | 1 | Duplicate identification | 0.0 | Part of model analysis |
-| | 1 | Target model design | 4.0 | 4-layer architecture (includes entity mapping) |
-| | 1 | Design review & iteration | 1.0 | Stakeholder review |
-| | | **Subtotal** | **31.0** | |
-| **New DBT Model Design** | 1 | New model design | 15.0 | 75 models x 0.2 days |
-| | 1 | Reusable component design | 2.0 | Macros and shared logic |
-| | 1 | Design documentation | 2.0 | Technical specifications |
-| | | **Subtotal** | **19.0** | |
-| **New DBT Model Build** | 2 | Simple model build | 9.0 | 45 models x 0.2 days |
-| | 2 | Medium model build | 9.2 | 23 models x 0.4 days |
-| | 2 | Complex model build | 5.6 | 7 models x 0.8 days |
-| | 2 | Macro/component build | 2.0 | Shared components |
-| | 2 | Model configuration | 3.75 | YAML, tests, docs |
-| | | **Subtotal** | **29.55** | |
-| **Entity Data Modelling** | 2 | Conformed layer design | 3.5 | 7 entities x 0.5 days |
-| | 2 | Conformed layer build | 3.5 | 7 entities x 0.5 days |
-| | 2 | Metrics layer design | 5.25 | 7 entities x 0.75 days |
-| | 2 | Metrics layer build | 5.25 | 7 entities x 0.75 days |
-| | | **Subtotal** | **17.5** | |
-| **Semantic Layer** | 1 | Requirements discovery | 1.75 | 7 entities x 0.25 days |
-| | 1 | Semantic model design | 5.25 | 7 models x 0.75 days |
-| | 2 | Semantic view build | 3.5 | 7 views x 0.5 days |
-| | 2 | Snowflake Intelligence validation | 2.0 | Cortex Analyst testing |
-| | | **Subtotal** | **12.5** | |
-| **Orchestration Setup** | 2 | Orchestration design | 1.0 | Scheduled patterns |
-| | 2 | Airflow DAG development | 3.0 | Build DAGs |
-| | 2 | Testing & validation | 1.0 | End-to-end testing |
-| | | **Subtotal** | **5.0** | |
-| **Governance** | 1 | Governance discovery | 1.0 | Assess sensitivity |
-| | 2 | Data classification | 2.0 | Apply to new objects |
-| | 2 | Masking policies advisory | 1.0 | Recommend approach |
-| | | **Subtotal** | **4.0** | |
-| **Testing** | 3 | Unit test migration | 2.0 | Existing DBT tests |
-| | 3 | Data quality testing | 2.0 | Accuracy, completeness |
-| | | **Subtotal** | **4.0** | |
-| **Documentation** | 3 | Solution design document | 3.0 | Architecture documentation |
-| | 3 | Data architecture document | 2.0 | Data model specs |
-| | 3 | Ingestion runbook | 1.5 | Operational procedures |
-| | 3 | Transformation runbook | 1.5 | DBT procedures |
-| | 3 | Knowledge transfer | 1.0 | 2-3 training sessions |
-| | | **Subtotal** | **9.0** | |
-| | | | | |
-| **PHASE TOTALS** | | | | |
-| | **Phase 1** | Discovery & Design | **63.5** | |
-| | **Phase 2** | Build | **67.55** | |
-| | **Phase 3** | Testing & Documentation | **13.0** | |
-| | | | | |
-| | | **Total Base Effort** | **144.05** | |
-| | | **Contingency (15%)** | **21.6** | |
-| | | **Grand Total** | **165.65** | |
+| Category | Phase | Activity | Effort (Days) | AI Scalable | Effort with AI | Calculation |
+|----------|-------|----------|---------------|-------------|----------------|-------------|
+| **Physical Layer Setup** | 1 | Database creation | 0.25 | Yes | 0.175 | 4 databases |
+| | 1 | Schema creation | 0.15 | Yes | 0.105 | Schemas per database |
+| | 1 | Access configuration | 0.1 | No | 0.1 | Initial role grants |
+| | | **Subtotal** | **0.5** | | **0.38** | |
+| **Ingestion Discovery** | 1 | Delta Share POC review | 2.0 | Yes | 1.4 | Analyse existing code |
+| | 1 | OpenFlow evaluation | 2.0 | No | 2.0 | Assess capabilities |
+| | 1 | Recommendation documentation | 1.0 | No | 1.0 | Document findings |
+| | | **Subtotal** | **5.0** | | **4.4** | |
+| **Ingestion Build** | 2 | Ingestion build | 5.0 | No | 5.0 | Selected approach |
+| | 2 | Airflow migration | 1.0 | Yes | 0.7 | Migrate from SF Tasks |
+| | 2 | Testing & validation | 1.0 | No | 1.0 | End-to-end testing |
+| | | **Subtotal** | **7.0** | | **6.7** | |
+| **Current State Analysis** | 1 | DBT model inventory | 2.0 | Yes | 1.4 | Catalogue 150 models |
+| | 1 | Simple model analysis | 9.0 | Yes | 6.3 | 90 models x 0.1 days |
+| | 1 | Medium model analysis | 9.0 | Yes | 6.3 | 45 models x 0.2 days |
+| | 1 | Complex model analysis | 6.0 | Yes | 4.2 | 15 models x 0.4 days |
+| | 1 | Duplicate identification | 0.0 | No | 0.0 | Part of model analysis |
+| | 1 | Target model design | 4.0 | Yes | 2.8 | 4-layer architecture (includes entity mapping) |
+| | 1 | Design review & iteration | 1.0 | No | 1.0 | Stakeholder review |
+| | | **Subtotal** | **31.0** | | **22.0** | |
+| **New DBT Model Design** | 1 | New model design | 15.0 | Yes | 10.5 | 75 models x 0.2 days |
+| | 1 | Reusable component design | 2.0 | Yes | 1.4 | Macros and shared logic |
+| | 1 | Design documentation | 2.0 | Yes | 1.4 | Technical specifications |
+| | | **Subtotal** | **19.0** | | **13.3** | |
+| **New DBT Model Build** | 2 | Simple model build | 9.0 | Yes | 6.3 | 45 models x 0.2 days |
+| | 2 | Medium model build | 9.2 | Yes | 6.44 | 23 models x 0.4 days |
+| | 2 | Complex model build | 5.6 | Yes | 3.92 | 7 models x 0.8 days |
+| | 2 | Macro/component build | 2.0 | Yes | 1.4 | Shared components |
+| | 2 | Model configuration | 3.75 | Yes | 2.625 | YAML, tests, docs |
+| | | **Subtotal** | **29.55** | | **20.685** | |
+| **Entity Data Modelling** | 2 | Conformed layer design | 3.5 | Yes | 2.45 | 7 entities x 0.5 days |
+| | 2 | Conformed layer build | 3.5 | Yes | 2.45 | 7 entities x 0.5 days |
+| | 2 | Metrics layer design | 5.25 | Yes | 3.675 | 7 entities x 0.75 days |
+| | 2 | Metrics layer build | 5.25 | Yes | 3.675 | 7 entities x 0.75 days |
+| | | **Subtotal** | **17.5** | | **12.25** | |
+| **Semantic Layer** | 1 | Requirements discovery | 1.75 | No | 1.75 | 7 entities x 0.25 days |
+| | 1 | Semantic model design | 5.25 | Yes | 3.675 | 7 models x 0.75 days |
+| | 2 | Semantic view build | 3.5 | Yes | 2.45 | 7 views x 0.5 days |
+| | 2 | Snowflake Intelligence validation | 2.0 | No | 2.0 | Cortex Analyst testing |
+| | | **Subtotal** | **12.5** | | **9.875** | |
+| **Orchestration Setup** | 2 | Orchestration design | 1.0 | No | 1.0 | Scheduled patterns |
+| | 2 | Airflow DAG development | 3.0 | Yes | 2.1 | Build DAGs |
+| | 2 | Testing & validation | 1.0 | No | 1.0 | End-to-end testing |
+| | | **Subtotal** | **5.0** | | **4.1** | |
+| **Governance** | 1 | Governance discovery | 1.0 | No | 1.0 | Assess sensitivity |
+| | 2 | Data classification | 2.0 | No | 2.0 | Apply to new objects |
+| | 2 | Masking policies advisory | 1.0 | No | 1.0 | Recommend approach |
+| | | **Subtotal** | **4.0** | | **4.0** | |
+| **Testing** | 3 | Unit test migration | 2.0 | No | 2.0 | Existing DBT tests |
+| | 3 | Data quality testing | 2.0 | No | 2.0 | Accuracy, completeness |
+| | | **Subtotal** | **4.0** | | **4.0** | |
+| **Documentation** | 3 | Solution design document | 3.0 | Yes | 2.1 | Architecture documentation |
+| | 3 | Data architecture document | 2.0 | Yes | 1.4 | Data model specs |
+| | 3 | Ingestion runbook | 1.5 | No | 1.5 | Operational procedures |
+| | 3 | Transformation runbook | 1.5 | No | 1.5 | DBT procedures |
+| | 3 | Knowledge transfer | 1.0 | No | 1.0 | 2-3 training sessions |
+| | | **Subtotal** | **9.0** | | **7.5** | |
+| | | | | | | |
+| **PHASE TOTALS** | | | | | | |
+| | **Phase 1** | Discovery & Design | **63.5** | | **47.955** | |
+| | **Phase 2** | Build | **67.55** | | **53.76** | |
+| | **Phase 3** | Testing & Documentation | **13.0** | | **11.5** | |
+| | | | | | | |
+| | | **Total Base Effort** | **144.05** | | **113.215** | |
+| | | **Contingency (15%)** | **21.6** | | **16.98** | |
+| | | **Grand Total** | **165.65** | | **130.20** | |
 
 ---
 
@@ -659,10 +659,11 @@ Senior Solution Architect:
 | A12 | Existing DBT tests (null checks, etc.) exist and can be migrated | Workshop confirmed |
 | A13 | No report re-pointing required (consumer responsibility) | Workshop confirmed |
 | A14 | Access to entire monolithic DBT project granted | Required for analysis |
-| A15 | Cortex Code CLI (or later version) can be connected to target Snowflake environment | Development tooling |
-| A16 | Design reviews are approved in a timely fashion | Standard |
-| A17 | Productionization support (beyond runbooks) is not included | Workshop confirmed |
-| A18 | Access to personnel with source data knowledge for target state model design is available | Required for analysis |
+| A15 | Cortex Code can be connected to target Snowflake environment | Development tooling |
+| A16 | Activities marked as "AI Scalable" are subject to 30% effort reduction when using AI-assisted development tools | Effort calculation assumption |
+| A17 | Design reviews are approved in a timely fashion | Standard |
+| A18 | Productionization support (beyond runbooks) is not included | Workshop confirmed |
+| A19 | Access to personnel with source data knowledge for target state model design is available | Required for analysis |
 
 ### 7.2 Risks
 

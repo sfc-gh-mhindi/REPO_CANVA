@@ -428,60 +428,60 @@ This outcome-based engagement will deliver a consolidated set of DBT macros for 
 
 ### 3.6 Consolidated Effort Table
 
-| Category | Phase | Activity | Effort (Days) | Calculation |
-|----------|-------|----------|---------------|-------------|
-| **Physical Layer Setup** | 1 | Database/schema configuration | 0.5 | Metrics layer schemas |
-| | 1 | Access configuration | 0.5 | Role grants |
-| | | **Subtotal** | **1.0** | |
-| **Discovery & Requirements** | 1 | MAU discovery | 3.0 | Review 1-2 permutations |
-| | 1 | Retention discovery | 3.0 | Review 1-2 permutations |
-| | 1 | Funnel discovery & consolidation | 4.5 | 3 permutations (GenAI, TE, DE) |
-| | 1 | Health/Engagement discovery | 3.5 | 2 permutations (TE, DE) |
-| | 1 | Audience requirements | 2.5 | Greenfield design |
-| | | **Subtotal** | **16.5** | |
-| **Macro Design** | 1 | MAU design & approval | 3.0 | Parameters + logic + review |
-| | 1 | Retention design & approval | 3.0 | Parameters + logic + review |
-| | 1 | Funnel design & approval | 3.5 | Complex consolidation + review |
-| | 1 | Health/Engagement design & approval | 3.5 | Complex consolidation + review |
-| | 1 | Audience design & approval | 3.0 | New feature + review |
-| | | **Subtotal** | **16.0** | |
-| **DBT Macro Development** | 2 | MAU macro build | 4.0 | COUNTD, rolling logic |
-| | 2 | Retention macro build | 4.0 | Cohorts, curves |
-| | 2 | Funnel macro build | 4.5 | Scope handling |
-| | 2 | Health/Engagement macro build | 4.5 | Scoring categories |
-| | 2 | Audience macro build | 4.0 | Criteria matching |
-| | | **Subtotal** | **21.0** | |
-| **Semantic Layer** | 2 | Requirements discovery | 1.5 | 5 macros x 0.3 days |
-| | 2 | Semantic model design | 2.5 | 5 models x 0.5 days |
-| | 2 | Semantic view build | 2.5 | 5 views x 0.5 days |
-| | 2 | Snowflake Intelligence validation | 1.5 | Cortex Analyst testing |
-| | | **Subtotal** | **8.0** | |
-| **Orchestration** | 2 | Airflow DAG configuration | 1.5 | 5 macro dependencies |
-| | 2 | Schedule configuration | 0.5 | Daily schedules |
-| | 2 | Testing & validation | 1.0 | End-to-end testing |
-| | | **Subtotal** | **3.0** | |
-| **Testing** | 3 | Unit test development | 0 | Not in scope |
-| | 3 | Integration testing | 3.0 | End-to-end validation |
-| | 3 | Data quality testing | 3.0 | Accuracy, completeness |
-| | 3 | Parameter validation testing | 2.0 | Various combinations |
-| | | **Subtotal** | **8.0** | |
-| **Deployment** | 3 | Dev environment deployment | 1.5 | Initial deployment |
-| | | **Subtotal** | **1.5** | |
-| **Documentation** | 4 | Solution design document | 2.0 | Architecture documentation |
-| | 4 | Macro specifications | 2.0 | Parameter and usage guides |
-| | 4 | Data architecture document | 1.0 | Data model specs |
-| | 4 | Knowledge transfer | 0.5 | 2 sessions x 1 hour |
-| | | **Subtotal** | **5.5** | |
-| | | | | |
-| **PHASE TOTALS** | | | | |
-| | **Phase 1** | Discovery & Design | **33.5** | |
-| | **Phase 2** | Build | **32.0** | |
-| | **Phase 3** | Testing & Deployment | **9.5** | |
-| | **Phase 4** | Documentation & Handover | **5.5** | |
-| | | | | |
-| | | **Total Base Effort** | **80.5** | |
-| | | **Contingency (15%)** | **12.1** | |
-| | | **Grand Total** | **92.6** | |
+| Category | Phase | Activity | Effort (Days) | AI Scalable | Effort with AI | Calculation |
+|----------|-------|----------|---------------|-------------|----------------|-------------|
+| **Physical Layer Setup** | 1 | Database/schema configuration | 0.5 | Yes | 0.35 | Metrics layer schemas |
+| | 1 | Access configuration | 0.5 | No | 0.5 | Role grants |
+| | | **Subtotal** | **1.0** | | **0.85** | |
+| **Discovery & Requirements** | 1 | MAU discovery | 3.0 | Yes | 2.1 | Review 1-2 permutations |
+| | 1 | Retention discovery | 3.0 | Yes | 2.1 | Review 1-2 permutations |
+| | 1 | Funnel discovery & consolidation | 4.5 | Yes | 3.15 | 3 permutations (GenAI, TE, DE) |
+| | 1 | Health/Engagement discovery | 3.5 | Yes | 2.45 | 2 permutations (TE, DE) |
+| | 1 | Audience requirements | 2.5 | No | 2.5 | Greenfield design |
+| | | **Subtotal** | **16.5** | | **12.3** | |
+| **Macro Design** | 1 | MAU design & approval | 3.0 | Yes | 2.1 | Parameters + logic + review |
+| | 1 | Retention design & approval | 3.0 | Yes | 2.1 | Parameters + logic + review |
+| | 1 | Funnel design & approval | 3.5 | Yes | 2.45 | Complex consolidation + review |
+| | 1 | Health/Engagement design & approval | 3.5 | Yes | 2.45 | Complex consolidation + review |
+| | 1 | Audience design & approval | 3.0 | Yes | 2.1 | New feature + review |
+| | | **Subtotal** | **16.0** | | **11.2** | |
+| **DBT Macro Development** | 2 | MAU macro build | 4.0 | Yes | 2.8 | COUNTD, rolling logic |
+| | 2 | Retention macro build | 4.0 | Yes | 2.8 | Cohorts, curves |
+| | 2 | Funnel macro build | 4.5 | Yes | 3.15 | Scope handling |
+| | 2 | Health/Engagement macro build | 4.5 | Yes | 3.15 | Scoring categories |
+| | 2 | Audience macro build | 4.0 | Yes | 2.8 | Criteria matching |
+| | | **Subtotal** | **21.0** | | **14.7** | |
+| **Semantic Layer** | 2 | Requirements discovery | 1.5 | No | 1.5 | 5 macros x 0.3 days |
+| | 2 | Semantic model design | 2.5 | Yes | 1.75 | 5 models x 0.5 days |
+| | 2 | Semantic view build | 2.5 | Yes | 1.75 | 5 views x 0.5 days |
+| | 2 | Snowflake Intelligence validation | 1.5 | No | 1.5 | Cortex Analyst testing |
+| | | **Subtotal** | **8.0** | | **6.5** | |
+| **Orchestration** | 2 | Airflow DAG configuration | 1.5 | Yes | 1.05 | 5 macro dependencies |
+| | 2 | Schedule configuration | 0.5 | No | 0.5 | Daily schedules |
+| | 2 | Testing & validation | 1.0 | No | 1.0 | End-to-end testing |
+| | | **Subtotal** | **3.0** | | **2.55** | |
+| **Testing** | 3 | Unit test development | 0 | No | 0 | Not in scope |
+| | 3 | Integration testing | 3.0 | No | 3.0 | End-to-end validation |
+| | 3 | Data quality testing | 3.0 | No | 3.0 | Accuracy, completeness |
+| | 3 | Parameter validation testing | 2.0 | No | 2.0 | Various combinations |
+| | | **Subtotal** | **8.0** | | **8.0** | |
+| **Deployment** | 3 | Dev environment deployment | 1.5 | No | 1.5 | Initial deployment |
+| | | **Subtotal** | **1.5** | | **1.5** | |
+| **Documentation** | 4 | Solution design document | 2.0 | Yes | 1.4 | Architecture documentation |
+| | 4 | Macro specifications | 2.0 | Yes | 1.4 | Parameter and usage guides |
+| | 4 | Data architecture document | 1.0 | Yes | 0.7 | Data model specs |
+| | 4 | Knowledge transfer | 0.5 | No | 0.5 | 2 sessions x 1 hour |
+| | | **Subtotal** | **5.5** | | **4.0** | |
+| | | | | | | |
+| **PHASE TOTALS** | | | | | | |
+| | **Phase 1** | Discovery & Design | **33.5** | | **24.35** | |
+| | **Phase 2** | Build | **32.0** | | **23.75** | |
+| | **Phase 3** | Testing & Deployment | **9.5** | | **9.5** | |
+| | **Phase 4** | Documentation & Handover | **5.5** | | **4.0** | |
+| | | | | | | |
+| | | **Total Base Effort** | **80.5** | | **61.6** | |
+| | | **Contingency (15%)** | **12.08** | | **9.24** | |
+| | | **Grand Total** | **92.58** | | **70.84** | |
 
 ---
 
@@ -760,6 +760,8 @@ WEEK     1    2    3    4    5    6    7    8    9   10   11   12   13   14   15
 | A20 | One semantic view per macro will be created | Standard approach |
 | A21 | Parameters are computational (affecting transformation logic) | Meeting confirmed |
 | A22 | Parallel run support may be needed short-term | Meeting confirmed |
+| A23 | Cortex Code can be connected to target Snowflake environment | Development tooling |
+| A24 | Activities marked as "AI Scalable" are subject to 30% effort reduction when using AI-assisted development tools | Effort calculation assumption |
 
 ### 7.2 Risks
 

@@ -372,57 +372,57 @@ The semantic layer will enable natural language queries across the following bus
 
 ### 3.6 Consolidated Effort Table
 
-| Category | Phase | Activity | Effort (Days) | Calculation |
-|----------|-------|----------|---------------|-------------|
-| **Physical Layer Setup** | 1 | Database creation | 0.25 | 3 databases |
-| | 1 | Schema creation | 0.25 | Schemas per database |
-| | 1 | Access configuration | 0.5 | Initial role grants |
-| | | **Subtotal** | **1.0** | |
-| **Current State Analysis** | 1 | End-user table analysis | 5.0 | 30 tables |
-| | 1 | Data profiling | 3.5 | 30 tables |
-| | 1 | Overlap & duplication analysis | 5.0 | Consolidation opportunities |
-| | 1 | Target model design | 3.0 | 3-layer architecture |
-| | 1 | Design review & iteration | 1.5 | Stakeholder review |
-| | | **Subtotal** | **18.0** | |
-| **Transformation Analysis** | 1 | Simple model analysis | 26.3 | 175 models x 0.15 days |
-| | 1 | Complex model analysis | 22.5 | 75 models x 0.3 days |
-| | 1 | Lineage documentation | 3.0 | Model dependencies |
-| | | **Subtotal** | **51.8** | |
-| **New DBT Model Design** | 1 | New model design | 35.0 | 175 models x 0.2 days |
-| | 1 | Design documentation | 3.0 | Technical specifications |
-| | | **Subtotal** | **38.0** | |
-| **New DBT Model Build** | 2 | Simple model build | 30.8 | 123 models x 0.25 days |
-| | 2 | Complex model build | 39.0 | 52 models x 0.75 days |
-| | 2 | Model configuration | 4.0 | YAML, tests, docs |
-| | | **Subtotal** | **73.8** | |
-| **Semantic Layer** | 2 | Requirements discovery | 3.5 | 7 views x 0.5 days |
-| | 2 | Semantic model design | 3.5 | 7 models x 0.5 days |
-| | 2 | Semantic view build | 5.3 | 7 views x 0.75 days |
-| | 2 | Snowflake Intelligence validation | 3.5 | Cortex Analyst testing |
-| | | **Subtotal** | **15.8** | |
-| **Orchestration Setup** | 2 | Orchestration design | 1.0 | Daily patterns |
-| | 2 | Airflow DAG development | 3.0 | Existing Airflow |
-| | 2 | Testing & validation | 1.0 | End-to-end testing |
-| | | **Subtotal** | **5.0** | |
-| **Testing** | 3 | Integration testing | 5.0 | End-to-end validation |
-| | 3 | Data quality testing | 4.0 | Accuracy, completeness |
-| | | **Subtotal** | **9.0** | |
-| **Deployment** | 3 | Dev environment deployment | 2.0 | Initial deployment |
-| | | **Subtotal** | **2.0** | |
-| **Documentation** | 4 | Solution design document | 4.0 | Architecture documentation |
-| | 4 | Data architecture document | 3.0 | Data model specs |
-| | 4 | Knowledge transfer | 3.0 | Handover sessions |
-| | | **Subtotal** | **10.0** | |
-| | | | | |
-| **PHASE TOTALS** | | | | |
-| | **Phase 1** | Discovery & Design | **108.8** | |
-| | **Phase 2** | Build | **94.6** | |
-| | **Phase 3** | Testing & Deployment | **11.0** | |
-| | **Phase 4** | Documentation & Handover | **10.0** | |
-| | | | | |
-| | | **Total Base Effort** | **224.4** | |
-| | | **Contingency (15%)** | **33.7** | |
-| | | **Grand Total** | **258.1** | |
+| Category | Phase | Activity | Effort (Days) | AI Scalable | Effort with AI | Calculation |
+|----------|-------|----------|---------------|-------------|----------------|-------------|
+| **Physical Layer Setup** | 1 | Database creation | 0.25 | Yes | 0.175 | 3 databases |
+| | 1 | Schema creation | 0.25 | Yes | 0.175 | Schemas per database |
+| | 1 | Access configuration | 0.5 | No | 0.5 | Initial role grants |
+| | | **Subtotal** | **1.0** | | **0.85** | |
+| **Current State Analysis** | 1 | End-user table analysis | 5.0 | Yes | 3.5 | 30 tables |
+| | 1 | Data profiling | 3.5 | Yes | 2.45 | 30 tables |
+| | 1 | Overlap & duplication analysis | 5.0 | Yes | 3.5 | Consolidation opportunities |
+| | 1 | Target model design | 3.0 | Yes | 2.1 | 3-layer architecture |
+| | 1 | Design review & iteration | 1.5 | No | 1.5 | Stakeholder review |
+| | | **Subtotal** | **18.0** | | **13.05** | |
+| **Transformation Analysis** | 1 | Simple model analysis | 26.3 | Yes | 18.41 | 175 models x 0.15 days |
+| | 1 | Complex model analysis | 22.5 | Yes | 15.75 | 75 models x 0.3 days |
+| | 1 | Lineage documentation | 3.0 | Yes | 2.1 | Model dependencies |
+| | | **Subtotal** | **51.8** | | **36.26** | |
+| **New DBT Model Design** | 1 | New model design | 35.0 | Yes | 24.5 | 175 models x 0.2 days |
+| | 1 | Design documentation | 3.0 | Yes | 2.1 | Technical specifications |
+| | | **Subtotal** | **38.0** | | **26.6** | |
+| **New DBT Model Build** | 2 | Simple model build | 30.8 | Yes | 21.56 | 123 models x 0.25 days |
+| | 2 | Complex model build | 39.0 | Yes | 27.3 | 52 models x 0.75 days |
+| | 2 | Model configuration | 4.0 | Yes | 2.8 | YAML, tests, docs |
+| | | **Subtotal** | **73.8** | | **51.66** | |
+| **Semantic Layer** | 2 | Requirements discovery | 3.5 | No | 3.5 | 7 views x 0.5 days |
+| | 2 | Semantic model design | 3.5 | Yes | 2.45 | 7 models x 0.5 days |
+| | 2 | Semantic view build | 5.3 | Yes | 3.71 | 7 views x 0.75 days |
+| | 2 | Snowflake Intelligence validation | 3.5 | No | 3.5 | Cortex Analyst testing |
+| | | **Subtotal** | **15.8** | | **13.16** | |
+| **Orchestration Setup** | 2 | Orchestration design | 1.0 | No | 1.0 | Daily patterns |
+| | 2 | Airflow DAG development | 3.0 | Yes | 2.1 | Existing Airflow |
+| | 2 | Testing & validation | 1.0 | No | 1.0 | End-to-end testing |
+| | | **Subtotal** | **5.0** | | **4.1** | |
+| **Testing** | 3 | Integration testing | 5.0 | No | 5.0 | End-to-end validation |
+| | 3 | Data quality testing | 4.0 | No | 4.0 | Accuracy, completeness |
+| | | **Subtotal** | **9.0** | | **9.0** | |
+| **Deployment** | 3 | Dev environment deployment | 2.0 | No | 2.0 | Initial deployment |
+| | | **Subtotal** | **2.0** | | **2.0** | |
+| **Documentation** | 4 | Solution design document | 4.0 | Yes | 2.8 | Architecture documentation |
+| | 4 | Data architecture document | 3.0 | Yes | 2.1 | Data model specs |
+| | 4 | Knowledge transfer | 3.0 | No | 3.0 | Handover sessions |
+| | | **Subtotal** | **10.0** | | **7.9** | |
+| | | | | | | |
+| **PHASE TOTALS** | | | | | | |
+| | **Phase 1** | Discovery & Design | **108.8** | | **76.76** | |
+| | **Phase 2** | Build | **94.6** | | **68.92** | |
+| | **Phase 3** | Testing & Deployment | **11.0** | | **11.0** | |
+| | **Phase 4** | Documentation & Handover | **10.0** | | **7.9** | |
+| | | | | | | |
+| | | **Total Base Effort** | **224.4** | | **164.58** | |
+| | | **Contingency (15%)** | **33.66** | | **24.69** | |
+| | | **Grand Total** | **258.06** | | **189.27** | |
 
 ---
 
@@ -622,6 +622,8 @@ pie showData
 | A17 | Upstream dependencies do not need to be migrated | Meeting confirmed |
 | A18 | Kai has set up layers for monetization but no subscription models built yet | Meeting confirmed |
 | A19 | Access to existing DBT models and source data is available | Expected |
+| A20 | Cortex Code can be connected to target Snowflake environment | Development tooling |
+| A21 | Activities marked as "AI Scalable" are subject to 30% effort reduction when using AI-assisted development tools | Effort calculation assumption |
 
 ### 7.2 Risks
 

@@ -1,0 +1,50 @@
+Domain,Category,Phase,Activity,Effort (Days),Can be expedited / scaled with CoCo,Effort with AI Scale,Calculation
+IT,Physical Layer Setup,1,Database creation,0.25,Yes,0.175,4 databases
+IT,Physical Layer Setup,1,Schema creation,0.15,Yes,0.105,Schemas per database
+IT,Physical Layer Setup,1,Access configuration,0.1,No,0.1,Initial role grants
+IT,Ingestion Discovery,1,Delta Share POC review,2,No,2,Analyse existing code
+IT,Ingestion Discovery,1,OpenFlow evaluation,2,No,2,Assess capabilities
+IT,Ingestion Discovery,1,Recommendation documentation,1,No,1,Document findings
+IT,Ingestion Build,2,Ingestion build,5,No,5,Selected approach
+IT,Ingestion Build,2,Airflow migration,1,No,1,Migrate from SF Tasks
+IT,Ingestion Build,2,Testing & validation,1,No,1,End-to-end testing
+IT,Current State Analysis,1,DBT model inventory,2,Yes,1.4,Catalogue 150 models
+IT,Current State Analysis,1,Simple model analysis,9,Yes,6.3,90 models x 0.1 days
+IT,Current State Analysis,1,Medium model analysis,9,Yes,6.3,45 models x 0.2 days
+IT,Current State Analysis,1,Complex model analysis,6,Yes,4.2,15 models x 0.4 days
+IT,Current State Analysis,1,Duplicate identification,0,Yes,0,Part of model analysis
+IT,Current State Analysis,1,Target model design,4,Yes,2.8,4-layer architecture (includes entity mapping)
+IT,Current State Analysis,1,Design review & iteration,1,No,1,Stakeholder review
+IT,New DBT Model Design,1,New model design,15,Yes,10.5,75 models x 0.2 days
+IT,New DBT Model Design,1,Reusable component design,2,Yes,1.4,Macros and shared logic
+IT,New DBT Model Design,1,Design documentation,2,Yes,1.4,Technical specifications
+IT,New DBT Model Build,2,Simple model build,9,Yes,6.3,45 models x 0.2 days
+IT,New DBT Model Build,2,Medium model build,9.2,Yes,6.44,23 models x 0.4 days
+IT,New DBT Model Build,2,Complex model build,5.6,Yes,3.92,7 models x 0.8 days
+IT,New DBT Model Build,2,Macro/component build,2,Yes,1.4,Shared components
+IT,New DBT Model Build,2,Model configuration,3.75,Yes,2.625,"YAML, tests, docs"
+IT,Entity Data Modelling,2,Conformed layer design,0,No,0,7 entities x 0.5 days
+IT,Entity Data Modelling,2,Conformed layer build,3.5,Yes,2.45,7 entities x 0.5 days
+IT,Entity Data Modelling,2,Metrics layer design,0,No,0,7 entities x 0.75 days
+IT,Entity Data Modelling,2,Metrics layer build,5.25,Yes,3.675,7 entities x 0.75 days
+IT,Semantic Layer,1,Requirements discovery,1.75,No,1.75,7 entities x 0.25 days
+IT,Semantic Layer,1,Semantic model design,5.25,Yes,3.675,7 models x 0.75 days
+IT,Semantic Layer,2,Semantic view build,3.5,Yes,2.45,7 views x 0.5 days
+IT,Semantic Layer,2,Snowflake Intelligence validation,2,No,2,Cortex Analyst testing
+IT,Orchestration Setup,2,Orchestration design,1,No,1,Scheduled patterns
+IT,Orchestration Setup,2,Airflow DAG development,3,Yes,2.1,Build DAGs
+IT,Orchestration Setup,2,Testing & validation,1,No,1,End-to-end testing
+IT,Governance,2,Governance discovery,1,No,1,Assess sensitivity
+IT,Governance,2,Data classification,2,No,2,Apply to new objects
+IT,Governance,2,Masking policies advisory,1,No,1,Recommend approach
+IT,Testing,3,Unit test migration,2,Yes,1.4,Existing DBT tests
+IT,Testing,3,Data quality testing,2,Yes,1.4,"Accuracy, completeness"
+IT,Documentation,3,Solution design document,3,No,3,Architecture documentation
+IT,Documentation,3,Data architecture document,2,Yes,1.4,Data model specs
+IT,Documentation,3,Ingestion runbook,1.5,No,1.5,Operational procedures
+IT,Documentation,3,Transformation runbook,1.5,No,1.5,DBT procedures
+IT,Documentation,3,Knowledge transfer,1,No,1,2-3 training sessions
+IT,Contingency (15%),4,Contingency (15%),20.295,,15.54975,
+,,,,,,,
+,,,,,,,
+,,Total,,,,119.21475,

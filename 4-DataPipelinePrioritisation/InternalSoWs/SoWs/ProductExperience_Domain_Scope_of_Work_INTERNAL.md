@@ -356,63 +356,62 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 
 ### 3.6 Consolidated Effort Table
 
-| Category | Phase | Activity | Effort (Days) | Calculation |
-|----------|-------|----------|---------------|-------------|
-| **Physical Layer Setup** | 1 | Database creation | 0.25 | 3 databases |
-| | 1 | Schema creation | 0.25 | Schemas per database |
-| | 1 | Access configuration | 0.5 | Initial role grants |
-| | | **Subtotal** | **1.0** | |
-| **Current State Analysis** | 1 | Table analysis | 0.5 | 1 table |
-| | 1 | Data profiling | 0.5 | 1 table |
-| | 1 | Column analysis | 2.0 | 50+ columns classification |
-| | 1 | Star schema design | 3.0 | 3-layer architecture |
-| | 1 | Design review & iteration | 1.0 | Stakeholder review |
-| | | **Subtotal** | **7.0** | |
-| **Transformation Analysis** | 1 | Simple model analysis | 0.15 | 1 model x 0.15 days |
-| | 1 | Medium model analysis | 1.0 | 4 models x 0.25 days |
-| | 1 | Complex model analysis | 1.0 | 2 models x 0.5 days |
-| | 1 | Lineage documentation | 0.5 | Model dependencies |
-| | | **Subtotal** | **2.65** | |
-| **New DBT Model Design** | 1 | New model design | 1.5 | 5 models x 0.3 days |
-| | 1 | Star schema model design | 1.5 | Dimension/fact models |
-| | 1 | Design documentation | 1.0 | Technical specifications |
-| | | **Subtotal** | **4.0** | |
-| **New DBT Model Build** | 2 | Simple model build | 0.25 | 1 model x 0.25 days |
-| | 2 | Medium model build | 1.5 | 3 models x 0.5 days |
-| | 2 | Complex model build | 1.0 | 1 model x 1.0 days |
-| | 2 | Model configuration | 0.5 | YAML, tests, docs |
-| | | **Subtotal** | **3.25** | |
-| **Semantic Layer** | 2 | Requirements discovery | 0.5 | 1 area x 0.5 days |
-| | 2 | Metric definition | 1.0 | Metrics for semantic layer |
-| | 2 | Semantic model design | 1.0 | 1 model x 1.0 days |
-| | 2 | Semantic view build | 0.75 | 1 view x 0.75 days |
-| | 2 | Snowflake Intelligence validation | 1.0 | Cortex Analyst testing |
-| | | **Subtotal** | **4.25** | |
-| **Orchestration Setup** | 2 | Orchestration design | 0.5 | Daily patterns |
-| | 2 | Airflow DAG development | 1.0 | Existing Airflow |
-| | 2 | Schedule configuration | 0.5 | Daily schedules |
-| | 2 | Testing & validation | 0.5 | End-to-end testing |
-| | | **Subtotal** | **2.5** | |
-| **Testing** | 3 | Unit test development | 2.0 | New model tests |
-| | 3 | Integration testing | 2.0 | End-to-end validation |
-| | 3 | Data quality testing | 2.0 | Accuracy, completeness |
-| | | **Subtotal** | **6.0** | |
-| **Deployment** | 3 | Dev environment deployment | 1.0 | Initial deployment |
-| | | **Subtotal** | **1.0** | |
-| **Documentation** | 4 | Solution design document | 1.5 | Architecture documentation |
-| | 4 | Data architecture document | 1.0 | Data model specs |
-| | 4 | Knowledge transfer | 0.25 | 1 session x 1 hour |
-| | | **Subtotal** | **2.75** | |
-| | | | | |
-| **PHASE TOTALS** | | | | |
-| | **Phase 1** | Discovery & Design | **14.65** | |
-| | **Phase 2** | Build | **10.0** | |
-| | **Phase 3** | Testing & Deployment | **7.0** | |
-| | **Phase 4** | Documentation & Handover | **2.75** | |
-| | | | | |
-| | | **Total Base Effort** | **34.4** | |
-| | | **Contingency (15%)** | **5.2** | |
-| | | **Grand Total** | **39.6** | |
+| Category | Phase | Activity | Effort (Days) | AI Scalable | Effort with AI | Calculation |
+|----------|-------|----------|---------------|-------------|----------------|-------------|
+| **Physical Layer Setup** | 1 | Database creation | 0.25 | Yes | 0.175 | 3 databases |
+| | 1 | Schema creation | 0.25 | Yes | 0.175 | Schemas per database |
+| | 1 | Access configuration | 0.5 | No | 0.5 | Initial role grants |
+| | | **Subtotal** | **1.0** | | **0.85** | |
+| **Current State Analysis** | 1 | Table analysis | 0.5 | Yes | 0.35 | 1 table |
+| | 1 | Data profiling | 0.5 | Yes | 0.35 | 1 table |
+| | 1 | Column analysis | 2.0 | Yes | 1.4 | 50+ columns classification |
+| | 1 | Star schema design | 3.0 | Yes | 2.1 | 3-layer architecture |
+| | 1 | Design review & iteration | 1.0 | No | 1.0 | Stakeholder review |
+| | | **Subtotal** | **7.0** | | **5.2** | |
+| **Transformation Analysis** | 1 | Simple model analysis | 0.15 | Yes | 0.105 | 1 model x 0.15 days |
+| | 1 | Medium model analysis | 1.0 | Yes | 0.7 | 4 models x 0.25 days |
+| | 1 | Complex model analysis | 1.0 | Yes | 0.7 | 2 models x 0.5 days |
+| | 1 | Lineage documentation | 0.5 | Yes | 0.35 | Model dependencies |
+| | | **Subtotal** | **2.65** | | **1.855** | |
+| **New DBT Model Design** | 1 | New model design | 1.5 | Yes | 1.05 | 5 models x 0.3 days |
+| | 1 | Star schema model design | 1.5 | Yes | 1.05 | Dimension/fact models |
+| | 1 | Design documentation | 1.0 | Yes | 0.7 | Technical specifications |
+| | | **Subtotal** | **4.0** | | **2.8** | |
+| **New DBT Model Build** | 2 | Simple model build | 0.25 | Yes | 0.175 | 1 model x 0.25 days |
+| | 2 | Medium model build | 1.5 | Yes | 1.05 | 3 models x 0.5 days |
+| | 2 | Complex model build | 1.0 | Yes | 0.7 | 1 model x 1.0 days |
+| | 2 | Model configuration | 0.5 | Yes | 0.35 | YAML, tests, docs |
+| | | **Subtotal** | **3.25** | | **2.275** | |
+| **Semantic Layer** | 2 | Requirements discovery | 0.5 | No | 0.5 | 1 area x 0.5 days |
+| | 2 | Metric definition | 1.0 | No | 1.0 | Metrics for semantic layer |
+| | 2 | Semantic model design | 1.0 | Yes | 0.7 | 1 model x 1.0 days |
+| | 2 | Semantic view build | 0.75 | Yes | 0.525 | 1 view x 0.75 days |
+| | 2 | Snowflake Intelligence validation | 1.0 | No | 1.0 | Cortex Analyst testing |
+| | | **Subtotal** | **4.25** | | **3.725** | |
+| **Orchestration Setup** | 2 | Orchestration design | 0.5 | No | 0.5 | Daily patterns |
+| | 2 | Airflow DAG development | 1.0 | No | 1.0 | Existing Airflow |
+| | 2 | Schedule configuration | 0.5 | No | 0.5 | Daily schedules |
+| | 2 | Testing & validation | 0.5 | No | 0.5 | End-to-end testing |
+| | | **Subtotal** | **2.5** | | **2.5** | |
+| **Testing** | 3 | Integration testing | 2.0 | No | 2.0 | End-to-end validation |
+| | 3 | Data quality testing | 2.0 | No | 2.0 | Accuracy, completeness |
+| | | **Subtotal** | **4.0** | | **4.0** | |
+| **Deployment** | 3 | Dev environment deployment | 1.0 | No | 1.0 | Initial deployment |
+| | | **Subtotal** | **1.0** | | **1.0** | |
+| **Documentation** | 4 | Solution design document | 1.5 | Yes | 1.05 | Architecture documentation |
+| | 4 | Data architecture document | 1.0 | Yes | 0.7 | Data model specs |
+| | 4 | Knowledge transfer | 0.25 | No | 0.25 | 1 session x 1 hour |
+| | | **Subtotal** | **2.75** | | **2.0** | |
+| | | | | | | |
+| **PHASE TOTALS** | | | | | | |
+| | **Phase 1** | Discovery & Design | **14.65** | | **10.705** | |
+| | **Phase 2** | Build | **10.0** | | **8.5** | |
+| | **Phase 3** | Testing & Deployment | **5.0** | | **5.0** | |
+| | **Phase 4** | Documentation & Handover | **2.75** | | **2.0** | |
+| | | | | | | |
+| | | **Total Base Effort** | **32.4** | | **26.205** | |
+| | | **Contingency (15%)** | **4.86** | | **3.93** | |
+| | | **Grand Total** | **37.26** | | **30.14** | |
 
 ---
 
@@ -715,9 +714,10 @@ Lead SA  ================================================
 | A12 | Target 30% reduction in model count through consolidation | Standard assumption for redesign |
 | A13 | Access to source data for business transformations is available | Required for analysis |
 | A14 | Data sources and tables from upstream dependencies are available | Required for development |
-| A15 | Cortex Code CLI (or later version) can be connected to target Snowflake environment | Development tooling |
-| A16 | Access to personnel with source data knowledge for target state model design is available | Required for analysis |
-| A17 | One semantic view for the new star schema will be created | Meeting confirmed |
+| A15 | Cortex Code can be connected to target Snowflake environment | Development tooling |
+| A16 | Activities marked as "AI Scalable" are subject to 30% effort reduction when using AI-assisted development tools | Effort calculation assumption |
+| A17 | Access to personnel with source data knowledge for target state model design is available | Required for analysis |
+| A18 | One semantic view for the new star schema will be created | Meeting confirmed |
 
 ### 7.2 Risks
 

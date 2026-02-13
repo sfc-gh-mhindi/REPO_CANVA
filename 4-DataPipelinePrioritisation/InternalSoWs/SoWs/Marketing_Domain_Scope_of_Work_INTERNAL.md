@@ -359,58 +359,57 @@ The pipeline will support reporting on two primary areas:
 
 ### 3.6 Consolidated Effort Table
 
-| Category | Phase | Activity | Effort (Days) | Calculation |
-|----------|-------|----------|---------------|-------------|
-| **Physical Layer Setup** | 1 | Schema creation | 0.25 | Marketing metrics schema |
-| | 1 | Access configuration | 0.25 | RBAC roles |
-| | | **Subtotal** | **0.5** | |
-| **Requirements & Design** | 1 | Business requirements analysis | 1.0 | 2 areas |
-| | 1 | Source field mapping | 1.5 | Discovery + Foundation |
-| | 1 | Dimensional model design | 3.0 | Metrics layer model |
-| | 1 | Target model design | 2.0 | Grain-appropriate tables |
-| | 1 | Attribution logic design | 1.5 | Marketplace → Editor |
-| | 1 | Design review & iteration | 1.0 | Stakeholder review |
-| | | **Subtotal** | **10.0** | |
-| **New DBT Model Design** | 1 | Simple model design | 0.5 | 2 models x 0.25 days |
-| | 1 | Medium model design | 2.0 | 5 models x 0.4 days |
-| | 1 | Complex model design | 0.6 | 1 model x 0.6 days |
-| | 1 | Design documentation | 1.0 | Technical specifications |
-| | | **Subtotal** | **4.1** | |
-| **New DBT Model Build** | 2 | Simple model build | 0.5 | 2 models x 0.25 days |
-| | 2 | Medium model build | 2.5 | 5 models x 0.5 days |
-| | 2 | Complex model build | 1.0 | 1 model x 1.0 days |
-| | 2 | Model configuration | 0.8 | YAML, tests, docs |
-| | | **Subtotal** | **4.8** | |
-| **Semantic Layer** | 2 | Requirements discovery | 1.5 | 3 areas x 0.5 days |
-| | 2 | Metric definition | 1.5 | Metrics for semantic layer |
-| | 2 | Semantic model design | 2.25 | 3 models x 0.75 days |
-| | 2 | Semantic view build | 1.5 | 3 views x 0.5 days |
-| | 2 | Snowflake Intelligence validation | 1.5 | Cortex Analyst testing |
-| | | **Subtotal** | **8.25** | |
-| **Orchestration Setup** | 2 | Orchestration design | 0.5 | Daily pattern |
-| | 2 | Airflow DAG development | 1.0 | Existing Airflow |
-| | 2 | Testing & validation | 0.5 | End-to-end testing |
-| | | **Subtotal** | **2.0** | |
-| **Testing** | 3 | Unit test development | 2.0 | New model tests |
-| | 3 | Integration testing | 2.0 | End-to-end validation |
-| | 3 | Data quality testing | 2.0 | Accuracy, completeness |
-| | | **Subtotal** | **6.0** | |
-| **Deployment** | 3 | Dev environment deployment | 1.0 | Initial deployment |
-| | | **Subtotal** | **1.0** | |
-| **Documentation** | 4 | Solution design document | 2.0 | Architecture documentation |
-| | 4 | Data architecture document | 1.5 | Data model specs |
-| | 4 | Knowledge transfer | 0.25 | 1 session x 1 hour |
-| | | **Subtotal** | **3.75** | |
-| | | | | |
-| **PHASE TOTALS** | | | | |
-| | **Phase 1** | Discovery & Design | **14.6** | |
-| | **Phase 2** | Build | **15.05** | |
-| | **Phase 3** | Testing & Deployment | **7.0** | |
-| | **Phase 4** | Documentation & Handover | **3.75** | |
-| | | | | |
-| | | **Total Base Effort** | **40.4** | |
-| | | **Contingency (15%)** | **6.1** | |
-| | | **Grand Total** | **46.5** | |
+| Category | Phase | Activity | Effort (Days) | AI Scalable | Effort with AI | Calculation |
+|----------|-------|----------|---------------|-------------|----------------|-------------|
+| **Physical Layer Setup** | 1 | Schema creation | 0.25 | Yes | 0.175 | Marketing metrics schema |
+| | 1 | Access configuration | 0.25 | No | 0.25 | RBAC roles |
+| | | **Subtotal** | **0.5** | | **0.425** | |
+| **Requirements & Design** | 1 | Business requirements analysis | 1.0 | No | 1.0 | 2 areas |
+| | 1 | Source field mapping | 1.5 | No | 1.5 | Discovery + Foundation |
+| | 1 | Dimensional model design | 3.0 | Yes | 2.1 | Metrics layer model |
+| | 1 | Target model design | 2.0 | Yes | 1.4 | Grain-appropriate tables |
+| | 1 | Attribution logic design | 1.5 | No | 1.5 | Marketplace → Editor |
+| | 1 | Design review & iteration | 1.0 | No | 1.0 | Stakeholder review |
+| | | **Subtotal** | **10.0** | | **8.5** | |
+| **New DBT Model Design** | 1 | Simple model design | 0.5 | Yes | 0.35 | 2 models x 0.25 days |
+| | 1 | Medium model design | 2.0 | Yes | 1.4 | 5 models x 0.4 days |
+| | 1 | Complex model design | 0.6 | Yes | 0.42 | 1 model x 0.6 days |
+| | 1 | Design documentation | 1.0 | No | 1.0 | Technical specifications |
+| | | **Subtotal** | **4.1** | | **3.17** | |
+| **New DBT Model Build** | 2 | Simple model build | 0.5 | Yes | 0.35 | 2 models x 0.25 days |
+| | 2 | Medium model build | 2.5 | Yes | 1.75 | 5 models x 0.5 days |
+| | 2 | Complex model build | 1.0 | Yes | 0.7 | 1 model x 1.0 days |
+| | 2 | Model configuration | 0.8 | Yes | 0.56 | YAML, tests, docs |
+| | | **Subtotal** | **4.8** | | **3.36** | |
+| **Semantic Layer** | 2 | Requirements discovery | 1.5 | No | 1.5 | 3 areas x 0.5 days |
+| | 2 | Metric definition | 1.5 | No | 1.5 | Metrics for semantic layer |
+| | 2 | Semantic model design | 2.25 | Yes | 1.575 | 3 models x 0.75 days |
+| | 2 | Semantic view build | 1.5 | Yes | 1.05 | 3 views x 0.5 days |
+| | 2 | Snowflake Intelligence validation | 1.5 | No | 1.5 | Cortex Analyst testing |
+| | | **Subtotal** | **8.25** | | **7.125** | |
+| **Orchestration Setup** | 2 | Orchestration design | 0.5 | No | 0.5 | Daily pattern |
+| | 2 | Airflow DAG development | 1.0 | Yes | 0.7 | Existing Airflow |
+| | 2 | Testing & validation | 0.5 | No | 0.5 | End-to-end testing |
+| | | **Subtotal** | **2.0** | | **1.7** | |
+| **Testing** | 3 | Integration testing | 2.0 | No | 2.0 | End-to-end validation |
+| | 3 | Data quality testing | 2.0 | No | 2.0 | Accuracy, completeness |
+| | | **Subtotal** | **4.0** | | **4.0** | |
+| **Deployment** | 3 | Dev environment deployment | 1.0 | No | 1.0 | Initial deployment |
+| | | **Subtotal** | **1.0** | | **1.0** | |
+| **Documentation** | 4 | Solution design document | 2.0 | Yes | 1.4 | Architecture documentation |
+| | 4 | Data architecture document | 1.5 | Yes | 1.05 | Data model specs |
+| | 4 | Knowledge transfer | 0.25 | No | 0.25 | 1 session x 1 hour |
+| | | **Subtotal** | **3.75** | | **2.7** | |
+| | | | | | | |
+| **PHASE TOTALS** | | | | | | |
+| | **Phase 1** | Discovery & Design | **14.6** | | **12.095** | |
+| | **Phase 2** | Build | **15.05** | | **12.185** | |
+| | **Phase 3** | Testing & Deployment | **5.0** | | **5.0** | |
+| | **Phase 4** | Documentation & Handover | **3.75** | | **2.7** | |
+| | | | | | | |
+| | | **Total Base Effort** | **38.4** | | **31.98** | |
+| | | **Contingency (15%)** | **5.76** | | **4.80** | |
+| | | **Grand Total** | **44.16** | | **36.78** | |
 
 ---
 
@@ -711,8 +710,9 @@ Lead SA  ███████████████████████�
 | A13 | Deployment to UAT and production environments is not included in MH effort scope | MH effort assumption |
 | A14 | MH effort is restricted to DEV environment only | MH effort assumption |
 | A15 | 3 semantic views sufficient to cover business question areas | Requirements analysis |
-| A16 | Cortex Code CLI can be connected to target Snowflake environment | Development tooling |
-| A17 | Access to personnel with source data knowledge for target state model design is available | Required for analysis |
+| A16 | Cortex Code can be connected to target Snowflake environment | Development tooling |
+| A17 | Activities marked as "AI Scalable" are subject to 30% effort reduction when using AI-assisted development tools | Effort calculation assumption |
+| A18 | Access to personnel with source data knowledge for target state model design is available | Required for analysis |
 
 ### 7.2 Risks
 

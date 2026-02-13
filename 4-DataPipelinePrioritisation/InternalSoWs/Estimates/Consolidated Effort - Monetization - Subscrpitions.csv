@@ -1,0 +1,32 @@
+Domain,Category,Phase,Activity,Effort (Days),Can be expedited / scaled with CoCo,Effort with AI Scale,Calculation
+Monetization,Physical Layer Setup,1,Database creation,0.25,Yes,0.175,3 databases
+Monetization,Physical Layer Setup,1,Schema creation,0.25,Yes,0.175,Schemas per database
+Monetization,Physical Layer Setup,1,Access configuration,0.5,No,0.5,Initial role grants
+Monetization,Current State Analysis,1,End-user table analysis,5,Yes,3.5,30 tables
+Monetization,Current State Analysis,1,Data profiling,3.5,Yes,2.45,30 tables
+Monetization,Current State Analysis,1,Overlap & duplication analysis,5,Yes,3.5,Consolidation opportunities
+Monetization,Current State Analysis,1,Target model design,3,Yes,2.1,3-layer architecture
+Monetization,Current State Analysis,1,Design review & iteration,1.5,No,1.5,Stakeholder review
+Monetization,Transformation Analysis,1,Simple model analysis,26.3,Yes,18.41,175 models x 0.15 days
+Monetization,Transformation Analysis,1,Complex model analysis,22.5,Yes,15.75,75 models x 0.3 days
+Monetization,Transformation Analysis,1,Lineage documentation,3,Yes,2.1,Model dependencies
+Monetization,New DBT Model Design,1,New model design,35,Yes,24.5,175 models x 0.2 days
+Monetization,New DBT Model Design,1,Design documentation,3,Yes,2.1,Technical specifications
+Monetization,New DBT Model Build,2,Simple model build,30.8,Yes,21.56,123 models x 0.25 days
+Monetization,New DBT Model Build,2,Complex model build,39,Yes,27.3,52 models x 0.75 days
+Monetization,New DBT Model Build,2,Model configuration,4,Yes,2.8,"YAML, tests, docs"
+Monetization,Semantic Layer,2,Requirements discovery,3.5,No,3.5,7 views x 0.5 days
+Monetization,Semantic Layer,2,Semantic model design,3.5,Yes,2.45,7 models x 0.5 days
+Monetization,Semantic Layer,2,Semantic view build,5.3,Yes,3.71,7 views x 0.75 days
+Monetization,Semantic Layer,2,Snowflake Intelligence validation,3.5,No,3.5,Cortex Analyst testing
+Monetization,Orchestration Setup,2,Orchestration design,1,No,1,Daily patterns
+Monetization,Orchestration Setup,2,Airflow DAG development,3,No,3,Existing Airflow
+Monetization,Orchestration Setup,2,Testing & validation,1,No,1,End-to-end testing
+Monetization,Testing,3,Integration testing,5,No,5,End-to-end validation
+Monetization,Testing,3,Data quality testing,4,No,4,"Accuracy, completeness"
+Monetization,Deployment,3,Dev environment deployment,2,No,2,Initial deployment
+Monetization,Documentation,4,Solution design document,4,Yes,2.8,Architecture documentation
+Monetization,Documentation,4,Data architecture document,3,Yes,2.1,Data model specs
+Monetization,Documentation,4,Knowledge transfer,3,No,3,Handover sessions
+Monetization,Contingency (15%),5,Contingency (15%),33.66,No,24.822,
+,,Total,,,,190.302,

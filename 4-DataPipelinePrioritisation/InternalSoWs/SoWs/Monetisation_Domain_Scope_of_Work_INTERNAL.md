@@ -385,74 +385,74 @@ This outcome-based engagement will deliver a fully modernised data pipeline for 
 
 ### 3.6 Consolidated Effort Table
 
-| Category | Phase | Activity | Effort (Days) | Calculation |
-|----------|-------|----------|---------------|-------------|
-| **Physical Layer Setup** | 1 | Database creation | 0.35 | 3 databases (AI-assisted) |
-| | 1 | Schema creation | 0.35 | Schemas per database (AI-assisted) |
-| | 1 | Access configuration | 0.5 | Initial role grants |
-| | | **Subtotal** | **1.2** | |
-| **Current State Analysis** | 1 | Table analysis | 2.1 | 14 tables (AI-assisted) |
-| | 1 | Data profiling | 1.4 | 14 tables (AI-assisted) |
-| | 1 | Dependency mapping | 2.0 | Cross-domain dependencies |
-| | 1 | Target model design | 2.8 | 3-layer architecture (AI-assisted) |
-| | 1 | Design review & iteration | 1.0 | Stakeholder review |
-| | | **Subtotal** | **9.3** | |
-| **Transformation Analysis** | 1 | Simple model analysis | 0.525 | 5 models (AI-assisted) |
-| | 1 | Medium model analysis | 2.625 | 15 models (AI-assisted) |
-| | 1 | Complex model analysis | 3.85 | 11 models (AI-assisted) |
-| | 1 | Macro identification | 1.4 | Common patterns (AI-assisted) |
-| | 1 | Lineage documentation | 1.05 | Model dependencies (AI-assisted) |
-| | | **Subtotal** | **9.45** | |
-| **New DBT Model Design** | 1 | New model design | 4.83 | 23 models (AI-assisted) |
-| | 1 | Reusable component design | 2.1 | Macros and shared logic (AI-assisted) |
-| | 1 | Design documentation | 1.4 | Technical specifications (AI-assisted) |
-| | | **Subtotal** | **8.33** | |
-| **New DBT Model Build** | 2 | Simple model build | 0.7 | 4 models (AI-assisted) |
-| | 2 | Medium model build | 3.85 | 11 models (AI-assisted) |
-| | 2 | Complex model build | 5.6 | 8 models (AI-assisted) |
-| | 2 | Macro/component build | 2.1 | Shared components (AI-assisted) |
-| | 2 | Model configuration | 0.7 | YAML, tests, docs (AI-assisted) |
-| | | **Subtotal** | **12.95** | |
-| **Semantic Layer** | 2 | Requirements discovery | 2.0 | 4 areas x 0.5 days |
-| | 2 | Semantic model design | 2.8 | 4 models (AI-assisted) |
-| | 2 | Semantic view build | 2.1 | 4 views (AI-assisted) |
-| | 2 | Snowflake Intelligence validation | 2.0 | Cortex Analyst testing |
-| | | **Subtotal** | **8.9** | |
-| **Orchestration Setup** | 2 | Orchestration design | 2.0 | Event + scheduled patterns |
-| | 2 | Airflow DAG development | 2.8 | 4 pipeline DAGs (AI-assisted) |
-| | 2 | Testing & validation | 1.5 | End-to-end testing |
-| | | **Subtotal** | **6.3** | |
-| **Governance** | 2 | Data classification | 2.0 | Apply to new objects |
-| | 2 | Masking policies | 1.4 | Implement masking rules (AI-assisted) |
-| | 2 | Row access policies | 1.05 | RAP configuration (AI-assisted) |
-| | 2 | RBAC implementation | 2.5 | Role hierarchy and grants |
-| | 2 | Governance validation | 1.0 | Audit and testing |
-| | | **Subtotal** | **7.95** | |
-| **Historical Data Migration** | 3 | Migration script development | 4.9 | 14 tables (AI-assisted) |
-| | 3 | Data reconciliation | 2.0 | 14 tables |
-| | 3 | Issue resolution | 2.0 | Migration discrepancies |
-| | | **Subtotal** | **8.9** | |
-| **Testing** | 3 | Unit test migration | 2.1 | Existing DBT tests (AI-assisted) |
-| | 3 | Data quality testing | 2.1 | Accuracy, completeness (AI-assisted) |
-| | | **Subtotal** | **4.2** | |
-| **Deployment** | 3 | Dev environment deployment | 2.0 | Initial deployment |
-| | | **Subtotal** | **2.0** | |
-| **Documentation** | 4 | Solution design document | 3.0 | Architecture documentation |
-| | 4 | Data architecture document | 2.0 | Data model specs |
-| | 4 | Migration guide | 2.0 | Downstream consumer guide |
-| | 4 | Runbooks | 1.5 | Operational procedures |
-| | 4 | Knowledge transfer | 0.5 | 4 sessions x 1 hour |
-| | | **Subtotal** | **9.0** | |
-| | | | | |
-| **PHASE TOTALS** | | | | |
-| | **Phase 1** | Discovery & Design | **28.3** | |
-| | **Phase 2** | Build | **36.1** | |
-| | **Phase 3** | Migration & Testing | **15.1** | |
-| | **Phase 4** | Documentation & Handover | **9.0** | |
-| | | | | |
-| | | **Total Base Effort** | **88.5** | |
-| | | **Contingency (15%)** | **13.3** | |
-| | | **Grand Total** | **101.8** | |
+| Category | Phase | Activity | Effort (Days) | AI Scalable | Effort with AI | Calculation |
+|----------|-------|----------|---------------|-------------|----------------|-------------|
+| **Physical Layer Setup** | 1 | Database creation | 0.5 | Yes | 0.35 | 3 databases |
+| | 1 | Schema creation | 0.5 | Yes | 0.35 | Schemas per database |
+| | 1 | Access configuration | 0.5 | No | 0.5 | Initial role grants |
+| | | **Subtotal** | **1.5** | | **1.2** | |
+| **Current State Analysis** | 1 | Table analysis | 3.0 | Yes | 2.1 | 14 tables |
+| | 1 | Data profiling | 2.0 | Yes | 1.4 | 14 tables |
+| | 1 | Dependency mapping | 2.0 | No | 2.0 | Cross-domain dependencies |
+| | 1 | Target model design | 4.0 | Yes | 2.8 | 3-layer architecture |
+| | 1 | Design review & iteration | 1.0 | No | 1.0 | Stakeholder review |
+| | | **Subtotal** | **12.0** | | **9.3** | |
+| **Transformation Analysis** | 1 | Simple model analysis | 0.75 | Yes | 0.525 | 5 models |
+| | 1 | Medium model analysis | 3.75 | Yes | 2.625 | 15 models |
+| | 1 | Complex model analysis | 5.5 | Yes | 3.85 | 11 models |
+| | 1 | Macro identification | 2.0 | Yes | 1.4 | Common patterns |
+| | 1 | Lineage documentation | 1.5 | Yes | 1.05 | Model dependencies |
+| | | **Subtotal** | **13.5** | | **9.45** | |
+| **New DBT Model Design** | 1 | New model design | 6.9 | Yes | 4.83 | 23 models |
+| | 1 | Reusable component design | 3.0 | Yes | 2.1 | Macros and shared logic |
+| | 1 | Design documentation | 2.0 | Yes | 1.4 | Technical specifications |
+| | | **Subtotal** | **11.9** | | **8.33** | |
+| **New DBT Model Build** | 2 | Simple model build | 1.0 | Yes | 0.7 | 4 models |
+| | 2 | Medium model build | 5.5 | Yes | 3.85 | 11 models |
+| | 2 | Complex model build | 8.0 | Yes | 5.6 | 8 models |
+| | 2 | Macro/component build | 3.0 | Yes | 2.1 | Shared components |
+| | 2 | Model configuration | 1.0 | Yes | 0.7 | YAML, tests, docs |
+| | | **Subtotal** | **18.5** | | **12.95** | |
+| **Semantic Layer** | 2 | Requirements discovery | 2.0 | No | 2.0 | 4 areas x 0.5 days |
+| | 2 | Semantic model design | 4.0 | Yes | 2.8 | 4 models |
+| | 2 | Semantic view build | 3.0 | Yes | 2.1 | 4 views |
+| | 2 | Snowflake Intelligence validation | 2.0 | No | 2.0 | Cortex Analyst testing |
+| | | **Subtotal** | **11.0** | | **8.9** | |
+| **Orchestration Setup** | 2 | Orchestration design | 2.0 | No | 2.0 | Event + scheduled patterns |
+| | 2 | Airflow DAG development | 4.0 | Yes | 2.8 | 4 pipeline DAGs |
+| | 2 | Testing & validation | 1.5 | No | 1.5 | End-to-end testing |
+| | | **Subtotal** | **7.5** | | **6.3** | |
+| **Governance** | 2 | Data classification | 2.0 | No | 2.0 | Apply to new objects |
+| | 2 | Masking policies | 2.0 | Yes | 1.4 | Implement masking rules |
+| | 2 | Row access policies | 1.5 | Yes | 1.05 | RAP configuration |
+| | 2 | RBAC implementation | 2.5 | No | 2.5 | Role hierarchy and grants |
+| | 2 | Governance validation | 1.0 | No | 1.0 | Audit and testing |
+| | | **Subtotal** | **9.0** | | **7.95** | |
+| **Historical Data Migration** | 3 | Migration script development | 7.0 | Yes | 4.9 | 14 tables |
+| | 3 | Data reconciliation | 2.0 | No | 2.0 | 14 tables |
+| | 3 | Issue resolution | 2.0 | No | 2.0 | Migration discrepancies |
+| | | **Subtotal** | **11.0** | | **8.9** | |
+| **Testing** | 3 | Unit test migration | 3.0 | Yes | 2.1 | Existing DBT tests |
+| | 3 | Data quality testing | 3.0 | Yes | 2.1 | Accuracy, completeness |
+| | | **Subtotal** | **6.0** | | **4.2** | |
+| **Deployment** | 3 | Dev environment deployment | 2.0 | No | 2.0 | Initial deployment |
+| | | **Subtotal** | **2.0** | | **2.0** | |
+| **Documentation** | 4 | Solution design document | 3.0 | No | 3.0 | Architecture documentation |
+| | 4 | Data architecture document | 2.0 | No | 2.0 | Data model specs |
+| | 4 | Migration guide | 2.0 | No | 2.0 | Downstream consumer guide |
+| | 4 | Runbooks | 1.5 | No | 1.5 | Operational procedures |
+| | 4 | Knowledge transfer | 0.5 | No | 0.5 | 4 sessions x 1 hour |
+| | | **Subtotal** | **9.0** | | **9.0** | |
+| | | | | | | |
+| **PHASE TOTALS** | | | | | | |
+| | **Phase 1** | Discovery & Design | **38.9** | | **28.28** | |
+| | **Phase 2** | Build | **46.0** | | **36.1** | |
+| | **Phase 3** | Migration & Testing | **19.0** | | **15.1** | |
+| | **Phase 4** | Documentation & Handover | **9.0** | | **9.0** | |
+| | | | | | | |
+| | | **Total Base Effort** | **112.9** | | **88.48** | |
+| | | **Contingency (15%)** | **16.94** | | **13.27** | |
+| | | **Grand Total** | **129.84** | | **101.75** | |
 
 ---
 
@@ -676,8 +676,9 @@ Senior Solution Architect:
 | A16 | Deployment to UAT and production environments is not included in MH effort scope | MH effort assumption |
 | A17 | MH effort is restricted to DEV environment only | MH effort assumption |
 | A18 | Access to entire monolithic DBT project granted to understand cross-domain dependencies | Required for discovery |
-| A19 | Cortex Code CLI (or later version) can be connected to target Snowflake environment | Development tooling |
-| A20 | Access to personnel with source data knowledge for target state model design is available | Required for analysis |
+| A19 | Cortex Code can be connected to target Snowflake environment | Development tooling |
+| A20 | Activities marked as "AI Scalable" are subject to 30% effort reduction when using AI-assisted development tools | Effort calculation assumption |
+| A21 | Access to personnel with source data knowledge for target state model design is available | Required for analysis |
 
 ### 7.2 Risks
 

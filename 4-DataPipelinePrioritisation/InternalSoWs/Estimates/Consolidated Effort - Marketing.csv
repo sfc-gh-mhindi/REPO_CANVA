@@ -1,0 +1,35 @@
+Domain,Category,Phase,Activity,Effort (Days),Can be expedited / scaled with CoCo,Effort with AI Scale,Calculation
+Marketing,Physical Layer Setup,1,Schema creation,0.25,Yes,0.175,Marketing metrics schema
+Marketing,Physical Layer Setup,1,Access configuration,0.25,No,0.25,RBAC roles
+Marketing,Requirements & Design,1,Business requirements analysis,1,No,1,2 areas
+Marketing,Requirements & Design,1,Source field mapping,1.5,No,1.5,Discovery + Foundation
+Marketing,Requirements & Design,1,Dimensional model design,3,Yes,2.1,Metrics layer model
+Marketing,Requirements & Design,1,Target model design,2,Yes,1.4,Grain-appropriate tables
+Marketing,Requirements & Design,1,Attribution logic design,1.5,No,1.5,Marketplace → Editor
+Marketing,Requirements & Design,1,Design review & iteration,1,No,1,Stakeholder review
+Marketing,New DBT Model Design,1,Simple model design,0.5,Yes,0.35,2 models x 0.25 days
+Marketing,New DBT Model Design,1,Medium model design,2,Yes,1.4,5 models x 0.4 days
+Marketing,New DBT Model Design,1,Complex model design,0.6,Yes,0.42,1 model x 0.6 days
+Marketing,New DBT Model Design,1,Design documentation,1,No,1,Technical specifications
+Marketing,New DBT Model Build,2,Simple model build,0.5,Yes,0.35,2 models x 0.25 days
+Marketing,New DBT Model Build,2,Medium model build,2.5,Yes,1.75,5 models x 0.5 days
+Marketing,New DBT Model Build,2,Complex model build,1,Yes,0.7,1 model x 1.0 days
+Marketing,New DBT Model Build,2,Model configuration,0.8,Yes,0.56,"YAML, tests, docs"
+Marketing,Semantic Layer,2,Requirements discovery,1.5,No,1.5,3 areas x 0.5 days
+Marketing,Semantic Layer,2,Metric definition,1.5,No,1.5,Metrics for semantic layer
+Marketing,Semantic Layer,2,Semantic model design,2.25,Yes,1.575,3 models x 0.75 days
+Marketing,Semantic Layer,2,Semantic view build,1.5,Yes,1.05,3 views x 0.5 days
+Marketing,Semantic Layer,2,Snowflake Intelligence validation,1.5,No,1.5,Cortex Analyst testing
+Marketing,Orchestration Setup,2,Orchestration design,0.5,No,0.5,Daily pattern
+Marketing,Orchestration Setup,2,Airflow DAG development,1,Yes,0.7,Existing Airflow
+Marketing,Orchestration Setup,2,Testing & validation,0.5,No,0.5,End-to-end testing
+Marketing,Testing,3,Unit test development,0,No,0,New model tests
+Marketing,Testing,3,Integration testing,2,No,2,End-to-end validation
+Marketing,Testing,3,Data quality testing,2,No,2,"Accuracy, completeness"
+Marketing,Deployment,3,Dev environment deployment,1,No,1,Initial deployment
+Marketing,Documentation,4,Solution design document,2,Yes,1.4,Architecture documentation
+Marketing,Documentation,4,Data architecture document,1.5,Yes,1.05,Data model specs
+Marketing,Documentation,4,Knowledge transfer,0.25,No,0.25,1 session x 1 hour
+Marketing,Contingency (15%),5,Contingency (15%),5.76,No,4.797,
+,,,,,,,
+,,Total,,,,36.777,

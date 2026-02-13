@@ -1,0 +1,39 @@
+Domain,Category,Phase,Activity,Effort (Days),Can be expedited / scaled with CoCo,Effort with AI Scale,Calculation
+Product Experience,Physical Layer Setup,1,Database creation,0.25,Yes,0.175,3 databases
+Product Experience,Physical Layer Setup,1,Schema creation,0.25,Yes,0.175,Schemas per database
+Product Experience,Physical Layer Setup,1,Access configuration,0.5,No,0.5,Initial role grants
+Product Experience,Current State Analysis,1,Table analysis,0.5,Yes,0.35,1 table
+Product Experience,Current State Analysis,1,Data profiling,0.5,Yes,0.35,1 table
+Product Experience,Current State Analysis,1,Column analysis,2,Yes,1.4,50+ columns classification
+Product Experience,Current State Analysis,1,Star schema design,3,Yes,2.1,3-layer architecture
+Product Experience,Current State Analysis,1,Design review & iteration,1,No,1,Stakeholder review
+Product Experience,Transformation Analysis,1,Simple model analysis,0.15,Yes,0.105,1 model x 0.15 days
+Product Experience,Transformation Analysis,1,Medium model analysis,1,Yes,0.7,4 models x 0.25 days
+Product Experience,Transformation Analysis,1,Complex model analysis,1,Yes,0.7,2 models x 0.5 days
+Product Experience,Transformation Analysis,1,Lineage documentation,0.5,Yes,0.35,Model dependencies
+Product Experience,New DBT Model Design,1,New model design,1.5,Yes,1.05,5 models x 0.3 days
+Product Experience,New DBT Model Design,1,Star schema model design,1.5,Yes,1.05,Dimension/fact models
+Product Experience,New DBT Model Design,1,Design documentation,1,Yes,0.7,Technical specifications
+Product Experience,New DBT Model Build,2,Simple model build,0.25,Yes,0.175,1 model x 0.25 days
+Product Experience,New DBT Model Build,2,Medium model build,1.5,Yes,1.05,3 models x 0.5 days
+Product Experience,New DBT Model Build,2,Complex model build,1,Yes,0.7,1 model x 1.0 days
+Product Experience,New DBT Model Build,2,Model configuration,0.5,Yes,0.35,"YAML, tests, docs"
+Product Experience,Semantic Layer,2,Requirements discovery,0.5,No,0.5,1 area x 0.5 days
+Product Experience,Semantic Layer,2,Metric definition,1,No,1,Metrics for semantic layer
+Product Experience,Semantic Layer,2,Semantic model design,1,Yes,0.7,1 model x 1.0 days
+Product Experience,Semantic Layer,2,Semantic view build,0.75,Yes,0.525,1 view x 0.75 days
+Product Experience,Semantic Layer,2,Snowflake Intelligence validation,1,No,1,Cortex Analyst testing
+Product Experience,Orchestration Setup,2,Orchestration design,0.5,No,0.5,Daily patterns
+Product Experience,Orchestration Setup,2,Airflow DAG development,1,No,1,Existing Airflow
+Product Experience,Orchestration Setup,2,Schedule configuration,0.5,No,0.5,Daily schedules
+Product Experience,Orchestration Setup,2,Testing & validation,0.5,No,0.5,End-to-end testing
+Product Experience,Testing,3,Unit test development,0,No,0,New model tests
+Product Experience,Testing,3,Integration testing,2,No,2,End-to-end validation
+Product Experience,Testing,3,Data quality testing,2,No,2,"Accuracy, completeness"
+Product Experience,Deployment,3,Dev environment deployment,1,No,1,Initial deployment
+Product Experience,Documentation,4,Solution design document,1.5,Yes,1.05,Architecture documentation
+Product Experience,Documentation,4,Data architecture document,1,Yes,0.7,Data model specs
+Product Experience,Documentation,4,Knowledge transfer,0.25,No,0.25,1 session x 1 hour
+Product Experience,Contingency (15%),5,Contingency (15%),4.635,No,4.635,Contingency (15%)
+,,,,,,,
+,,Total,,,,30.84,

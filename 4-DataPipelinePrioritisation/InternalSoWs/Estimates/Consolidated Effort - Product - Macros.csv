@@ -1,0 +1,40 @@
+Domain,Category,Phase,Activity,Effort (Days),Can be expedited / scaled with CoCo,Effort with AI Scale,Calculation
+Product Experience,Physical Layer Setup,1,Database/schema configuration,0.5,No,0.5,Metrics layer schemas
+Product Experience,Physical Layer Setup,1,Access configuration,0.5,No,0.5,Role grants
+Product Experience,Discovery & Requirements,1,MAU discovery,3,No,3,Review 1-2 permutations
+Product Experience,Discovery & Requirements,1,Retention discovery,3,No,3,Review 1-2 permutations
+Product Experience,Discovery & Requirements,1,Funnel discovery & consolidation,4.5,No,4.5,"3 permutations (GenAI, TE, DE)"
+Product Experience,Discovery & Requirements,1,Health/Engagement discovery,3.5,No,3.5,"2 permutations (TE, DE)"
+Product Experience,Discovery & Requirements,1,Audience requirements,2.5,No,2.5,Greenfield design
+Product Experience,Macro Design,1,MAU design & approval,3,No,3,Parameters + logic + review
+Product Experience,Macro Design,1,Retention design & approval,3,No,3,Parameters + logic + review
+Product Experience,Macro Design,1,Funnel design & approval,3.5,No,3.5,Complex consolidation + review
+Product Experience,Macro Design,1,Health/Engagement design & approval,3.5,No,3.5,Complex consolidation + review
+Product Experience,Macro Design,1,Audience design & approval,3,No,3,New feature + review
+Product Experience,DBT Macro Development,2,MAU macro build,4,Yes,2.8,"COUNTD, rolling logic"
+Product Experience,DBT Macro Development,2,Retention macro build,4,Yes,2.8,"Cohorts, curves"
+Product Experience,DBT Macro Development,2,Funnel macro build,4.5,Yes,3.15,Scope handling
+Product Experience,DBT Macro Development,2,Health/Engagement macro build,4.5,Yes,3.15,Scoring categories
+Product Experience,DBT Macro Development,2,Audience macro build,4,Yes,2.8,Criteria matching
+Product Experience,Metrics Layer Modelling,2,Dimensional model design,0,No,0,5 macros x 0.5 days
+Product Experience,Metrics Layer Modelling,2,Granular tables,0,No,0,5 macros x 0.3 days
+Product Experience,Metrics Layer Modelling,2,Aggregated tables,0,No,0,5 macros x 0.3 days
+Product Experience,Semantic Layer,2,Requirements discovery,1.5,No,1.5,5 macros x 0.3 days
+Product Experience,Semantic Layer,2,Semantic model design,2.5,Yes,1.75,5 models x 0.5 days
+Product Experience,Semantic Layer,2,Semantic view build,2.5,Yes,1.75,5 views x 0.5 days
+Product Experience,Semantic Layer,2,Snowflake Intelligence validation,1.5,No,1.5,Cortex Analyst testing
+Product Experience,Orchestration,2,Airflow DAG configuration,1.5,Yes,1.05,5 macro dependencies
+Product Experience,Orchestration,2,Schedule configuration,0.5,No,0.5,Daily schedules
+Product Experience,Orchestration,2,Testing & validation,1,No,1,End-to-end testing
+Product Experience,Testing,3,Unit test development,0,No,0,Per macro tests
+Product Experience,Testing,3,Integration testing,3,No,3,End-to-end validation
+Product Experience,Testing,3,Data quality testing,3,No,3,"Accuracy, completeness"
+Product Experience,Testing,3,Parameter validation testing,2,No,2,Various combinations
+Product Experience,Deployment,3,Dev environment deployment,1.5,No,1.5,Initial deployment
+Product Experience,Documentation,4,Solution design document,2,Yes,1.4,Architecture documentation
+Product Experience,Documentation,4,Macro specifications,2,Yes,1.4,Parameter and usage guides
+Product Experience,Documentation,4,Data architecture document,1,Yes,0.7,Data model specs
+Product Experience,Documentation,4,Knowledge transfer,0.5,No,0.5,2 sessions x 1 hour
+Product Experience,Contingency (15%),5,Contingency (15%),12.075,No,10.6125,
+,,,,,,,
+,,Total,,,,81.3625,
