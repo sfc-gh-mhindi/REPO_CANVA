@@ -1,0 +1,21 @@
+SELECT
+    log_id,
+    log_timestamp,
+    movement_type,
+    quantity_change,
+    quantity_before,
+    quantity_after,
+    product_id,
+    product_sku,
+    product_name,
+    warehouse_id,
+    warehouse_name,
+    warehouse_city,
+    warehouse_state,
+    reference_type,
+    reference_id,
+    user_id,
+    user_name,
+    unit_cost,
+    total_cost
+FROM DBT_REFACTOR_TEST.RAW.RAW_INVENTORY_LOG

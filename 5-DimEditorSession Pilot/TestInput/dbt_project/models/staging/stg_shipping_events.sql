@@ -1,0 +1,23 @@
+SELECT
+    event_id,
+    event_timestamp,
+    event_type,
+    event_description,
+    order_id,
+    order_date,
+    customer_id,
+    customer_name,
+    customer_email,
+    carrier_code,
+    carrier_name,
+    service_type,
+    tracking_number,
+    ship_to_city,
+    ship_to_state,
+    ship_to_country,
+    shipping_cost,
+    estimated_delivery_date,
+    actual_delivery_date,
+    event_location_city,
+    event_location_state
+FROM DBT_REFACTOR_TEST.RAW.RAW_SHIPPING_EVENTS

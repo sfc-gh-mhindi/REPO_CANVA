@@ -1,0 +1,31 @@
+-- ANTI-PATTERN: Using v1 customer table only
+SELECT
+    cust_id as customer_id,
+    first_name,
+    last_name,
+    first_name || ' ' || last_name as full_name,
+    email,
+    phone,
+    dob as date_of_birth,
+    gender,
+    registration_date,
+    last_login_date,
+    account_status,
+    address1,
+    address2,
+    city,
+    state,
+    zip as postal_code,
+    country,
+    -- ANTI-PATTERN: Parsing delimited string (fragile)
+    CASE WHEN CONTAINS(marketing_preferences, 'email') THEN TRUE ELSE FALSE END as email_opt_in,
+    CASE WHEN CONTAINS(marketing_preferences, 'sms') THEN TRUE ELSE FALSE END as sms_opt_in,
+    total_orders,
+    total_spend,
+    avg_order_value,
+    last_order_date,
+    customer_score,
+    acquisition_source,
+    acquisition_campaign,
+    created_at
+FROM DBT_REFACTOR_TEST.RAW.RAW_CUSTOMERS_V1

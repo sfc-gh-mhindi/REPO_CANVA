@@ -1,0 +1,55 @@
+version: 2
+
+sources:
+  - name: raw
+    database: DBT_REFACTOR_TEST
+    schema: RAW
+    tables:
+      - name: raw_orders
+      - name: raw_transactions
+      - name: raw_customers_v1
+      - name: raw_customers_v2
+      - name: raw_products_flat
+      - name: raw_inventory_log
+      - name: raw_shipping_events
+      - name: raw_returns
+      - name: raw_marketing_campaigns
+      - name: raw_clickstream
+      - name: raw_support_tickets
+      - name: raw_employee_sales
+
+models:
+  - name: stg_orders
+    description: "Staging orders - v1"
+  - name: stg_orders_v2
+    description: "Staging orders - v2 (duplicate)"
+  - name: stg_orders_completed
+    description: "Staging completed orders only (duplicate)"
+  - name: stg_transactions
+    description: "Staging transactions"
+  - name: stg_transactions_adjusted
+    description: "Staging adjusted transactions (duplicate)"
+  - name: stg_customers_v1
+    description: "Staging customers from v1 system"
+  - name: stg_customers_v2
+    description: "Staging customers from v2 system"
+  - name: stg_customers_combined
+    description: "Combined customer staging (union)"
+  - name: stg_products
+    description: "Staging products"
+  - name: stg_products_active
+    description: "Staging active products only (duplicate)"
+  - name: stg_returns
+    description: "Staging returns"
+  - name: stg_shipping_events
+    description: "Staging shipping events"
+  - name: stg_inventory
+    description: "Staging inventory"
+  - name: stg_support_tickets
+    description: "Staging support tickets"
+  - name: stg_employee_sales
+    description: "Staging employee sales"
+  - name: stg_campaigns
+    description: "Staging marketing campaigns"
+  - name: stg_clickstream
+    description: "Staging clickstream events"

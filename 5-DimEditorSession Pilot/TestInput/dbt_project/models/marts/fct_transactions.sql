@@ -1,0 +1,27 @@
+-- ANTI-PATTERN: Redundant transactions fact
+SELECT
+    te.transaction_id,
+    te.transaction_date,
+    DATE_TRUNC('month', te.transaction_date) as transaction_month,
+    te.transaction_type,
+    te.transaction_amount,
+    te.net_amount,
+    te.order_id,
+    te.order_date,
+    te.order_status,
+    te.customer_id,
+    te.customer_name,
+    te.customer_city,
+    te.customer_state,
+    te.product_id,
+    te.product_name,
+    te.product_category,
+    te.unit_price,
+    te.quantity,
+    te.unit_price * te.quantity as line_total,
+    te.payment_method,
+    te.payment_processor,
+    te.store_id,
+    te.store_name,
+    te.channel_type
+FROM {{ ref('int_transactions_enriched') }} te

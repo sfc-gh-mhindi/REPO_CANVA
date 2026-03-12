@@ -1,0 +1,27 @@
+-- ANTI-PATTERN: Using v2 customer table separately (no unification)
+SELECT
+    customer_key as customer_id,
+    customer_external_id,
+    name_first as first_name,
+    name_last as last_name,
+    name_full as full_name,
+    email_primary as email,
+    email_secondary,
+    phone_mobile as phone,
+    phone_home,
+    phone_work,
+    date_of_birth,
+    gender_code as gender,
+    loyalty_program_id,
+    loyalty_tier,
+    loyalty_points_balance,
+    loyalty_points_lifetime,
+    loyalty_enrollment_date,
+    subscription_status,
+    subscription_plan,
+    subscription_monthly_fee,
+    fraud_risk_score,
+    account_locked,
+    verification_status,
+    sys_created_ts as created_at
+FROM DBT_REFACTOR_TEST.RAW.RAW_CUSTOMERS_V2

@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: int_orders_enriched
+    description: "Enriched orders - joins multiple order stagings"
+  - name: int_orders_products
+    description: "Orders with product info (duplicate logic)"
+  - name: int_customer_360
+    description: "Customer 360 view - massive aggregation"
+  - name: int_customer_summary
+    description: "Customer summary (duplicate of 360)"
+  - name: int_customer_metrics
+    description: "Customer metrics (third customer agg)"
+  - name: int_product_performance
+    description: "Product performance metrics"
+  - name: int_product_summary
+    description: "Product summary (duplicate)"
+  - name: int_transactions_enriched
+    description: "Enriched transactions"
+  - name: int_sessions
+    description: "Sessionized web events"
+  - name: int_order_lines
+    description: "Order line items (duplicate)"

@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Orders fact table"
+  - name: fct_orders_enriched
+    description: "Enriched orders fact (duplicate)"
+  - name: fct_returns
+    description: "Returns fact table"
+  - name: fct_transactions
+    description: "Transactions fact table"
+  - name: fct_sessions
+    description: "Sessions fact table"
+  - name: dim_customers
+    description: "Customer dimension"
+  - name: dim_products
+    description: "Product dimension"
+  - name: dim_date
+    description: "Date dimension"
+  - name: dim_employees
+    description: "Employee dimension"
+  - name: dim_stores
+    description: "Store dimension"

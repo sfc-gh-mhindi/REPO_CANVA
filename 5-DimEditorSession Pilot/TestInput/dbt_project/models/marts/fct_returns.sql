@@ -1,0 +1,27 @@
+-- ANTI-PATTERN: Returns fact with duplicate customer/product info
+SELECT
+    r.return_id,
+    r.return_date,
+    DATE_TRUNC('month', r.return_date) as return_month,
+    r.return_status,
+    r.return_reason,
+    r.original_order_id,
+    r.original_order_date,
+    r.customer_id,
+    r.customer_first_name || ' ' || r.customer_last_name as customer_name,
+    r.customer_email,
+    r.customer_tier,
+    r.product_id,
+    r.product_sku,
+    r.product_name,
+    r.product_category,
+    r.product_unit_price,
+    r.quantity_returned,
+    r.refund_amount,
+    r.refund_method,
+    r.refund_status,
+    r.refund_date,
+    r.inspection_status,
+    r.restockable,
+    DATEDIFF('day', r.original_order_date, r.return_date) as days_to_return
+FROM {{ ref('stg_returns') }} r
